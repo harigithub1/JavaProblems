@@ -30,4 +30,4 @@ bin/
 
 .idea/
 JavaProblems.iml
-!**/src/Main.java
+**/src/Main.java
