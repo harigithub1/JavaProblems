@@ -8,7 +8,6 @@ public class _2ContainsDuplicateLC217 {
             if (!set.add(num)) {
                 return true;
             }
-            set.add(num);
         }
         return false;
     }
