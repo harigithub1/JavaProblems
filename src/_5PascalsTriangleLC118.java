@@ -4,9 +4,9 @@ class _5PascalsTriangleLC118 {
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
         // Base case
-        if (numRows == 0) return result;
+        if (numRows == 0) return triangle;
         // First row
-        triangle.add(new Array list<>());
+        triangle.add(new ArrayList<>());
         triangle.get(0).add(1);
         // Build remaining rows
         for (int i = 1; i < numRows; i++) {
@@ -16,7 +16,7 @@ class _5PascalsTriangleLC118 {
             currRow.add(1);
             // Middle elements
             for (int j = 1; j < i; j++) {
-                curr.add(prevRow.get(j - 1) + prevRow.get(j));
+                currRow.add(prevRow.get(j - 1) + prevRow.get(j));
             }
             // Last element
             currRow.add(1);
