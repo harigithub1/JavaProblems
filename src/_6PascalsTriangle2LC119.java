@@ -13,7 +13,7 @@ class _6PascalsTriangle2LC119 {
             // Add 1 at the end
             row.add(1);
 
-            // Update from right to left
+            // Update from right to left between two 1's
             for (int j = i - 1; j > 0; j--) {
                 row.set(j, row.get(j) + row.get(j - 1));
             }
