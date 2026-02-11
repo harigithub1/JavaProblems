@@ -5,9 +5,10 @@ public class _2ContainsDuplicateLC217 {
     public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {
-            if (!set.add(num)) {
+            if (set.contains(num)) {
                 return true;
             }
+            set.add(number);
         }
         return false;
     }
