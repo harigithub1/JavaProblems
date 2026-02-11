@@ -2,13 +2,9 @@ import java.util.*;
 
 class _6PascalsTriangle2LC119 {
     public static List<Integer> getRow(int rowIndex) {
-        List<Integer> row = new ArrayList<>();
-
-        // First element is always 1
-        row.add(1);
-
-        // Build each row up to rowIndex
-        for (int i = 1; i <= rowIndex; i++) {
+        List<Integer> row = new ArrayList<>();   
+        
+        for (int i = 0; i <= rowIndex; i++) {
 
             // Add 1 at the end
             row.add(1);
