@@ -17,3 +17,5 @@ public class _7MissingNumberLC268{
         System.out.println(missingNumber(nums));
     }
 }
+
+// Gauss formula
