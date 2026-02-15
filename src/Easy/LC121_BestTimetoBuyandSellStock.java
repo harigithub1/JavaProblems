@@ -24,3 +24,8 @@ public class LC121_BestTimetoBuyandSellStock {
         System.out.println("Maximum Profit: " + result);
     }
 }
+
+/**
+ * Sliding Window (Optimized) / Two-Pointer Pattern
+ * the sliding happens left → right (forward direction).
+ */
