@@ -21,7 +21,7 @@ class LC119_PascalsTriangle2 {
     }
 
     public static void main(String args[]){
-        System.out.println(getRow(4));
+        System.out.println(getRow(3));
     }
 }
 
