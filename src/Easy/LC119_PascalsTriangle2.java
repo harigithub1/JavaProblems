@@ -2,7 +2,7 @@ package Easy;
 
 import java.util.*;
 
-class PascalsTriangle2LC119 {
+class LC119_PascalsTriangle2 {
     public static List<Integer> getRow(int rowIndex) {
         List<Integer> row = new ArrayList<>();   
         

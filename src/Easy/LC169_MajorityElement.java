@@ -1,6 +1,6 @@
 package Easy;
 
-class MajorityElementLC169 {
+class LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
         int candidate = 0;
         int count = 0;

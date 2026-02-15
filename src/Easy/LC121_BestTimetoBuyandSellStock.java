@@ -1,6 +1,6 @@
 package Easy;
 
-public class BestTimetoBuyandSellStockLC121 {
+public class LC121_BestTimetoBuyandSellStock {
     public static int maxProfit(int[] prices) {
         if (prices == null || prices.length == 0) return 0;
         int minPrice = Integer.MAX_VALUE;

@@ -2,7 +2,7 @@ package Easy;
 
 import java.util.*;
 
-class PascalsTriangleLC118 {
+class LC118_PascalsTriangle {
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
         // Base case
