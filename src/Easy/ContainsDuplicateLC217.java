@@ -1,7 +1,8 @@
-import java.util.HashSet;
-import java.util.Set;
+package Easy;
 
-public class _2ContainsDuplicateLC217 {
+import java.util.HashSet;
+
+public class ContainsDuplicateLC217 {
     public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {

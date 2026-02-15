@@ -1,4 +1,6 @@
-public class _3ValidAnagramLC242 {
+package Easy;
+
+public class ValidAnagramLC242 {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;

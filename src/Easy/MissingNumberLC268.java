@@ -1,4 +1,6 @@
-public class _7MissingNumberLC268{
+package Easy;
+
+public class MissingNumberLC268 {
 
     public static int missingNumber(int[] nums) {
         int n = nums.length;
