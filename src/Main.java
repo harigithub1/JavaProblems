@@ -1,25 +1,16 @@
 import java.util.*;
 public class Main{
-    public static List<List<Integer>> generatePascalTriangle(int rowNum){
-        List<List<Integer>> result = new ArrayList<>();
-        if(rowNum==0){
-            return result;
-        }
-        result.add(Arrays.asList(1));
-        for(int i =1;i<rowNum;i++){
-            List<Integer> prev = result.get(i-1);
-            List<Integer> curr = new ArrayList<>();
-            curr.add(1);
-            for(int j=1;j<i;j++){
-                curr.add(prev.get(j-1)+prev.get(j));
+    public static List<Integer> generateRow(int rowIndex){
+        List<Integer> row = new ArrayList<>();
+        for(int i =0;i<rowIndex;i++){
+            row.add(1);
+            for(int j=i-1;j>0;j--){
+                row.set(j,row.get(j-1)+row.get(j));
             }
-            curr.add(1);
-            result.add(curr);
         }
-        return result;
+        return row;
     }
     public static void main(String args[]){
-        int rowNum=5;
-        System.out.println(generatePascalTriangle(rowNum));
+        System.out.println(generateRow(5));
     }
 }
