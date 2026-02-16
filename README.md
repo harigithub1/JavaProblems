@@ -41,7 +41,8 @@ Diameter of Binary Tree Leetcode#543 Easy
 Binary Tree Right Side View Leetcode#199 Medium
 
 🔗 3. Linked List (Very Common)
-Reverse Linked List
+
+Reverse Linked List Leetcode#206 Easy
 
 Detect Cycle in Linked List
 

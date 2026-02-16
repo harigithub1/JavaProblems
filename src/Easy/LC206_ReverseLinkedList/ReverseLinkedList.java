@@ -1,13 +1,4 @@
-package Easy;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
+package Easy.LC206_ReverseLinkedList;
 
 public class ReverseLinkedList {
 
