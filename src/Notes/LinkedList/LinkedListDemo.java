@@ -80,4 +80,94 @@ public class LinkedListDemo {
  * 💡 Key Concept To Remember
  * A linked list is:
  * Data + Address of next data
+ *
+ * Prompt: ListNode node1 = new ListNode(1); what is happening here
+ * ListNode node1 = new ListNode(1);
+ * This single line does three important things.
+ * 🔹 Step 1: ListNode node1
+ * This declares a variable.
+ * It means:
+ * “I want a variable named node1 that can store a reference to a ListNode object.”
+ * Important:
+ * node1 does NOT store the actual node.
+ * It stores the address (reference) of the node in memory.
+ * Think of it like:
+ * node1 → (will point somewhere in memory)
+ * 🔹 Step 2: new ListNode(1)
+ * This creates a new object in memory.
+ * When Java sees:
+ * new ListNode(1)
+ * It:
+ * Allocates memory in RAM
+ * Calls the constructor
+ * Sets:
+ * val = 1
+ * next = null
+ * So in memory, something like this is created:
+ * Address 5000:
+ * [val = 1 | next = null]
+ * 🔹 Step 3: Assignment =
+ * Now Java stores that memory address inside node1.
+ * So:
+ * node1 → 5000
+ * Now node1 is pointing to that object.
+ * 🖼 Visual Representation
+ * After this line:
+ * ListNode node1 = new ListNode(1);
+ * Memory looks like:
+ * node1
+ *    ↓
+ * [1 | null]
+ * ⚡ Very Important Concept
+ * Java variables for objects store references, not actual objects.
+ * So this is WRONG thinking:
+ * ❌ node1 stores the node.
+ * Correct thinking:
+ * ✅ node1 stores the address of the node.
+
+ * 🔎 Simple Analogy
+ * Think of it like:
+ * The object is a house.
+ * The variable (node1) is the house address.
+ *
+ * In this line:
+ * ListNode node1 = new ListNode(1);
+ * 🔹 new ListNode(1)
+ * This creates the object.
+ * It builds a real thing in memory that looks like:
+ * [val = 1 | next = null]
+ * This object lives somewhere in RAM.
+ * 🔹 node1
+ * This is the reference variable.
+ * It does NOT store the object itself.
+ * It stores the address of that object.
+ * So internally it’s like:
+ * node1 → (address of object)
+ * 🧠 Think of it like this:
+ * new ListNode(1) → creates a house
+ * node1 → stores the house address
+ * You don’t store the house inside node1.
+ * You store where the house is located.
+ * 🔎 Important Detail
+ * If you write:
+ * ListNode node2 = node1;
+ * Now both variables point to the SAME object.
+ *
+ * node1 ─┐
+ *        ├──> [1 | null]
+ * node2 ─┘
+ *
+ * No new object is created.
+ *
+ * 🚨 Very Common Beginner Confusion
+ * This:
+ * ListNode node1;
+ * Only declares a variable.
+ * No object is created yet.
+ * This:
+ * new ListNode(1);
+ * Creates an object.
+ * This:
+ * ListNode node1 = new ListNode(1);
+ * Creates an object AND stores its reference.
  */
