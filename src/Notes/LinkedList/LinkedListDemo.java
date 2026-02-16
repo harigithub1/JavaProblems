@@ -35,6 +35,7 @@ public class LinkedListDemo {
         printList(head);
     }
 }
+
 /**
  * 🔹 Step 1: Create nodes
  * ListNode node1 = new ListNode(1);
