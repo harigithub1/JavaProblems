@@ -1,6 +1,7 @@
 package Easy;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 class LC118_PascalsTriangle {
     public static List<List<Integer>> generate(int numRows) {
