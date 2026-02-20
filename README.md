@@ -2,11 +2,11 @@ chatgpt prompt: most frequently asked dsa problems in Faang for software enginee
 
 🔥 1. Arrays & Strings (Very Frequently Asked)
 
-Two Sum Leetcode#1 Easy
+Two Sum Leetcode#1 Easy (Blind75,NeetCode150)
 
 3Sum Leetcode#15 Medium
 
-Best Time to Buy and Sell Stock Leetcode#121 Easy
+Best Time to Buy and Sell Stock Leetcode#121 Easy (Blind75,NeetCode150)
 
 Product of Array Except Self Leetcode#238 Medium
 
@@ -14,7 +14,7 @@ Maximum Subarray (Kadane’s Algorithm) Leetcode#53 Medium
 
 Longest Substring Without Repeating Characters Leetcode#3 Medium
 
-Valid Anagram Leetcode#242 Easy
+Valid Anagram Leetcode#242 Easy (Blind75)
 
 Group Anagrams Leetcode#49 Medium
 
@@ -26,55 +26,55 @@ Trapping Rain Water   Leetcode#42 Hard
 
 Binary Tree Level Order Traversal Leetcode#102 Medium
 
-Maximum Depth of Binary Tree Leetcode#104 Easy
+Maximum Depth of Binary Tree Leetcode#104 Easy (Blind75,NeetCode150)
 
 Validate Binary Search Tree Leetcode#98 Medium
 
 Lowest Common Ancestor (LCA)  Leetcode#236 Medium
 
-Invert Binary Tree Leetcode#226 Easy
+Invert Binary Tree Leetcode#226 Easy (Blind75)
 
 Serialize and Deserialize Binary Tree Leetcode#297 Hard
 
-Diameter of Binary Tree Leetcode#543 Easy
+Diameter of Binary Tree Leetcode#543 Easy (NeetCode150)
 
 Binary Tree Right Side View Leetcode#199 Medium
 
 🔗 3. Linked List (Very Common)
 
-Reverse Linked List Leetcode#206 Easy
+Reverse Linked List Leetcode#206 Easy (Blind75,NeetCode150)
 
-Detect Cycle in Linked List
+Detect Cycle in Linked List Leetcode#141 Easy
 
-Merge Two Sorted Lists
+Merge Two Sorted Lists Leetcode#21 Easy (Blind75,NeetCode150)
 
-Remove Nth Node From End
+Remove Nth Node From End Leetcode#19 Medium
 
-Copy List with Random Pointer
+Copy List with Random Pointer Leetcode#138 Medium
 
-LRU Cache
+LRU Cache Leetcode#146 Medium
 
 🧠 4. Dynamic Programming (FAANG Favorite)
 
-Climbing Stairs
+Climbing Stairs Leetcode#70 Easy (Blind75,NeetCode150)
 
-Coin Change
+Coin Change Leetcode#322 Medium
 
-Longest Increasing Subsequence
+Longest Increasing Subsequence Leetcode#300 Medium
 
-Longest Common Subsequence
+Longest Common Subsequence Leetcode#1143 Medium
 
-Word Break
+Word Break Leetcode#139 Medium
 
-House Robber
+House Robber Leetcode#198 Medium
 
-Edit Distance
+Edit Distance Leetcode#72 Medium
 
-Decode Ways
+Decode Ways Leetcode#91 Medium
 
 🌐 5. Graphs (Very High Signal)
 
-Number of Islands
+Number of Islands Leetcode#200 Medium
 
 Clone Graph
 
@@ -90,7 +90,7 @@ Word Ladder
 
 📚 6. Stack & Queue
 
-Valid Parentheses
+Valid Parentheses Leetcode#20 Easy
 
 Min Stack
 
