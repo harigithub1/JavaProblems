@@ -1,6 +1,7 @@
 package Easy;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
 class LC119_PascalsTriangle2 {
     public static List<Integer> getRow(int rowIndex) {
