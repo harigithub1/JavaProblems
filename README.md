@@ -44,7 +44,7 @@ Binary Tree Right Side View Leetcode#199 Medium
 
 Reverse Linked List Leetcode#206 Easy (Blind75,NeetCode150)
 
-Detect Cycle in Linked List Leetcode#141 Easy
+Detect Cycle in Linked List Leetcode#141 Easy (not in either Blind75/NeetCode150)
 
 Merge Two Sorted Lists Leetcode#21 Easy (Blind75,NeetCode150)
 
@@ -90,7 +90,7 @@ Word Ladder
 
 📚 6. Stack & Queue
 
-Valid Parentheses Leetcode#20 Easy
+Valid Parentheses Leetcode#20 Easy (Blind75,NeetCode150)
 
 Min Stack
 
