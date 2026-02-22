@@ -4,17 +4,16 @@ public class ReverseLinkedList {
 
     // Reverse function (Iterative)
     public static ListNode reverseList(ListNode head) {
-        ListNode prev = null;
-        ListNode curr = head;
+        ListNode previousNode = null;
+        ListNode currentNode = head;
 
-        while (curr != null) {
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+        while (currentNode != null) {
+            ListNode nextNodeTemp = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = nextNodeTemp;
         }
-
-        return prev;
+        return previousNode;
     }
 
     // Helper function to print list
