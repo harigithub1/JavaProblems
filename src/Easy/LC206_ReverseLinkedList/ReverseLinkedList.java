@@ -8,10 +8,10 @@ public class ReverseLinkedList {
         ListNode currentNode = head;
 
         while (currentNode != null) {
-            ListNode nextNodeTemp = currentNode.next;
+            ListNode nextNode = currentNode.next;
             currentNode.next = previousNode;
             previousNode = currentNode;
-            currentNode = nextNodeTemp;
+            currentNode = nextNode;
         }
         return previousNode;
     }
