@@ -1,10 +1,11 @@
 package Easy;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class LC217_ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
-        HashSet<Integer> set = new HashSet<>();
+        Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             if (set.contains(num)) {
                 return true;

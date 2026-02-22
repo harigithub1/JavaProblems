@@ -5,17 +5,16 @@ public class Main{
     public static List<Integer> getRow(int rowIndex){
         List<Integer> row = new ArrayList<>();
         row.add(1);
-        for(int i=0;i<rowIndex;i++){
-            List<Integer> prev = row;
-            for(int j =i;j>0;j--){
-                row.set(j,prev.get(j)+prev.get(j-1));
+        for(int i=1;i<rowIndex;i++){
+            for(int j=i-1;j>0;j--){
+                row.set(j,row.get(j-1)+row.get(j));
             }
             row.add(1);
         }
-        return row;
+        return  row;
     }
     public static void main(String args[]){
-        int rowIndex = 4;
+        int rowIndex = 3;
         System.out.println(getRow(rowIndex));
     }
 }
