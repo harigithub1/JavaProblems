@@ -5,13 +5,10 @@ public class ReverseLinkedList {
         ListNode prevNode = null;
         ListNode currNode = head;
         while (currNode != null) {
-            //Save the next node
             ListNode nextNode = currNode.next;
-            //Reverse the pointer
             currNode.next = prevNode;
-            //Move prevNode forward
+
             prevNode = currNode;
-            //Move currNode forward using saved reference
             currNode = nextNode;
         }
         return prevNode;
@@ -29,8 +26,8 @@ public class ReverseLinkedList {
         }
 
         head.next = null;
-//        head = prevNode;
-        return prevNode;
+        head = prevNode;
+        return head;
     }
 
     // Helper function to print list
