@@ -76,53 +76,53 @@ Decode Ways Leetcode#91 Medium
 
 Number of Islands Leetcode#200 Medium
 
-Clone Graph
+Clone Graph Leetcode#133 Medium
 
-Course Schedule
+Course Schedule Leetcode#207 Medium
 
-Pacific Atlantic Water Flow
+Pacific Atlantic Water Flow Leetcode#417 Medium
 
-Rotting Oranges
+Rotting Oranges Leetcode#994 Medium
 
-Accounts Merge
+Accounts Merge Leetcode#721 Medium
 
-Word Ladder
+Word Ladder Leetcode#127 Hard
 
 📚 6. Stack & Queue
 
 Valid Parentheses Leetcode#20 Easy (Blind75,NeetCode150)
 
-Min Stack
+Min Stack Leetcode#155 Medium
 
-Daily Temperatures
+Daily Temperatures Leetcode#739 Medium
 
-Largest Rectangle in Histogram
+Largest Rectangle in Histogram Leetcode#84 Hard
 
-Sliding Window Maximum
+Sliding Window Maximum Leetcode#239 Hard
 
 🔍 7. Binary Search (Very Common)
 
-Search in Rotated Sorted Array
+Search in Rotated Sorted Array Leetcode#33 Medium
 
-Find Peak Element
+Find Peak Element Leetcode#162 Medium
 
-Median of Two Sorted Arrays
+Median of Two Sorted Arrays Leetcode#4 Hard
 
-Koko Eating Bananas
+Koko Eating Bananas Leetcode#875 Medium
 
-Capacity To Ship Packages Within D Days
+Capacity To Ship Packages Within D Days Leetcode#1011 Medium
 
 🏆 8. Backtracking
 
-Subsets
+Subsets Leetcode#78 Medium
 
-Permutations
+Permutations Leetcode#46 Medium
 
-Combination Sum
+Combination Sum Leetcode#39 Medium
 
-N-Queens
+N-Queens Leetcode#51 Hard
 
-Word Search
+Word Search Leetcode#79 Medium
 
 🎯 If You Want Maximum ROI Preparation
 
