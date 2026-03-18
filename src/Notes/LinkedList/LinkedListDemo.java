@@ -4,11 +4,10 @@ public class LinkedListDemo {
 
     // Method to print the linked list
     public static void printList(ListNode head) {
-        ListNode temp = head;
 
-        while (temp != null) {
-            System.out.print(temp.val + " -> ");
-            temp = temp.next;
+        while (head != null) {
+            System.out.print(head.val + " -> ");
+            head = head.next;
         }
 
         System.out.println("null");

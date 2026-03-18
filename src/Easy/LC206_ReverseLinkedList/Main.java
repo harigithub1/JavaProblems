@@ -15,22 +15,9 @@ public class Main {
         sol.printList(head);
 
         // Reverse the list
-        ListNode reversedHead = sol.reverseList(head);
+        ListNode reversedHead = sol.reverseListVersion1(head);
 
         System.out.println("Reversed List:");
         sol.printList(reversedHead);
-
-        // Recreate the list
-        head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-        // Reverse the list
-        ListNode reversedHead2 = sol.reverseList2(head);
-
-        System.out.println("Reversed List2:");
-        sol.printList(reversedHead2);
     }
-
 }
