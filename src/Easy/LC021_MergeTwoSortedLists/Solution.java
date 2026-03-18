@@ -3,7 +3,7 @@ package Easy.LC021_MergeTwoSortedLists;
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // Create a dummy node
-        ListNode dummy = new ListNode(0);
+        ListNode dummy = new ListNode(0);//here it need not be 0 it can be any number like 111. ListNode dummy = new ListNode(111);
         ListNode current = dummy;
 
         // Traverse both lists
@@ -25,6 +25,7 @@ class Solution {
             current.next = list2;
         }
 
+        //merged list (starting from dummy.next)
         return dummy.next;
     }
 }
