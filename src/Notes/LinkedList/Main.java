@@ -1,6 +1,6 @@
 package Notes.LinkedList;
 
-public class LinkedListDemo {
+public class Main {
 
     // Method to print the linked list
     public static void printList(ListNode head) {
