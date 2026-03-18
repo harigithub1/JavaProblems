@@ -1,6 +1,6 @@
 package Practice;
 
-public class Solution {
+public class Main {
     public static void printList(ListNode head){
         ListNode temp=head;
         while (temp!=null){

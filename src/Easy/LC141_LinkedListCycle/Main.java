@@ -1,6 +1,6 @@
 package Easy.LC141_LinkedListCycle;
 
-public class LinkedListCycle {
+public class Main {
         public static boolean hasCycle(ListNode head) {
             if (head == null || head.next == null) return false;
             ListNode slow = head;
