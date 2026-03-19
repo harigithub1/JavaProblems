@@ -24,7 +24,7 @@ public class LC020_ValidParanthesis {
     }
 
     public static void main(String args[]) {
-        String s = "()";//s = "()[]{}" true//s = "(]" false//s = "([])" true//s = "([)]" false
+        String s = "()";    //s = "()[]{}" true   //s = "(]" false   //s = "([])" true  //s = "([)]" false
         System.out.println(isValid(s));
     }
 }
