@@ -9,6 +9,7 @@ public class Main {
                 slow = slow.next;          // move 1 step
                 fast = fast.next.next;     // move 2 steps
 
+                //here we are comparing the nodes not its values, to check you can pass all values as 4,4,4,4 instead of 3,2,0,-4
                 if (slow == fast) {
                     return true;           // cycle detected
                 }
@@ -36,3 +37,8 @@ public class Main {
             System.out.println(hasCycle(head));
         }
     }
+/**
+ * The technique used here is:
+ *
+ * 🔥 Fast & Slow Pointer (Two-Pointer / Floyd’s Cycle Detection)
+ */
