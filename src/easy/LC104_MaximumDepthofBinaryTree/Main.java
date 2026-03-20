@@ -8,18 +8,21 @@ public class Main {
         return 1 + Math.max(left, right);
     }
 
-    public static void main(String args[]){
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        System.out.println(maxDepth(root)); // Output: 3
+    public static void main(String[] args) {
+        // Create nodes
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+        int depth = maxDepth(root);
+        System.out.println("Max Depth: " + depth);
     }
 }
-        /*
-                1
-               / \
-              2   3
-             /
-            4
-        */
+/**
+ *     3
+ *    / \
+ *   9  20
+ *      / \
+ *     15  7
+ */
