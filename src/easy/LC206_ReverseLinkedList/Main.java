@@ -2,7 +2,7 @@ package easy.LC206_ReverseLinkedList;
 
 public class Main {
 
-    public static ListNode reverseListVersion1(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         ListNode prevNode = null;
         ListNode currNode = head;
         while (currNode != null) {
@@ -40,7 +40,7 @@ public class Main {
         printList(head);
 
         // Reverse the list
-        ListNode reversedHead = reverseListVersion1(head);
+        ListNode reversedHead = reverseList(head);
 
         System.out.println("Reversed List:");
         printList(reversedHead);
