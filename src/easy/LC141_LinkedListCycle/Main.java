@@ -1,4 +1,4 @@
-package easy.lc141_LinkedListCycle;
+package easy.LC141_LinkedListCycle;
 
 public class Main {
         public static boolean hasCycle(ListNode head) {

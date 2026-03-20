@@ -1,4 +1,4 @@
-package easy.lc141_LinkedListCycle;
+package easy.LC141_LinkedListCycle;
 
 // Node class
 class ListNode {

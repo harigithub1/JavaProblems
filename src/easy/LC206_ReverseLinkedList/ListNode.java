@@ -1,4 +1,4 @@
-package easy.lc206_ReverseLinkedList;
+package easy.LC206_ReverseLinkedList;
 
 class ListNode {
     int val;

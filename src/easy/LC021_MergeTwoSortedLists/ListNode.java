@@ -1,4 +1,4 @@
-package easy.lc021_MergeTwoSortedLists;
+package easy.LC021_MergeTwoSortedLists;
 
 class ListNode {
     int val;

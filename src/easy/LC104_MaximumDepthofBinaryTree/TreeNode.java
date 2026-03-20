@@ -1,4 +1,4 @@
-package easy.lc104_MaximumDepthofBinaryTree;
+package easy.LC104_MaximumDepthofBinaryTree;
 
 class TreeNode {
     int val;
