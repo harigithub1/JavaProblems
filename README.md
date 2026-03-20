@@ -2,11 +2,11 @@ chatgpt prompt: most frequently asked dsa problems in Faang for software enginee
 
 🔥 1. Arrays & Strings (Very Frequently Asked)
 
-Two Sum Leetcode#1 Easy (Blind75,NeetCode150)
+Two Sum Leetcode#1 easy (Blind75,NeetCode150)
 
 3Sum Leetcode#15 Medium
 
-Best Time to Buy and Sell Stock Leetcode#121 Easy (Blind75,NeetCode150)
+Best Time to Buy and Sell Stock Leetcode#121 easy (Blind75,NeetCode150)
 
 Product of Array Except Self Leetcode#238 Medium
 
@@ -14,7 +14,7 @@ Maximum Subarray (Kadane’s Algorithm) Leetcode#53 Medium
 
 Longest Substring Without Repeating Characters Leetcode#3 Medium
 
-Valid Anagram Leetcode#242 Easy (Blind75)
+Valid Anagram Leetcode#242 easy (Blind75)
 
 Group Anagrams Leetcode#49 Medium
 
@@ -26,27 +26,27 @@ Trapping Rain Water   Leetcode#42 Hard
 
 Binary Tree Level Order Traversal Leetcode#102 Medium
 
-Maximum Depth of Binary Tree Leetcode#104 Easy (Blind75,NeetCode150)
+Maximum Depth of Binary Tree Leetcode#104 easy (Blind75,NeetCode150)
 
 Validate Binary Search Tree Leetcode#98 Medium
 
 Lowest Common Ancestor (LCA)  Leetcode#236 Medium
 
-Invert Binary Tree Leetcode#226 Easy (Blind75)
+Invert Binary Tree Leetcode#226 easy (Blind75)
 
 Serialize and Deserialize Binary Tree Leetcode#297 Hard
 
-Diameter of Binary Tree Leetcode#543 Easy (NeetCode150)
+Diameter of Binary Tree Leetcode#543 easy (NeetCode150)
 
 Binary Tree Right Side View Leetcode#199 Medium
 
 🔗 3. Linked List (Very Common)
 
-Reverse Linked List Leetcode#206 Easy (Blind75,NeetCode150)
+Reverse Linked List Leetcode#206 easy (Blind75,NeetCode150)
 
-Detect Cycle in Linked List Leetcode#141 Easy (not in either Blind75/NeetCode150)
+Detect Cycle in Linked List Leetcode#141 easy (not in either Blind75/NeetCode150)
 
-Merge Two Sorted Lists Leetcode#21 Easy (Blind75,NeetCode150)
+Merge Two Sorted Lists Leetcode#21 easy (Blind75,NeetCode150)
 
 Remove Nth Node From End Leetcode#19 Medium
 
@@ -56,7 +56,7 @@ LRU Cache Leetcode#146 Medium
 
 🧠 4. Dynamic Programming (FAANG Favorite)
 
-Climbing Stairs Leetcode#70 Easy (Blind75,NeetCode150)
+Climbing Stairs Leetcode#70 easy (Blind75,NeetCode150)
 
 Coin Change Leetcode#322 Medium
 
@@ -90,7 +90,7 @@ Word Ladder Leetcode#127 Hard
 
 📚 6. Stack & Queue
 
-Valid Parentheses Leetcode#20 Easy (Blind75,NeetCode150)
+Valid Parentheses Leetcode#20 easy (Blind75,NeetCode150)
 
 Min Stack Leetcode#155 Medium
 
