@@ -12,9 +12,7 @@ public class LC020_ValidParanthesis {
             // Handle closing brackets
             else {
                 if (stack.isEmpty()) return false;
-
                 char top = stack.pop();
-
                 if (ch == ')' && top != '(') return false;
                 if (ch == '}' && top != '{') return false;
                 if (ch == ']' && top != '[') return false;
@@ -24,7 +22,28 @@ public class LC020_ValidParanthesis {
     }
 
     public static void main(String args[]) {
-        String s = "()";    //s = "()[]{}" true   //s = "(]" false   //s = "([])" true  //s = "([)]" false
-        System.out.println(isValid(s));
+        System.out.println(isValid("()"));        // true
+        System.out.println(isValid("()[]{}"));    // true
+        System.out.println(isValid("(]"));        // false
+        System.out.println(isValid("([)]"));      // false
+        System.out.println(isValid("{[]}"));      // true
     }
 }
+/**
+ * Stack Pattern (LIFO Pattern)
+ * 🚀 Where This Pattern Appears (FAANG)
+ *
+ * This is a high-frequency pattern:
+ *
+ * ✅ Valid Parentheses (this problem)
+ *
+ * ✅ Next Greater Element
+ *
+ * ✅ Min Stack
+ *
+ * ✅ Largest Rectangle in Histogram
+ *
+ * ✅ Daily Temperatures
+ *
+ * ✅ Decode String
+ */
