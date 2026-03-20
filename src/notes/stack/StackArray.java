@@ -1,6 +1,6 @@
-package notes.Stack;
+package notes.stack;
 
-//🚀 1. Stack Using Array (Most Important)
+//🚀 1. stack Using Array (Most Important)
 class StackArray {
     private int[] arr;
     private int top;
@@ -15,7 +15,7 @@ class StackArray {
     // Push
     public void push(int x) {
         if (top == capacity - 1) {
-            System.out.println("Stack Overflow");
+            System.out.println("stack Overflow");
             return;
         }
         arr[++top] = x;
@@ -24,7 +24,7 @@ class StackArray {
     // Pop
     public int pop() {
         if (top == -1) {
-            System.out.println("Stack Underflow");
+            System.out.println("stack Underflow");
             return -1;
         }
         return arr[top--];
@@ -33,7 +33,7 @@ class StackArray {
     // Peek
     public int peek() {
         if (top == -1) {
-            System.out.println("Stack is Empty");
+            System.out.println("stack is Empty");
             return -1;
         }
         return arr[top];

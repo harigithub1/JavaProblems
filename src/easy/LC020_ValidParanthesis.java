@@ -30,7 +30,7 @@ public class LC020_ValidParanthesis {
     }
 }
 /**
- * Stack Pattern (LIFO Pattern)
+ * stack Pattern (LIFO Pattern)
  * 🚀 Where This Pattern Appears (FAANG)
  *
  * This is a high-frequency pattern:
@@ -39,7 +39,7 @@ public class LC020_ValidParanthesis {
  *
  * ✅ Next Greater Element
  *
- * ✅ Min Stack
+ * ✅ Min stack
  *
  * ✅ Largest Rectangle in Histogram
  *

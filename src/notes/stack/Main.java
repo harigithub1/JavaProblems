@@ -1,4 +1,4 @@
-package notes.Stack;
+package notes.stack;
 public class Main {
     public static void main(String[] args) {
         StackArray stack = new StackArray(5);

@@ -1,6 +1,6 @@
-package notes.Stack;
+package notes.stack;
 
-//🔗 2. Stack Using Linked List (Interview Favorite Twist)
+//🔗 2. stack Using Linked List (Interview Favorite Twist)
 class StackLinkedList {
 
     private static class Node {
@@ -24,7 +24,7 @@ class StackLinkedList {
     // Pop
     public int pop() {
         if (top == null) {
-            System.out.println("Stack Underflow");
+            System.out.println("stack Underflow");
             return -1;
         }
         int val = top.data;
@@ -35,7 +35,7 @@ class StackLinkedList {
     // Peek
     public int peek() {
         if (top == null) {
-            System.out.println("Stack is Empty");
+            System.out.println("stack is Empty");
             return -1;
         }
         return top.data;

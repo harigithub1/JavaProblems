@@ -1,4 +1,4 @@
-package notes.LinkedList;
+package notes.linkedList;
 
 public class Main {
 
