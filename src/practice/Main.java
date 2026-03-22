@@ -1,42 +1,40 @@
 package practice;
 public class Main{
-    public static ListNode reverseList(ListNode head){
-        ListNode currNode = head;
-        ListNode prevNode = null;
-        while(currNode!=null){
-            ListNode nextNode = currNode.next;
-            currNode.next=prevNode;
-            prevNode=currNode;
-            currNode=nextNode;
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2){
+        ListNode dummy = new ListNode(0);
+        ListNode currNode = dummy;
+        while(list1!=null&&list2!=null){
+            if(list1.val<=list2.val){
+                currNode.next=list1;
+                list1=list1.next;
+            } else {
+                currNode.next=list2;
+                list2=list2.next;
+            }
+            currNode=currNode.next;
         }
-        return prevNode;
-    }
-
-    // Helper function to print list
-    public static void printList(ListNode head) {
-        while (head != null) {
-            System.out.print(head.val + " -> ");
-            head = head.next;
+        if(list1!=null){
+            currNode.next=list1;
         }
-        System.out.println("null");
+        if(list2!=null){
+            currNode.next=list2;
+        }
+        return dummy.next;
     }
-
-    public static void main(String[] args) {
-
-        // Creating linked list: 1 -> 2 -> 3 -> 4 -> 5 -> null
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-
-        System.out.println("Original List:");
-        printList(head);
-
-        // Reverse the list
-        ListNode reversedHead = reverseList(head);
-
-        System.out.println("Reversed List:");
-        printList(reversedHead);
+    public static void printList(ListNode head){
+        while(head!=null){
+            System.out.println(head.val);
+            head=head.next;
+        }
+    }
+    public static void main(String args[]){
+        ListNode list1 = new ListNode(1);
+        list1.next = new ListNode(2);
+        list1.next.next = new ListNode(4);
+        ListNode list2 = new ListNode(1);
+        list2.next = new ListNode(3);
+        list2.next.next = new ListNode(4);
+        ListNode mergedList = mergeTwoLists(list1,list2);
+        printList(mergedList);
     }
 }

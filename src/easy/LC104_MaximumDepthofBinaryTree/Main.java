@@ -3,9 +3,9 @@ package easy.LC104_MaximumDepthofBinaryTree;
 public class Main {
     public static int maxDepth(TreeNode root) {
         if (root == null) return 0;
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
-        return 1 + Math.max(left, right);
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
+        return 1 + Math.max(leftDepth, rightDepth);
     }
 
     public static void main(String[] args) {
@@ -25,4 +25,7 @@ public class Main {
  *   9  20
  *      / \
  *     15  7
+ *
+ *  🧠 Pattern Name:
+ *  Divide and Conquer (Top-Down / Bottom-Up DFS on Trees)
  */
