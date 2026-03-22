@@ -28,4 +28,6 @@ public class Main {
  *
  *  🧠 Pattern Name:
  *  Divide and Conquer (Top-Down / Bottom-Up DFS on Trees)
+ *  🧠 Pattern Name
+ * 👉 Postorder DFS (Bottom-Up Recursion)
  */
