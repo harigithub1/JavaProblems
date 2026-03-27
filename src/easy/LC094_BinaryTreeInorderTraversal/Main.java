@@ -1,9 +1,7 @@
 package easy.LC094_BinaryTreeInorderTraversal;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 class Main {
 
@@ -31,6 +29,10 @@ class Main {
                   3
 
             Inorder   : [1, 3, 2]
+            Preorder  : [1, 2, 3]
+            Postorder : [3, 2, 1]
+            LevelOrder: [[1], [2], [3]]
+
         */
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
