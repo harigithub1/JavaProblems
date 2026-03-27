@@ -16,14 +16,12 @@ class Main {
 
     private static void inorder(TreeNode node, List<Integer> result) {
         if (node == null) return;
-
         inorder(node.left, result);
         result.add(node.val);
         inorder(node.right, result);
     }
 
     public static void main(String[] args) {
-
         /*
               Example Tree:
                   1
@@ -34,13 +32,10 @@ class Main {
 
             Inorder   : [1, 3, 2]
         */
-
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(3);
-
         System.out.println("Inorder: " + inorderTraversal(root));
-
           /*
           Example 2 Tree:
                   1
@@ -53,21 +48,15 @@ class Main {
 
         Expected Inorder: [4,2,6,5,7,1,3,9,8]
     */
-
 //        TreeNode root = new TreeNode(1);
-
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
-
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
-
         root.left.right.left = new TreeNode(6);
         root.left.right.right = new TreeNode(7);
-
         root.right.right = new TreeNode(8);
         root.right.right.left = new TreeNode(9);
-
         System.out.println("Inorder: " + inorderTraversal(root));
     }
 }
