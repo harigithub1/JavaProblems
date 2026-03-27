@@ -33,9 +33,6 @@ class Main {
                   3
 
             Inorder   : [1, 3, 2]
-            Preorder  : [1, 2, 3]
-            Postorder : [3, 2, 1]
-            LevelOrder: [[1], [2], [3]]
         */
 
         TreeNode root = new TreeNode(1);
