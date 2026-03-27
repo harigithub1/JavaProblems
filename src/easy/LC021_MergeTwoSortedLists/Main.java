@@ -4,7 +4,7 @@ public class Main {
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // Create a dummy node
-        ListNode dummy = new ListNode(0);//here it need not be 0 it can be any number like 111. ListNode dummy = new ListNode(111);
+        ListNode dummy = new ListNode(0);//here it need not be 0 it can be any number like 111. TreeNode dummy = new TreeNode(111);
         ListNode current = dummy;
 
         // Traverse both lists

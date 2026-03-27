@@ -1,4 +1,4 @@
-package notes.tree;
+package easy.LC144_BinaryTreePreorderTraversal;
 
 class TreeNode {
     int val;
@@ -9,4 +9,5 @@ class TreeNode {
     TreeNode(int val) {
         this.val = val;
     }
+
 }

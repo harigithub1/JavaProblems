@@ -12,7 +12,7 @@ class ListNode {
 /**
  * In Java, a node usually looks like this
  *     int val;        // data
- *     ListNode next;  // address of next node
+ *     TreeNode next;  // address of next node
  *
  * 🖼 Visual Representation
  * Imagine this:
@@ -24,7 +24,7 @@ class ListNode {
  *
  * 🚶 How Do We Traverse a Linked List?
  * We start from the head and move forward.
- * ListNode temp = head;
+ * TreeNode temp = head;
  * while (temp != null) {
  *     System.out.println(temp.val);
  *     temp = temp.next;
