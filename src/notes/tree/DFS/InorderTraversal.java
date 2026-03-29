@@ -2,7 +2,7 @@ package notes.tree.DFS;
 
 public class InorderTraversal {
 
-    public void inorder(TreeNode root) {
+    public static void inorder(TreeNode root) {
         if (root == null) return;
 
         inorder(root.left);     // Left
@@ -16,9 +16,7 @@ public class InorderTraversal {
         root.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
-
-        InorderTraversal obj = new InorderTraversal();
-        obj.inorder(root);
+        inorder(root);
     }
 }
 /**

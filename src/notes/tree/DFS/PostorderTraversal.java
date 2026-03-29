@@ -4,7 +4,6 @@ public class PostorderTraversal {
 
     public void postorder(TreeNode root) {
         if (root == null) return;
-
         postorder(root.left);   // Left
         postorder(root.right);  // Right
         System.out.print(root.val + " "); // Root
@@ -21,3 +20,13 @@ public class PostorderTraversal {
         obj.postorder(root);
     }
 }
+
+/**
+ *         1
+ *        / \
+ *       2   3
+ *      / \
+ *     4   5
+ *     Post traversal result:
+ *      4 → 5 → 2 → 3 → 1
+ */

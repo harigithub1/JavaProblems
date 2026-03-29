@@ -2,9 +2,8 @@ package notes.tree.DFS;
 
 public class PreorderTraversal {
 
-    public void preorder(TreeNode root) {
+    public static void preorder(TreeNode root) {
         if (root == null) return;
-
         System.out.print(root.val + " "); // Root
         preorder(root.left);              // Left
         preorder(root.right);             // Right
@@ -17,8 +16,7 @@ public class PreorderTraversal {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        PreorderTraversal obj = new PreorderTraversal();
-        obj.preorder(root);
+        preorder(root);
     }
 }
 /**
@@ -28,5 +26,5 @@ public class PreorderTraversal {
  *      / \
  *     4   5
  *     Preorder traversal result:
- * 1 → 2 → 4 → 5 → 3
+ *      1 → 2 → 4 → 5 → 3
  */
