@@ -28,3 +28,37 @@ public class PreorderTraversal {
  *     Preorder traversal result:
  *      1 → 2 → 4 → 5 → 3
  */
+/**
+ * preorder(1)
+ * root = 1
+ * print 1
+ *
+ * preorder(2)
+ * root = 2
+ * print 2
+ *
+ * preorder(4)
+ * root = 4
+ * print 4
+ *
+ * preorder(null)   // returns immediately
+ * preorder(null)   // returns immediately
+ *
+ * // back to root = 2
+ *
+ * preorder(5)
+ * root = 5
+ * print 5
+ *
+ * preorder(null)   // returns immediately
+ * preorder(null)   // returns immediately
+ *
+ * // back to root = 1
+ *
+ * preorder(3)
+ * root = 3
+ * print 3
+ *
+ * preorder(null)   // returns immediately
+ * preorder(null)   // returns immediately
+ */

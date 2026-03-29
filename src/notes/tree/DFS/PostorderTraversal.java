@@ -30,3 +30,46 @@ public class PostorderTraversal {
  *     Post traversal result:
  *      4 → 5 → 2 → 3 → 1
  */
+/**
+ * postorder(1)
+ * root = 1
+ *
+ * postorder(2)
+ * root = 2
+ *
+ * postorder(4)
+ * root = 4
+ *
+ * postorder(null)   // 4.left → returns immediately
+ * postorder(null)   // 4.right → returns immediately
+ *
+ * print 4
+ *
+ * // back to root = 2
+ *
+ * postorder(5)
+ * root = 5
+ *
+ * postorder(null)   // 5.left → returns immediately
+ * postorder(null)   // 5.right → returns immediately
+ *
+ * print 5
+ *
+ * // back to root = 2
+ *
+ * print 2
+ *
+ * // back to root = 1
+ *
+ * postorder(3)
+ * root = 3
+ *
+ * postorder(null)   // 3.left → returns immediately
+ * postorder(null)   // 3.right → returns immediately
+ *
+ * print 3
+ *
+ * // back to root = 1
+ *
+ * print 1
+ */
