@@ -1,4 +1,4 @@
-package notes.treeBFS;
+package notes.tree.BFS;
 
 import java.util.*;
 

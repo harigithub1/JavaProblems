@@ -16,7 +16,7 @@ public class Main {
         return root;
     }
 
-    // Helper method to print treeDFS (inorder traversal)
+    // Helper method to print DFS (inorder traversal)
     public static void printInorder(TreeNode root) {
         if (root == null) return;
         printInorder(root.left);

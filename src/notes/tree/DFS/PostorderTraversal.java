@@ -1,4 +1,4 @@
-package notes.treeDFS;
+package notes.tree.DFS;
 
 public class PostorderTraversal {
 

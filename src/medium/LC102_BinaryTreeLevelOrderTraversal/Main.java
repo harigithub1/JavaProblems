@@ -35,7 +35,7 @@ class Main {
 
     public static void main(String[] args) {
           /*
-            Build this treeDFS:
+            Build this DFS:
                   3
                  / \
                 9  20
