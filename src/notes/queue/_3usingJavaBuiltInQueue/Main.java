@@ -1,4 +1,4 @@
-package notes.queue.usingJavaBuiltInQueue;
+package notes.queue._3usingJavaBuiltInQueue;
 
 import java.util.*;
 

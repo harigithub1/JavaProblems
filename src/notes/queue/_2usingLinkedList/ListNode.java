@@ -1,4 +1,4 @@
-package notes.queue.usingLinkedList;
+package notes.queue._2usingLinkedList;
 
 public class ListNode {
     int data;

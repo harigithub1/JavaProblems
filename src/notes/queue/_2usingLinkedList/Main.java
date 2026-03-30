@@ -1,4 +1,4 @@
-package notes.queue.usingLinkedList;
+package notes.queue._2usingLinkedList;
 
 class Main {
     ListNode front, rear;

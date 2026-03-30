@@ -1,10 +1,10 @@
-package notes.queue.usingArray;
-class Main {
+package notes.queue._1usingArray;
+class QueueArray {
     int front, rear, size;
     int capacity;
     int[] arr;
 
-    Main(int capacity) {
+    QueueArray(int capacity) {
         this.capacity = capacity;
         front = 0;
         size = 0;
@@ -50,5 +50,31 @@ class Main {
     int rear() {
         if (isEmpty()) return -1;
         return arr[rear];
+    }
+
+    public static void main(String[] args) {
+        QueueArray q = new QueueArray(5);
+
+        q.enqueue(10);
+        q.enqueue(20);
+        q.enqueue(30);
+        q.enqueue(40);
+        q.enqueue(50);
+
+        System.out.println("Front element: " + q.front());
+        System.out.println("Rear element: " + q.rear());
+
+        System.out.println(q.dequeue() + " removed");
+        System.out.println(q.dequeue() + " removed");
+
+        q.enqueue(60);
+        q.enqueue(70);
+
+        System.out.println("Front element: " + q.front());
+        System.out.println("Rear element: " + q.rear());
+
+        while (!q.isEmpty()) {
+            System.out.println(q.dequeue() + " removed");
+        }
     }
 }
