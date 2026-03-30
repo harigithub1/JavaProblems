@@ -1,34 +1,26 @@
 package practice;
+
+/**
+ *           1
+ *          / \
+ *         2   3
+ *        / \
+ *       4   5
+ */
+
 public class Main{
-    public static ListNode reverseList(ListNode head){
-        ListNode prevNode = null;
-        ListNode currNode = head;
-        while (currNode!=null){
-            ListNode nextNode = currNode.next;
-            currNode.next=prevNode;
-            prevNode=currNode;
-            currNode=nextNode;
-        }
-        return prevNode;
-    }
-    public static void printList(ListNode head){
-        while (head!=null){
-            System.out.println(head.val);
-            head=head.next;
-        }
+    public static void preOrder(TreeNode root){
+        if(root==null) return;
+        preOrder(root.left);
+        System.out.println(root.val);
+        preOrder(root.right);
     }
     public static void main(String args[]){
-        ListNode head = new ListNode(1);
-        ListNode second = new ListNode(2);
-        ListNode third = new ListNode(3);
-        ListNode fourth = new ListNode(4);
-        ListNode fifth = new ListNode(5);
-        head.next=second;
-        second.next =third;
-        third.next=fourth;
-        fourth.next=fifth;
-        ListNode reversedList = reverseList(head);
-        printList(reversedList);
-
+        TreeNode root = new TreeNode(1);
+        root.left=new TreeNode(2);
+        root.right=new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right=new TreeNode(5);
+        preOrder(root);
     }
 }

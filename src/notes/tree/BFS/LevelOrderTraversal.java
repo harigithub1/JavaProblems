@@ -1,10 +1,13 @@
 package notes.tree.BFS;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Queue;
 
 public class LevelOrderTraversal {
 
-    public List<Integer> levelOrder(TreeNode root) {
+    public static List<Integer> levelOrder(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
 
@@ -23,6 +26,13 @@ public class LevelOrderTraversal {
     }
 
     public static void main(String[] args) {
+        /**
+         *         1
+         *        / \
+         *       2   3
+         *      / \   \
+         *     4   5   6
+         */
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
@@ -30,7 +40,6 @@ public class LevelOrderTraversal {
         root.left.right = new TreeNode(5);
         root.right.right = new TreeNode(6);
 
-        LevelOrderTraversal obj = new LevelOrderTraversal();
-        System.out.println(obj.levelOrder(root));
+        System.out.println(levelOrder(root));
     }
 }
