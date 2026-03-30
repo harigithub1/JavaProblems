@@ -13,15 +13,15 @@ class Main {
         if (root == null) return result;
 
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
+        queue.offer(root); //offer(e) Inserts element (returns false if fails)
 
         while (!queue.isEmpty()) {
             int size = queue.size();
             List<Integer> level = new ArrayList<>();
 
             for (int i = 0; i < size; i++) {
-                TreeNode current = queue.poll();
-                level.add(current.val);
+                TreeNode current = queue.poll(); //poll() Removes head (returns null if empty)
+                level.add(current.val); //add(e) Inserts element (throws exception if fails)
 
                 if (current.left != null) queue.offer(current.left);
                 if (current.right != null) queue.offer(current.right);
