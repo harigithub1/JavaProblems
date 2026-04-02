@@ -3,16 +3,13 @@ package easy.LC226_InvertBinaryTree;
 public class Main {
     public static TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
-
         // Swap left and right
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
-
         // Recurse on children
         invertTree(root.left);
         invertTree(root.right);
-
         return root;
     }
 
@@ -31,8 +28,7 @@ public class Main {
              2     7
             / \   / \
            1   3 6   9
-        */
-
+        */  
         TreeNode root = new TreeNode(4);
         root.left = new TreeNode(2);
         root.right = new TreeNode(7);
