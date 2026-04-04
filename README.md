@@ -22,7 +22,7 @@ Merge Intervals  Leetcode#56 Medium
 
 Trapping Rain Water   Leetcode#42 Hard
 
-🌳 2. Trees & Binary Search Trees (Extremely Important)
+🔥 2. Trees & Binary Search Trees (Extremely Important)
 
 Binary Tree Level Order Traversal Leetcode#102 Medium
 
@@ -32,15 +32,15 @@ Validate Binary Search Tree Leetcode#98 Medium
 
 Lowest Common Ancestor (LCA)  Leetcode#236 Medium
 
-Invert Binary Tree Leetcode#226 easy (Blind75)
+✅ Invert Binary Tree Leetcode#226 easy (Blind75)
 
 Serialize and Deserialize Binary Tree Leetcode#297 Hard
 
-Diameter of Binary Tree Leetcode#543 easy (NeetCode150)
+✅ Diameter of Binary Tree Leetcode#543 easy (NeetCode150)
 
 Binary Tree Right Side View Leetcode#199 Medium
 
-🔗 3. Linked List (Very Common)
+🔥  3. Linked List (Very Common)
 
 ✅ Pattern-Three-Pointer: Reverse Linked List Leetcode#206 easy (Blind75,NeetCode150)
 
@@ -54,7 +54,7 @@ Copy List with Random Pointer Leetcode#138 Medium
 
 LRU Cache Leetcode#146 Medium
 
-🧠 4. Dynamic Programming (FAANG Favorite)
+🔥  4. Dynamic Programming (FAANG Favorite)
 
 ✅ Pattern-Fibonacci Pattern:Climbing Stairs Leetcode#70 easy (Blind75,NeetCode150)
 
@@ -72,7 +72,7 @@ Edit Distance Leetcode#72 Medium
 
 Decode Ways Leetcode#91 Medium
 
-🌐 5. Graphs (Very High Signal)
+🔥  5. Graphs (Very High Signal)
 
 Number of Islands Leetcode#200 Medium
 
@@ -88,7 +88,7 @@ Accounts Merge Leetcode#721 Medium
 
 Word Ladder Leetcode#127 Hard
 
-📚 6. Stack & Queue
+🔥  6. Stack & Queue
 
 ✅ Pattern-Stack Pattern: Valid Parentheses Leetcode#20 easy (Blind75,NeetCode150)
 
@@ -100,7 +100,7 @@ Largest Rectangle in Histogram Leetcode#84 Hard
 
 Sliding Window Maximum Leetcode#239 Hard
 
-🔍 7. Binary Search (Very Common)
+🔥  7. Binary Search (Very Common)
 
 Search in Rotated Sorted Array Leetcode#33 Medium
 
@@ -112,7 +112,7 @@ Koko Eating Bananas Leetcode#875 Medium
 
 Capacity To Ship Packages Within D Days Leetcode#1011 Medium
 
-🏆 8. Backtracking
+🔥 8. Backtracking
 
 Subsets Leetcode#78 Medium
 
