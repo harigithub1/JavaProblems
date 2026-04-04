@@ -28,3 +28,38 @@ public class LC026_RemoveDuplicatesFromSortedArray {
         }
     }
 }
+/**
+ *
+ * Trace:
+ * i=0, j=1
+ * skip
+ *
+ * i=0, j=2
+ * i=1
+ * [0,1]
+ *
+ * i=1, j=3
+ * skip
+ *
+ * i=1, j=4
+ * skip
+ *
+ * i=1, j=5
+ * i=2
+ * [0,1,2]
+ *
+ * i=2, j=6
+ * skip
+ *
+ * i=2, j=7
+ * i=3
+ * [0,1,2,3]
+ *
+ * i=3, j=8
+ * skip
+ *
+ * i=3, j=9
+ * i=4
+ * [0,1,2,3,4]
+ *
+ */
