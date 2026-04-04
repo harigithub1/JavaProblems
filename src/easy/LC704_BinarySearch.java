@@ -3,14 +3,10 @@ package easy;
 public class LC704_BinarySearch {
 
     public static int search(int[] nums, int target) {
-
         int left = 0;
         int right = nums.length - 1;
-
         while (left <= right) {
-
             int mid = left + (right - left) / 2; // avoids overflow
-
             if (nums[mid] == target) {
                 return mid;
             } else if (nums[mid] < target) {
@@ -19,7 +15,6 @@ public class LC704_BinarySearch {
                 right = mid - 1;  // search left half
             }
         }
-
         return -1; // target not found
     }
 
@@ -29,3 +24,6 @@ public class LC704_BinarySearch {
         System.out.println(search(nums, target));
     }
 }
+/**
+ * Pattern: Divide and Conquer
+ */
