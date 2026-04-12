@@ -14,15 +14,16 @@ public class LC003_LongestSubstringWithoutRepeatingChar {
                 left++;
             }
             set.add(c);
+            System.out.println(set);
             maxLength = Math.max(maxLength, right - left + 1);
         }
         return maxLength;
     }
 
     public static void main(String[] args) {
-//        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
 //        System.out.println(lengthOfLongestSubstring("bbbbb"));
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+//        System.out.println(lengthOfLongestSubstring("pwwkew"));
     }
 }
 /**
