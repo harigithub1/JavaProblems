@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow.Arrays._03_Kadane_Algorithm;
+package _00Arrays._03_Kadane_Algorithm;
 
 public class LC053_MaximumSubArraySum {
     public static int maxSubArray(int[] nums) {

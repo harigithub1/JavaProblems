@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow.Arrays._01_Core_Patterns;
+package _00Arrays._01_Core_Patterns;
 
 public class LC189_RotateArray {
     public static void rotate(int[] nums, int k) {

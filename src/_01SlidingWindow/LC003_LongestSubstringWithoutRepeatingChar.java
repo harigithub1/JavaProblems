@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow.SlidingWindow.Fixed_And_Variable_Window;
+package _01SlidingWindow;
 
 import java.util.HashSet;
 import java.util.Set;

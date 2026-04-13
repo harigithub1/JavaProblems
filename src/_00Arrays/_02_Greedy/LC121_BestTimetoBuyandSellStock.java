@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow.Arrays._02_Greedy;
+package _00Arrays._02_Greedy;
 
 public class LC121_BestTimetoBuyandSellStock {
     public static int maxProfit(int[] prices) {

@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow.Arrays._01_Core_Patterns;
+package _00Arrays._01_Core_Patterns;
 
 class LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
