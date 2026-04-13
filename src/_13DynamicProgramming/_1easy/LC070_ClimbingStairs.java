@@ -1,4 +1,4 @@
-package _12DynamicProgramming._1easy;
+package _13DynamicProgramming._1easy;
 
 public class LC070_ClimbingStairs {
     public static int climbStairs(int n) {
