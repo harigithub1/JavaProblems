@@ -1,11 +1,8 @@
 package _01ArraysAndSlidingWindow._2medium;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.HashMap;
 
-public class LC003_LongestSubstringWithoutRepeatingCharV2 {
+public class LC003_LongestSubstringWithoutRepeatingChar_OptimizedVersion {
     public static int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         int left = 0, maxLength = 0;
