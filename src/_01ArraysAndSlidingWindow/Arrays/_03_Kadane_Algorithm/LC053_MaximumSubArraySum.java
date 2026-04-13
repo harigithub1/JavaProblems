@@ -1,4 +1,4 @@
-package _13DynamicProgramming._2medium;
+package _01ArraysAndSlidingWindow.Arrays._03_Kadane_Algorithm;
 
 public class LC053_MaximumSubArraySum {
     public static int maxSubArray(int[] nums) {
@@ -23,8 +23,8 @@ public class LC053_MaximumSubArraySum {
 }
 /**
  * ⚡ Pattern Name Summary
- * ✅ Primary Pattern: Dynamic Programming (Kadane’s Algorithm)
- * ✅ Secondary Nature: Greedy optimization
+ * ✅ Primary Pattern: Dynamic Programming (_03_Kadane_Algorithm’s Algorithm)
+ * ✅ Secondary Nature: _02_Greedy optimization
  *
  * 🧩 Where Else This Pattern Appears
  * You’ll see this same pattern in problems like:

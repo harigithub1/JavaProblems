@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow._2medium;
+package _01ArraysAndSlidingWindow.SlidingWindow.Fixed_And_Variable_Window;
 
 import java.util.HashSet;
 import java.util.Set;

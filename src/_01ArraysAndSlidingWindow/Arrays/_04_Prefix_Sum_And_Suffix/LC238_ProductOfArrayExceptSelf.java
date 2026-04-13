@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow._2medium;
+package _01ArraysAndSlidingWindow.Arrays._04_Prefix_Sum_And_Suffix;
 
 public class LC238_ProductOfArrayExceptSelf {
     public static int[] productExceptSelf(int[] nums) {

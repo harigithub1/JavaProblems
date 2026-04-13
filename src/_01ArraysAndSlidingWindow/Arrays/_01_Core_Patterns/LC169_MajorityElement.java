@@ -1,4 +1,4 @@
-package _01ArraysAndSlidingWindow._0warmup;
+package _01ArraysAndSlidingWindow.Arrays._01_Core_Patterns;
 
 class LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
@@ -43,7 +43,7 @@ class LC169_MajorityElement {
  * 👉 Boyer-Moore Majority Vote
  *
  * 2️⃣ Algorithm Type
- * 👉 Greedy Algorithm
+ * 👉 _02_Greedy Algorithm
  *
  * Because it makes local decisions without backtracking.
  *
