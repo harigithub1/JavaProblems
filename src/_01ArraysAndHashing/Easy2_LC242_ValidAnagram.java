@@ -1,6 +1,6 @@
 package _01ArraysAndHashing;
 
-public class Easy_LC242_ValidAnagram {
+public class Easy2_LC242_ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;

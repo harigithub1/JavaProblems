@@ -1,6 +1,6 @@
 package _01ArraysAndHashing;
 
-public class Medium_LC238_ProductOfArrayExceptSelf {
+public class Medium7_LC238_ProductOfArrayExceptSelf {
     public static int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
