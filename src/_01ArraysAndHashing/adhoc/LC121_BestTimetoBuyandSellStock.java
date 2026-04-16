@@ -1,4 +1,4 @@
-package _01ArraysAndHashing;
+package _01ArraysAndHashing.adhoc;
 
 public class LC121_BestTimetoBuyandSellStock {
     public static int maxProfit(int[] prices) {

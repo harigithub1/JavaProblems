@@ -1,4 +1,4 @@
-package _01ArraysAndHashing;
+package _01ArraysAndHashing.adhoc;
 
 public class LC189_RotateArray {
     public static void rotate(int[] nums, int k) {

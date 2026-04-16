@@ -1,4 +1,4 @@
-package _01ArraysAndHashing;
+package _01ArraysAndHashing.adhoc;
 
 class LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
