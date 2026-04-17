@@ -19,12 +19,22 @@ public class Medium2_LC347_TopKFrequentElements {
             bucket[freq].add(key);
         }
 
+        System.out.println("bucket");
+        for(List<Integer> l: bucket) {
+            System.out.println(l);
+        }
+
         // Step 3: Collect top k elements
         List<Integer> result = new ArrayList<>();
         for (int i = bucket.length - 1; i >= 0 && result.size() < k; i--) {
             if (bucket[i] != null) {
                 result.addAll(bucket[i]);
             }
+        }
+
+        System.out.println("result");
+        for(List<Integer> l: bucket) {
+            System.out.println(l);
         }
 
         // Convert to array
@@ -37,15 +47,16 @@ public class Medium2_LC347_TopKFrequentElements {
         int[] nums1 = {1,1,1,2,2,3};
         int k1 = 2;
         System.out.println(Arrays.toString(topKFrequent(nums1, k1)));
-
-        // Example 2
-        int[] nums2 = {1};
-        int k2 = 1;
-        System.out.println(Arrays.toString(topKFrequent(nums2, k2)));
-
-        // Example 3
-        int[] nums3 = {1,2,1,2,1,2,3,1,3,2};
-        int k3 = 2;
-        System.out.println(Arrays.toString(topKFrequent(nums3, k3)));
     }
 }
+/**
+ *
+ * Step 3: Collect top k elements (because bucket may contain empty check below comments [ null, [3], [2], [1], null, null, null] for input         int[] nums1 = {1,1,1,2,2,3}; )
+ * bucket[0] = null
+ * bucket[1] = [3]
+ * bucket[2] = [2]
+ * bucket[3] = [1]
+ * bucket[4] = null
+ * bucket[5] = null
+ * bucket[6] = null
+ */
