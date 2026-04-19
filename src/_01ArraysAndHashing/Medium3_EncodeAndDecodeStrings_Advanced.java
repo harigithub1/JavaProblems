@@ -35,11 +35,9 @@ public class Medium3_EncodeAndDecodeStrings_Advanced {
     public static void main(String[] args) {
         // Input
         List<String> input = Arrays.asList("leet", "code", "love", "you");
-
         // Encode
         String encoded = encode(input);
         System.out.println("Encoded: " + encoded);
-
         // Decode
         List<String> decoded = decode(encoded);
         System.out.println("Decoded: " + decoded);
