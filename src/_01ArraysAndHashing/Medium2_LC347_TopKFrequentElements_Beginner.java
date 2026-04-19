@@ -2,6 +2,7 @@ package _01ArraysAndHashing;
 import java.util.*;
 
 public class Medium2_LC347_TopKFrequentElements_Beginner {
+
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> count = new HashMap<>();
         for (int num : nums) {
@@ -20,9 +21,8 @@ public class Medium2_LC347_TopKFrequentElements_Beginner {
         }
         return res;
     }
-    public static void main(String[] args) {
 
-        // Example 1
+    public static void main(String[] args) {
         int[] nums1 = {1,1,1,2,2,3};
         int k1 = 2;
         System.out.println(Arrays.toString(topKFrequent(nums1, k1)));
