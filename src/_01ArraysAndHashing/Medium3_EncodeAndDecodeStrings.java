@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Medium3_EncodeAndDecodeStrings_Advanced {
+public class Medium3_EncodeAndDecodeStrings {
     // Encodes a list of strings to a single string.
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
