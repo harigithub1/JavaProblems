@@ -1,7 +1,7 @@
 package _01ArraysAndHashing;
 import java.util.*;
 
-public class Medium2_LC347_TopKFrequentElements_Beginner {
+public class Medium2_LC347_TopKFrequentElements_NeetCodeSol {
 
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();

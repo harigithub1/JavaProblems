@@ -1,7 +1,7 @@
 package _01ArraysAndHashing;
 import java.util.*;
 
-public class Medium3_EncodeAndDecodeStrings_Beginner {
+public class Medium3_EncodeAndDecodeStrings_NeetCodeSol {
 
     public static String encode(List<String> strs) {
         if (strs.isEmpty()) return "";
