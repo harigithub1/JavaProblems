@@ -2,7 +2,7 @@ package _03SlidingWindow;
 
 import java.util.HashMap;
 
-public class LC003_LongestSubstringWithoutRepeatingChar_OptimizedVersion {
+public class Medium1_LC003_LongestSubstringWithoutRepeatingChar {
     public static int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         int left = 0, maxLength = 0;

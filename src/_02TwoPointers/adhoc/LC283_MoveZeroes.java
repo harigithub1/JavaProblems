@@ -1,4 +1,4 @@
-package _02TwoPointers;
+package _02TwoPointers.adhoc;
 
 public class LC283_MoveZeroes {
     // O(n) time, O(1) space

@@ -1,6 +1,6 @@
-package _01ArraysAndHashing.adhoc;
+package _03SlidingWindow;
 
-public class LC121_BestTimetoBuyandSellStock {
+public class Easy1_LC121_BestTimetoBuyandSellStock {
     public static int maxProfit(int[] prices) {
         if (prices == null || prices.length == 0) return 0;
         int minPrice = Integer.MAX_VALUE;

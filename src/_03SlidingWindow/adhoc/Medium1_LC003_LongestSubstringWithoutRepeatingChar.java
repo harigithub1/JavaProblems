@@ -1,9 +1,9 @@
-package _03SlidingWindow;
+package _03SlidingWindow.adhoc;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class LC003_LongestSubstringWithoutRepeatingChar {
+public class Medium1_LC003_LongestSubstringWithoutRepeatingChar {
     public static int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         int left = 0, maxLength = 0;

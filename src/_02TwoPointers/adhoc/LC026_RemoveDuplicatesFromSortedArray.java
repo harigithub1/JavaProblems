@@ -1,4 +1,4 @@
-package _02TwoPointers;
+package _02TwoPointers.adhoc;
 
 public class LC026_RemoveDuplicatesFromSortedArray {
     //Pattern: Two Pointer Technique
