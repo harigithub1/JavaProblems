@@ -1,4 +1,4 @@
-package _03SlidingWindow_DSAHigh_SDHigh;
+package _03SlidingWindow_DSAVeryHigh_SDLow;
 
 import java.util.HashMap;
 

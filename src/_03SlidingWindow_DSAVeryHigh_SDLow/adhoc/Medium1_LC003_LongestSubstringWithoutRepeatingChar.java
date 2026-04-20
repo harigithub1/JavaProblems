@@ -1,4 +1,4 @@
-package _03SlidingWindow_DSAHigh_SDHigh.adhoc;
+package _03SlidingWindow_DSAVeryHigh_SDLow.adhoc;
 
 import java.util.HashSet;
 import java.util.Set;

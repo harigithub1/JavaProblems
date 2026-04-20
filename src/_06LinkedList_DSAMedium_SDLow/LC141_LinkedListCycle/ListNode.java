@@ -1,4 +1,4 @@
-package _06LinkedList_DSAHigh_SDMedium.LC141_LinkedListCycle;
+package _06LinkedList_DSAMedium_SDLow.LC141_LinkedListCycle;
 
 // Node class
 class ListNode {

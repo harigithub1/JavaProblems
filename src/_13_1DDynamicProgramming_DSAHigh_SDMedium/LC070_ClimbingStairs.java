@@ -1,4 +1,4 @@
-package _13_1DDynamicProgramming_DSAVeryHigh_SDLow;
+package _13_1DDynamicProgramming_DSAHigh_SDMedium;
 
 public class LC070_ClimbingStairs {
     public static int climbStairs(int n) {

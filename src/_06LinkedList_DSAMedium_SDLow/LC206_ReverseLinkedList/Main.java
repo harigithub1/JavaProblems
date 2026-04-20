@@ -1,4 +1,4 @@
-package _06LinkedList_DSAHigh_SDMedium.LC206_ReverseLinkedList;
+package _06LinkedList_DSAMedium_SDLow.LC206_ReverseLinkedList;
 
 public class Main {
 
