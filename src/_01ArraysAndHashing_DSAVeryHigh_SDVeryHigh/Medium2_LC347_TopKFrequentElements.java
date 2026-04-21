@@ -9,17 +9,17 @@ public class Medium2_LC347_TopKFrequentElements {
             count.put(num, count.getOrDefault(num, 0) + 1);
         }
 
-        List<int[]> arr = new ArrayList<>();
+        List<int[]> list = new ArrayList<>();
         for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
-            arr.add(new int[]{entry.getValue(), entry.getKey()});
+            list.add(new int[]{entry.getValue(), entry.getKey()});
         }
-        arr.sort((a, b) -> b[0] - a[0]);
+        list.sort((a, b) -> b[0] - a[0]);
 
-        int[] res = new int[k];
+        int[] arr = new int[k];
         for (int i = 0; i < k; i++) {
-            res[i] = arr.get(i)[1];
+            arr[i] = list.get(i)[1];
         }
-        return res;
+        return arr;
     }
 
     public static void main(String[] args) {
