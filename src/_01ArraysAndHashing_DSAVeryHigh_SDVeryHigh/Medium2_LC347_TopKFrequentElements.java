@@ -30,13 +30,3 @@ public class Medium2_LC347_TopKFrequentElements {
         System.out.println(Arrays.toString(topKFrequent(nums1, k1)));
     }
 }
-/**
- * Step 3: Collect top k elements (because bucket may contain empty check below comments [ null, [3], [2], [1], null, null, null] for input         int[] nums1 = {1,1,1,2,2,3}; )
- * bucket[0] = null
- * bucket[1] = [3]
- * bucket[2] = [2]
- * bucket[3] = [1]
- * bucket[4] = null
- * bucket[5] = null
- * bucket[6] = null
- */
