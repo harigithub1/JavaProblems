@@ -27,3 +27,20 @@ public class Medium4_LC238_ProductOfArrayExceptSelf_Beginner {
         for (int v : res) System.out.print(v + " "); // prints: 24 12 8 6
     }
 }
+/**
+ * pref[0] = 1
+ * i=1 → pref[1] = nums[0] * pref[0] = 1 * 1 = 1
+ * i=2 → pref[2] = nums[1] * pref[1] = 2 * 1 = 2
+ * i=3 → pref[3] = nums[2] * pref[2] = 3 * 2 = 6
+ *
+ * suff[3] = 1
+ * i=2 → suff[2] = nums[3] * suff[3] = 4 * 1 = 4
+ * i=1 → suff[1] = nums[2] * suff[2] = 3 * 4 = 12
+ * i=0 → suff[0] = nums[1] * suff[1] = 2 * 12 = 24
+ *
+ * res
+ * i=0 → 1 * 24 = 24
+ * i=1 → 1 * 12 = 12
+ * i=2 → 2 * 4 = 8
+ * i=3 → 6 * 1 = 6  
+ */
