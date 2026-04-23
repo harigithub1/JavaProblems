@@ -34,7 +34,7 @@ public class Medium3_EncodeAndDecodeStrings {
 
     public static void main(String[] args) {
         // Input
-        List<String> input = Arrays.asList("leet", "code", "love", "you");
+        List<String> input = Arrays.asList("hello", "world");
         // Encode
         String encoded = encode(input);
         System.out.println("Encoded: " + encoded);
