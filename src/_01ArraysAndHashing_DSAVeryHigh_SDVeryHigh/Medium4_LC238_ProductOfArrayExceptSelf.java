@@ -17,7 +17,6 @@ public class Medium4_LC238_ProductOfArrayExceptSelf {
         }
         return result;
     }
-
     // quick test
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4};
