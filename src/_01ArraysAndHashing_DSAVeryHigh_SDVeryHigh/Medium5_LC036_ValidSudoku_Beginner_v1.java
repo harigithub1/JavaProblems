@@ -7,27 +7,27 @@ public class Medium5_LC036_ValidSudoku_Beginner_v1 {
         Map<Integer, Set<Character>> rows = new HashMap<>();
         Map<Integer, Set<Character>> cols = new HashMap<>();
         Map<String, Set<Character>> squares = new HashMap<>();
-        for (int r = 0; r < 9; r++) {
-            for (int c = 0; c < 9; c++) {
-                if (board[r][c] == '.') continue;
-                char val = board[r][c];
-                String squareKey = (r / 3) + "," + (c / 3);
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] == '.') continue;
+                char val = board[i][j];
+                String squareKey = (i / 3) + "," + (j / 3);
                 // 🔹 ROW
-                if (!rows.containsKey(r)) {
-                    rows.put(r, new HashSet<>());
+                if (!rows.containsKey(i)) {
+                    rows.put(i, new HashSet<>());
                 }
-                if (rows.get(r).contains(val)) {
+                if (rows.get(i).contains(val)) {
                     return false;
                 }
-                rows.get(r).add(val);
+                rows.get(i).add(val);
                 // 🔹 COLUMN
-                if (!cols.containsKey(c)) {
-                    cols.put(c, new HashSet<>());
+                if (!cols.containsKey(j)) {
+                    cols.put(j, new HashSet<>());
                 }
-                if (cols.get(c).contains(val)) {
+                if (cols.get(j).contains(val)) {
                     return false;
                 }
-                cols.get(c).add(val);
+                cols.get(j).add(val);
                 // 🔹 SQUARE
                 if (!squares.containsKey(squareKey)) {
                     squares.put(squareKey, new HashSet<>());
