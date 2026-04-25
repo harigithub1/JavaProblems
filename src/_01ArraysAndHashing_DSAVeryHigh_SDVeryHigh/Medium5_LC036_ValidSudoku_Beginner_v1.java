@@ -10,32 +10,31 @@ public class Medium5_LC036_ValidSudoku_Beginner_v1 {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') continue;
-                char val = board[i][j];
-                String squareKey = (i / 3) + "," + (j / 3);
                 // 🔹 ROW
                 if (!rows.containsKey(i)) {
                     rows.put(i, new HashSet<>());
                 }
-                if (rows.get(i).contains(val)) {
+                if (rows.get(i).contains(board[i][j])) {
                     return false;
                 }
-                rows.get(i).add(val);
+                rows.get(i).add(board[i][j]);
                 // 🔹 COLUMN
                 if (!cols.containsKey(j)) {
                     cols.put(j, new HashSet<>());
                 }
-                if (cols.get(j).contains(val)) {
+                if (cols.get(j).contains(board[i][j])) {
                     return false;
                 }
-                cols.get(j).add(val);
+                cols.get(j).add(board[i][j]);
                 // 🔹 SQUARE
+                String squareKey = (i / 3) + "," + (j / 3);
                 if (!squares.containsKey(squareKey)) {
                     squares.put(squareKey, new HashSet<>());
                 }
-                if (squares.get(squareKey).contains(val)) {
+                if (squares.get(squareKey).contains(board[i][j])) {
                     return false;
                 }
-                squares.get(squareKey).add(val);
+                squares.get(squareKey).add(board[i][j]);
             }
         }
         return true;
