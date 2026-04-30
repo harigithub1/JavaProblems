@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 // Encodes a list of strings to a single string.
-public class Medium3_EncodeAndDecodeStringsBeginner {
+public class Medium3_LC___EncodeAndDecodeStringsBeginner {
     public static String encode(List<String> strs) {
         if (strs.isEmpty()) return "";
         StringBuilder res = new StringBuilder();
