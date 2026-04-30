@@ -13,6 +13,7 @@ public class Medium3_LC___EncodeAndDecodeStrings {
         }
         return sb.toString();
     }
+
     // Decodes a single string to a list of strings.
     public static List<String> decode(String s) {
         List<String> result = new ArrayList<>();
@@ -24,10 +25,8 @@ public class Medium3_LC___EncodeAndDecodeStrings {
                 j++;
             }
             int length = Integer.parseInt(s.substring(i, j));
-            j++; // skip '#'
-            String word = s.substring(j, j + length);
-            result.add(word);
-            i = j + length;
+            result.add(s.substring(j + 1, j + 1 + length));
+            i = j + 1 + length;
         }
         return result;
     }
