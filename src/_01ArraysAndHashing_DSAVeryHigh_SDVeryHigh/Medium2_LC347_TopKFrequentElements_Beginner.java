@@ -23,8 +23,6 @@ public class Medium2_LC347_TopKFrequentElements_Beginner {
     }
 
     public static void main(String[] args) {
-
-        // Example 1
         int[] nums1 = {1, 1, 1, 2, 2, 3};
         int k1 = 2;
         System.out.println(Arrays.toString(topKFrequent(nums1, k1)));
