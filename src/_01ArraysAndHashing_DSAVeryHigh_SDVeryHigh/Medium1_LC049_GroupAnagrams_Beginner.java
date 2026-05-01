@@ -18,7 +18,6 @@ public class Medium1_LC049_GroupAnagrams_Beginner {
     public static void main(String[] args) {
         String[] input = {"eat","tea","tan","ate","nat","bat"};
         List<List<String>> result = groupAnagrams(input);
-        // Print result
         for (List<String> group : result) {
             System.out.println(group);
         }
