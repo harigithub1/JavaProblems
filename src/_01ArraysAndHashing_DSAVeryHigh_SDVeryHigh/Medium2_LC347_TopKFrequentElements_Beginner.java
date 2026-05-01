@@ -5,19 +5,19 @@ import java.util.*;
 public class Medium2_LC347_TopKFrequentElements_Beginner {
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> count = new HashMap<>();
-        for (int num : nums) {
-            count.put(num, count.getOrDefault(num, 0) + 1);
+        for (int n : nums) {
+            count.put(n, count.getOrDefault(n, 0) + 1);
         }
 
         List<int[]> list = new ArrayList<>();
         for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
-            list.add(new int[]{entry.getValue(), entry.getKey()});
+            list.add(new int[]{entry.getKey(), entry.getValue()});
         }
-        list.sort((a, b) -> b[0] - a[0]);
+        list.sort((a, b) -> b[1] - a[1]);
 
         int[] arr = new int[k];
         for (int i = 0; i < k; i++) {
-            arr[i] = list.get(i)[1];
+            arr[i] = list.get(i)[0];
         }
         return arr;
     }
