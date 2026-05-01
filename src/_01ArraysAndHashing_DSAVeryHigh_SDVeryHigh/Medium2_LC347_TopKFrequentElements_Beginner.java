@@ -4,13 +4,13 @@ import java.util.*;
 
 public class Medium2_LC347_TopKFrequentElements_Beginner {
     public static int[] topKFrequent(int[] nums, int k) {
-        Map<Integer, Integer> count = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
-            count.put(n, count.getOrDefault(n, 0) + 1);
+            map.put(n, map.getOrDefault(n, 0) + 1);
         }
 
         List<int[]> list = new ArrayList<>();
-        for (Map.Entry<Integer, Integer> entry : count.entrySet()) {
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             list.add(new int[]{entry.getKey(), entry.getValue()});
         }
         list.sort((a, b) -> b[1] - a[1]);
