@@ -1,4 +1,4 @@
-package _02TwoPointers_DSAVeryHigh_SDLow.adhoc;
+package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250;
 
 public class LC026_RemoveDuplicatesFromSortedArray {
     //Pattern: Two Pointer Technique

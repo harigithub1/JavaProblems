@@ -1,4 +1,4 @@
-package _03SlidingWindow_DSAVeryHigh_SDLow.adhoc;
+package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.adhoc;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 class LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
