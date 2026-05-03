@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode150;
 
 public class Easy2_LC242_ValidAnagram {
     public static boolean isAnagram(String s, String t) {
