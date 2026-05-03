@@ -1,4 +1,4 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Medium560SubarraySumEqualsK {
+public class Medium6_LC304_RangeSumQuery2DImmutable {
 }

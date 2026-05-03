@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-class LC169_MajorityElement {
+class Easy7_LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
         int candidate = 0;
         int count = 0;

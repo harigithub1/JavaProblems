@@ -1,4 +1,4 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Easy705DesignHashSet {
+public class Medium10_LC122_BestTimetoBuyandSellStock2 {
 }
