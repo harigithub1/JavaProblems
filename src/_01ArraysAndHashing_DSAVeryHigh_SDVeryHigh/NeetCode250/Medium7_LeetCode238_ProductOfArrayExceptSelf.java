@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Medium7_LC238_ProductOfArrayExceptSelf {
+public class Medium7_LeetCode238_ProductOfArrayExceptSelf {
     public static int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
@@ -49,3 +49,4 @@ public class Medium7_LC238_ProductOfArrayExceptSelf {
  * ✅ Two-pass array traversal
  * ✅ Space optimization (using output array)
  */
+

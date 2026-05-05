@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Medium5_LC_271_EncodeAndDecodeStrings {
+public class Medium5_LeetCode_271_EncodeAndDecodeStrings {
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
         for (String s : strs) {
@@ -36,3 +36,4 @@ public class Medium5_LC_271_EncodeAndDecodeStrings {
         System.out.println("Decoded: " + decoded);
     }
 }
+

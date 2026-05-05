@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Easy2_LC217_ContainsDuplicate {
+public class Easy2_LeetCode217_ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
@@ -23,10 +23,11 @@ public class Easy2_LC217_ContainsDuplicate {
 /**
  * You can describe this as:
  *
- * 🟢 “HashSet Lookup Pattern”
- * 🟢 “Seen Before Pattern”
- * 🟢 “Duplicate Detection Using Set”
+ * 🟢 "HashSet Lookup Pattern"
+ * 🟢 "Seen Before Pattern"
+ * 🟢 "Duplicate Detection Using Set"
  */
 /**
  * //set.add(num) will add num to the set and returns true if num is not present already
  */
+

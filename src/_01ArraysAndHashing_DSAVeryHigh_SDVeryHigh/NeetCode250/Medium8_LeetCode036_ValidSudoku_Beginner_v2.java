@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Medium8_LC036_ValidSudoku_Beginner_v2 {
+public class Medium8_LeetCode036_ValidSudoku_Beginner_v2 {
     public static boolean isValidSudoku(char[][] board) {
         Map<Integer, Set<Character>> cols = new HashMap<>();
         Map<Integer, Set<Character>> rows = new HashMap<>();
@@ -43,3 +43,4 @@ public class Medium8_LC036_ValidSudoku_Beginner_v2 {
         System.out.println("Is valid Sudoku? " + result);
     }
 }
+

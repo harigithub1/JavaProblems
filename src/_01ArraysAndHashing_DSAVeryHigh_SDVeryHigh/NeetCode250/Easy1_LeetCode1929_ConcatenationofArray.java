@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 import java.util.Arrays;
 
-public class Easy1_LC1929_ConcatenationofArray {
+public class Easy1_LeetCode1929_ConcatenationofArray {
     public static int[] getConcatenation(int[] nums) {
         int n = nums.length;
         int[] ans = new int[2 * n];
@@ -20,3 +20,4 @@ public class Easy1_LC1929_ConcatenationofArray {
         System.out.println("Output: " + Arrays.toString(result));
     }
 }
+

@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Medium8_LC036_ValidSudoku_Beginner_v1 {
+public class Medium8_LeetCode036_ValidSudoku_Beginner_v1 {
     public static boolean isValidSudoku(char[][] board) {
         Map<Integer, Set<Character>> rows = new HashMap<>();
         Map<Integer, Set<Character>> cols = new HashMap<>();
@@ -92,3 +92,4 @@ public class Medium8_LC036_ValidSudoku_Beginner_v1 {
  * i 8 j 7 add 7 in row[8], col[7], square[2,2]
  * i 8 j 8 add 9 in row[8], col[8], square[2,2]
  */
+

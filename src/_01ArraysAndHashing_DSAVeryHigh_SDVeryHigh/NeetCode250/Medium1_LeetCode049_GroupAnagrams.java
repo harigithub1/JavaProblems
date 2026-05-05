@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 import java.util.*;
 
-public class Medium1_LC049_GroupAnagrams {
+public class Medium1_LeetCode049_GroupAnagrams {
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> res = new HashMap<>();
         for (String s : strs) {
@@ -26,3 +26,4 @@ public class Medium1_LC049_GroupAnagrams {
         }
     }
 }
+

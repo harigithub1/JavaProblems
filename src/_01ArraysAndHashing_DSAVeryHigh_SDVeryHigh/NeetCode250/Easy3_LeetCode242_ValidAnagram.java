@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Easy3_LC242_ValidAnagram {
+public class Easy3_LeetCode242_ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -38,7 +38,7 @@ The standard pattern name for this approach is:
 ✓ Frequency Counting (Hashing) Pattern
 More specifically for strings:
 ✓ Character Frequency Array Pattern
-And in many DSA/interview contexts, it’s also called:
+And in many DSA/interview contexts, it's also called:
 ✓ Counting / Bucket Counting Pattern
 So the best single name to remember is:
 → Frequency Counting Pattern
@@ -55,3 +55,4 @@ for (int count : freq) {
     }
 }
 */
+

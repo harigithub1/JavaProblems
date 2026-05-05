@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-class Easy7_LC169_MajorityElement {
+class Easy7_LeetCode169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
         int candidate = 0;
         int count = 0;
@@ -50,3 +50,4 @@ class Easy7_LC169_MajorityElement {
  * So you can also say:
  * "It's a greedy voting algorithm using Boyer-Moore."
  */
+

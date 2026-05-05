@@ -1,4 +1,5 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Medium6_LC304_RangeSumQuery2DImmutable {
+public class Medium11_LeetCode229_MajorityElement2 {
 }
+

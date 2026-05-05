@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 
-public class Medium4_LC347_TopKFrequentElements {
+public class Medium4_LeetCode347_TopKFrequentElements {
     public static int[] topKFrequent(int[] nums, int k) {
         // Step 1: Count frequency
         Map<Integer, Integer> freqMap = new HashMap<>();
@@ -60,3 +60,4 @@ public class Medium4_LC347_TopKFrequentElements {
  * bucket[5] = null
  * bucket[6] = null
  */
+

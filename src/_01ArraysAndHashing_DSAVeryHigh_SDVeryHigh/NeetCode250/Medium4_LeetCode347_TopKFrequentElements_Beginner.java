@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 import java.util.*;
 
-public class Medium4_LC347_TopKFrequentElements_Beginner {
+public class Medium4_LeetCode347_TopKFrequentElements_Beginner {
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
@@ -28,3 +28,4 @@ public class Medium4_LC347_TopKFrequentElements_Beginner {
         System.out.println(Arrays.toString(topKFrequent(nums1, k1)));
     }
 }
+

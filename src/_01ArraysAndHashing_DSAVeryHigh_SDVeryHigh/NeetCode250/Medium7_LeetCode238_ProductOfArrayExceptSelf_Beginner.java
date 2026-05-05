@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 import java.util.Arrays;
 
-public class Medium7_LC238_ProductOfArrayExceptSelf_Beginner {
+public class Medium7_LeetCode238_ProductOfArrayExceptSelf_Beginner {
     public static int[] productExceptSelf(int[] nums) {
         int l = nums.length;
         int[] res = new int[l];
@@ -48,3 +48,4 @@ public class Medium7_LC238_ProductOfArrayExceptSelf_Beginner {
  * i=2 → 2 * 4 = 8
  * i=3 → 6 * 1 = 6  
  */
+
