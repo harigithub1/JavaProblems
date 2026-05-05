@@ -1,4 +1,4 @@
-package _03SlidingWindow_DSAVeryHigh_SDLow;
+package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250;
 
 public class Easy1_LC121_BestTimetoBuyandSellStock {
     public static int maxProfit(int[] prices) {
