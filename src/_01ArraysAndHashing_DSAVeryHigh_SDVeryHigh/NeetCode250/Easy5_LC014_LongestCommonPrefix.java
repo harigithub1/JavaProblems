@@ -12,13 +12,12 @@ public class Easy5_LC014_LongestCommonPrefix {
         return strs[0];
     }
     public static void main(String[] args) {
-        String[] strs = {"flower", "flow", "flight"};
+        String[] strs = {"flower", "f", "flight"};
         String result = longestCommonPrefix(strs);
         System.out.println("Longest Common Prefix: " + result);
     }
 }
 /**
- * i=0
  *
  * flower
  * s.charAt(0) f
