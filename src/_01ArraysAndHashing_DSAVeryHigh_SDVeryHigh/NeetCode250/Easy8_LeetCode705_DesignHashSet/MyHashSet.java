@@ -23,20 +23,4 @@ public class MyHashSet {
     public boolean contains(int key) {
         return data.contains(key);
     }
-
-    public static void main(String[] args) {
-        MyHashSet myHashSet = new MyHashSet();
-
-        myHashSet.add(1);
-        myHashSet.add(2);
-
-        System.out.println(myHashSet.contains(1)); // true
-        System.out.println(myHashSet.contains(3)); // false
-
-        myHashSet.add(2);
-        System.out.println(myHashSet.contains(2)); // true
-
-        myHashSet.remove(2);
-        System.out.println(myHashSet.contains(2)); // false
-    }
 }
