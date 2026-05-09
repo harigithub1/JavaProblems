@@ -6,11 +6,11 @@ import java.util.Set;
 public class Easy2_LeetCode217_ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            if (set.contains(num)) {
+        for (int n : nums) {
+            if (set.contains(n)) {
                 return true;
             }
-            set.add(num);
+            set.add(n);
         }
         return false;
     }
