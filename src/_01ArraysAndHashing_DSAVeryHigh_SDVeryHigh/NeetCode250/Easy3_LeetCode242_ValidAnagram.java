@@ -5,13 +5,13 @@ public class Easy3_LeetCode242_ValidAnagram {
         if (s.length() != t.length()) {
             return false;
         }
-        int[] count = new int[26]; // for lowercase letters
+        int[] arr = new int[26]; // for lowercase letters
         for (int i = 0; i < s.length(); i++) {
-            count[s.charAt(i) - 'a']++;
-            count[t.charAt(i) - 'a']--;
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i) - 'a']--;
         }
-        for (int c : count) {
-            if (c != 0) {
+        for (int a : arr) {
+            if (a != 0) {
                 return false;
             }
         }
