@@ -32,7 +32,6 @@ public class Medium2_LeetCode912_SortAnArray {
             }
         }
 
-
         while (i <= m) {
             temp.add(arr[i]);
             i++;
@@ -49,13 +48,9 @@ public class Medium2_LeetCode912_SortAnArray {
     }
 
     public static void main(String[] args) {
-
         Medium2_LeetCode912_SortAnArray s = new Medium2_LeetCode912_SortAnArray();
-
         int[] nums = {5, 2, 3, 1};
-
         int[] result = s.sortArray(nums);
-
         System.out.println(Arrays.toString(result));
     }
 }
