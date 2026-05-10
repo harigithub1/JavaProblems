@@ -14,7 +14,7 @@ public class Medium2_LeetCode912_SortAnArray {
         mergeSort(arr, m + 1, r);
         merge(arr, l, m, r);
     }
-    
+
     private void merge(int[] arr, int l, int m, int r) {
         ArrayList<Integer> temp = new ArrayList<>();
         int i = l;
