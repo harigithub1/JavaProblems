@@ -2,12 +2,12 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 //merge sort
 public class Medium2_LeetCode912_SortAnArray {
-    public int[] sortArray(int[] nums) {
+    public static int[] sortArray(int[] nums) {
         mergeSort(nums, 0, nums.length - 1);
         return nums;
     }
 
-    private void mergeSort(int[] arr, int l, int r) {
+    private static void mergeSort(int[] arr, int l, int r) {
         if (l >= r) return;
         int m = (l + r) / 2;
         mergeSort(arr, l, m);
@@ -15,7 +15,7 @@ public class Medium2_LeetCode912_SortAnArray {
         merge(arr, l, m, r);
     }
 
-    private void merge(int[] arr, int l, int m, int r) {
+    private static void merge(int[] arr, int l, int m, int r) {
         ArrayList<Integer> temp = new ArrayList<>();
         int i = l;
         int j = m + 1;
@@ -42,9 +42,8 @@ public class Medium2_LeetCode912_SortAnArray {
     }
 
     public static void main(String[] args) {
-        Medium2_LeetCode912_SortAnArray s = new Medium2_LeetCode912_SortAnArray();
         int[] nums = {5, 2, 3, 1};
-        int[] result = s.sortArray(nums);
+        int[] result = sortArray(nums);
         System.out.println(Arrays.toString(result));
     }
 }
