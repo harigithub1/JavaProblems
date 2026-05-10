@@ -4,19 +4,16 @@ class Easy7_LeetCode169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
         int candidate = 0;
         int count = 0;
-
-        for (int num : nums) {
+        for (int n : nums) {
             if (count == 0) {
-                candidate = num;
+                candidate = n;
             }
-
-            if (num == candidate) {
+            if (n == candidate) {
                 count++;
             } else {
                 count--;
             }
         }
-
         return candidate;
     }
 
