@@ -1,7 +1,5 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
-
 import java.util.*;
-
 //merge sort
 public class Medium2_LeetCode912_SortAnArray {
     public int[] sortArray(int[] nums) {
@@ -16,12 +14,11 @@ public class Medium2_LeetCode912_SortAnArray {
         mergeSort(arr, m + 1, r);
         merge(arr, l, m, r);
     }
-
+    
     private void merge(int[] arr, int l, int m, int r) {
         ArrayList<Integer> temp = new ArrayList<>();
         int i = l;
         int j = m + 1;
-
         while (i <= m && j <= r) {
             if (arr[i] <= arr[j]) {
                 temp.add(arr[i]);
@@ -31,17 +28,14 @@ public class Medium2_LeetCode912_SortAnArray {
                 j++;
             }
         }
-
         while (i <= m) {
             temp.add(arr[i]);
             i++;
         }
-
         while (j <= r) {
             temp.add(arr[j]);
             j++;
         }
-
         for (i = l; i <= r; i++) {
             arr[i] = temp.get(i - l);
         }
