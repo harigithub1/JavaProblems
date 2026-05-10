@@ -15,8 +15,6 @@ public class Easy6_LeetCode027_RemoveElement {
         int[] nums = {3, 2, 2, 3};
         int val = 3;
         int k = removeElement(nums, val);
-        System.out.println("k = " + k);
-        System.out.print("Updated array (first k elements): ");
         for (int i = 0; i < k; i++) {
             System.out.print(nums[i] + " ");
         }
