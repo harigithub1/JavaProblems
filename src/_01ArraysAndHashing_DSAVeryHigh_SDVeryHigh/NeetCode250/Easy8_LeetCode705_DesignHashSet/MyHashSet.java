@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyHashSet {
-    private List<Integer> data;
+    private List<Integer> set;
 
     public MyHashSet() {
-        data = new ArrayList<>();
+        set = new ArrayList<>();
     }
 
     public void add(int val) {
-        if (!data.contains(val)) {
-            data.add(val);
+        if (!set.contains(val)) {
+            set.add(val);
         }
     }
 
     public void remove(int val) {
-        data.remove(Integer.valueOf(val));
+        set.remove(Integer.valueOf(val));
     }
 
     public boolean contains(int val) {
-        return data.contains(val);
+        return set.contains(val);
     }
 }
