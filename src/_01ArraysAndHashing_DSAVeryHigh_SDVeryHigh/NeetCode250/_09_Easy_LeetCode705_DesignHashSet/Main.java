@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._08_Easy_LeetCode705_DesignHashSet;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._09_Easy_LeetCode705_DesignHashSet;
 
 public class Main {
     public static void main(String[] args) {
