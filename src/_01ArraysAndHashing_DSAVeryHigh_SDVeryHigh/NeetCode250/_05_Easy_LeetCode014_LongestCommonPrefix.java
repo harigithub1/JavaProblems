@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Easy5_LeetCode014_LongestCommonPrefix {
+public class _05_Easy_LeetCode014_LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs) {
         for (int i = 0; i < strs[0].length(); i++) {
             for (String s : strs) {

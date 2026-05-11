@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Easy3_LeetCode242_ValidAnagram {
+public class _03_Easy_LeetCode242_ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;

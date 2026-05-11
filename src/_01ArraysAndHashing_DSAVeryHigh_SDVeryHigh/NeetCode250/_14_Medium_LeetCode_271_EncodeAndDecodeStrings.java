@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Medium5_LeetCode_271_EncodeAndDecodeStrings {
+public class _14_Medium_LeetCode_271_EncodeAndDecodeStrings {
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
         for (String s : strs) {

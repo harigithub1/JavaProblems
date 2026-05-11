@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 //merge sort
-public class Medium2_LeetCode912_SortAnArray {
+public class _11_Medium_LeetCode912_SortAnArray {
     public static int[] sortArray(int[] nums) {
         mergeSort(nums, 0, nums.length - 1);
         return nums;

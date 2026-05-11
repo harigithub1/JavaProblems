@@ -1,5 +1,5 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Medium11_LeetCode229_MajorityElement2 {
+public class _21_Medium_LeetCode560_SubarraySumEqualsK {
 }
 

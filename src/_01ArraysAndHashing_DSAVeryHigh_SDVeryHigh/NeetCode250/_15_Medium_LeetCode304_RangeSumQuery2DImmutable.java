@@ -1,5 +1,5 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Hard1_LeetCode041_FirstMissingPositive {
+public class _15_Medium_LeetCode304_RangeSumQuery2DImmutable {
 }
 

@@ -1,5 +1,5 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class Medium3_LeetCode075_SortColors {
+public class _20_Medium_LeetCode229_MajorityElement2 {
 }
 
