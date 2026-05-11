@@ -52,6 +52,7 @@ public class Medium2_LeetCode912_SortAnArray_Beginner {
     }
 }
 /*
+Dry run:
 Initial Array
 arr = [6, 3, 9, 5, 2, 8]
 Call:
@@ -275,4 +276,16 @@ arr = [2,3,5,6,8,9]
 
 Final Output
 2 3 5 6 8 9
+
+Note:
+VERY IMPORTANT CONCEPT
+merged[] is recreated NEW every conquer call.
+So these are DIFFERENT arrays:
+merged = [3,6]
+merged = [3,6,9]
+merged = [2,5]
+merged = [2,5,8]
+merged = [2,3,5,6,8,9]
+They are NOT the same merged array growing continuously.
+Each conquer call has its own temporary merged array.
  */
