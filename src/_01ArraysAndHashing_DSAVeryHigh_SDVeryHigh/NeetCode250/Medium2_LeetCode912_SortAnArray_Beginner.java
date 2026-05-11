@@ -9,16 +9,24 @@ public class Medium2_LeetCode912_SortAnArray_Beginner {
         int x = 0;
         while (idx1 <= mid && idx2 <= ei) {
             if (arr[idx1] <= arr[idx2]) {
-                merged[x++] = arr[idx1++];
+                merged[x] = arr[idx1];
+                x++;
+                idx1++;
             } else {
-                merged[x++] = arr[idx2++];
+                merged[x] = arr[idx2];
+                x++;
+                idx2++;
             }
         }
         while (idx1 <= mid) {
-            merged[x++] = arr[idx1++];
+            merged[x] = arr[idx1];
+            x++;
+            idx1++;
         }
         while (idx2 <= ei) {
-            merged[x++] = arr[idx2++];
+            merged[x] = arr[idx2];
+            x++;
+            idx2++;
         }
         for (int i = 0, j = si; i < merged.length; i++, j++) {
             arr[j] = merged[i];
