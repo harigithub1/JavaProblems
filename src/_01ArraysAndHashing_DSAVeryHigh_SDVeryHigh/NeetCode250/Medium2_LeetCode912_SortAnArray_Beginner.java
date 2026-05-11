@@ -133,7 +133,7 @@ idx1++;
 
 After execution
 merged[1] = 6
-************** merged = [3,6] **********************************************************
+merged = [3,6]
 x = 2
 idx1 = 1
 Loop ends.
@@ -185,7 +185,7 @@ idx1 > mid
 
 Remaining right elements
 Copy 9.
-***************************** merged = [3,6,9] *******************************************
+merged = [3,6,9]
 
 Copy back
 Array becomes:
