@@ -2,19 +2,6 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 //merge sort
 public class _11_Medium_LeetCode912_SortAnArray_Beginner {
-    public static int[] sortArray(int[] nums) {
-        mergeSort(nums, 0, nums.length - 1);
-        return nums;
-    }
-
-    private static void mergeSort(int[] arr, int l, int r) {
-        if (l >= r) return;
-        int m = (l + r) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-        merge(arr, l, m, r);
-    }
-
     private static void merge(int[] arr, int l, int m, int r) {
         ArrayList<Integer> temp = new ArrayList<>();
         int i = l;
@@ -39,6 +26,19 @@ public class _11_Medium_LeetCode912_SortAnArray_Beginner {
         for (i = l; i <= r; i++) {
             arr[i] = temp.get(i - l);
         }
+    }
+
+    private static void mergeSort(int[] arr, int l, int r) {
+        if (l >= r) return;
+        int m = (l + r) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+
+    public static int[] sortArray(int[] nums) {
+        mergeSort(nums, 0, nums.length - 1);
+        return nums;
     }
 
     public static void main(String[] args) {
