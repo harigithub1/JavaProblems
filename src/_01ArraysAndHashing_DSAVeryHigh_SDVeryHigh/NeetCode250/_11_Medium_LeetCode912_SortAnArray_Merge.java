@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 //merge sort
-public class _11_Medium_LeetCode912_SortAnArray {
+public class _11_Medium_LeetCode912_SortAnArray_Merge {
     public static void merge(int[] arr, int si, int mid, int ei) {
         int[] temp = new int[ei - si + 1];
         int idx1 = si;

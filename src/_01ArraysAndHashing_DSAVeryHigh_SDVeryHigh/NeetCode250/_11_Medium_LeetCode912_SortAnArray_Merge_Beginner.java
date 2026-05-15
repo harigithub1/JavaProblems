@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 //merge sort
-public class _11_Medium_LeetCode912_SortAnArray_Beginner {
+public class _11_Medium_LeetCode912_SortAnArray_Merge_Beginner {
     private static void merge(int[] arr, int l, int m, int r) {
         ArrayList<Integer> temp = new ArrayList<>();
         int i = l;
