@@ -3,25 +3,25 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 //quick sort
 public class _11_Medium_LeetCode912_SortAnArray_Quick {
-    private static int partition(int[] nums, int left, int right) {
-        int mid = (left + right) >> 1;
-        swap(nums, mid, left + 1);
-        if (nums[left] > nums[right])
-            swap(nums, left, right);
-        if (nums[left + 1] > nums[right])
-            swap(nums, left + 1, right);
-        if (nums[left] > nums[left + 1])
-            swap(nums, left, left + 1);
-        int pivot = nums[left + 1];
-        int i = left + 1;
-        int j = right;
+    private static int partition(int[] nums, int l, int r) {
+        int mid = (l + r) >> 1;
+        swap(nums, mid, l + 1);
+        if (nums[l] > nums[r])
+            swap(nums, l, r);
+        if (nums[l + 1] > nums[r])
+            swap(nums, l + 1, r);
+        if (nums[l] > nums[l + 1])
+            swap(nums, l, l + 1);
+        int pivot = nums[l + 1];
+        int i = l + 1;
+        int j = r;
         while (true) {
             while (nums[++i] < pivot) ;
             while (nums[--j] > pivot) ;
             if (i > j) break;
             swap(nums, i, j);
         }
-        nums[left + 1] = nums[j];
+        nums[l + 1] = nums[j];
         nums[j] = pivot;
         return j;
     }
@@ -32,15 +32,15 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         nums[j] = temp;
     }
 
-    private static void quickSort(int[] nums, int left, int right) {
-        if (right <= left + 1) {
-            if (right == left + 1 && nums[right] < nums[left])
-                swap(nums, left, right);
+    private static void quickSort(int[] nums, int l, int r) {
+        if (r <= l + 1) {
+            if (r == l + 1 && nums[r] < nums[l])
+                swap(nums, l, r);
             return;
         }
-        int j = partition(nums, left, right);
-        quickSort(nums, left, j - 1);
-        quickSort(nums, j + 1, right);
+        int j = partition(nums, l, r);
+        quickSort(nums, l, j - 1);
+        quickSort(nums, j + 1, r);
     }
 
     public static int[] sortArray(int[] nums) {
