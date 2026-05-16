@@ -4,7 +4,7 @@ import java.util.*;
 //quick sort
 public class _11_Medium_LeetCode912_SortAnArray_Quick {
     private static int partition(int[] nums, int l, int r) {
-        int mid = (l + r) >> 1;
+        int mid = (l + r)/2;
         swap(nums, mid, l + 1);
         if (nums[l] > nums[r])
             swap(nums, l, r);
@@ -16,8 +16,14 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         int i = l + 1;
         int j = r;
         while (true) {
-            while (nums[++i] < pivot) ;
-            while (nums[--j] > pivot) ;
+            i = i + 1;
+            while (nums[i] < pivot) {
+                i = i + 1;
+            }
+            j = j - 1;
+            while (nums[j] > pivot) {
+                j = j - 1;
+            }
             if (i > j) break;
             swap(nums, i, j);
         }
