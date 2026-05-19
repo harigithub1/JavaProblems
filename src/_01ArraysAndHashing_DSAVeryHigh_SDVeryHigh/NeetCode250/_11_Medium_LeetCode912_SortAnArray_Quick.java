@@ -152,7 +152,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     // Driver Code
     public static void main(String[] args) {
 
-        int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
+        int[] nums = {8,3,7,4,9,2,6,5};
 //        int[] nums = {9,1,8,2,7,3,6,4,5};
 //        int[] nums = {1,2,3,4,5,6,7,8};
 //        int[] nums = {5,5,5,5,5,5};
