@@ -58,19 +58,19 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         while (true) {
 
             // Move i once to start scanning after pivot
-            i = i + 1;
+            i++;
 
             // Keep moving right while elements are smaller than pivot
             while (arr[i] < pivot) {
-                i = i + 1;
+                i++;
             }
 
             // Move j once to start scanning from right side
-            j = j - 1;
+            j--;
 
             // Keep moving left while elements are larger than pivot
             while (arr[j] > pivot) {
-                j = j - 1;
+                j--;
             }
 
             // If pointers crossed, partition complete
@@ -89,10 +89,8 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         // ---------------------------------------------------
 
         // Move smaller element into old pivot position
-        arr[l + 1] = arr[j];
-
         // Put pivot into correct sorted position
-        arr[j] = pivot;
+        swap(arr, j, l + 1);
 
         // Return pivot index
         return j;
@@ -100,7 +98,8 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
     // Utility swap function
     private static void swap(int[] arr, int i, int j) {
-
+        if(i == j)
+            return;
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
@@ -131,13 +130,13 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         }
 
         // Partition array and get pivot index
-        int j = partition(arr, l, r);
+        int pIdx = partition(arr, l, r);
 
         // Recursively sort left half
-        quickSort(arr, l, j - 1);
+        quickSort(arr, l, pIdx - 1);
 
         // Recursively sort right half
-        quickSort(arr, j + 1, r);
+        quickSort(arr, pIdx + 1, r);
     }
 
     // Main sorting function
