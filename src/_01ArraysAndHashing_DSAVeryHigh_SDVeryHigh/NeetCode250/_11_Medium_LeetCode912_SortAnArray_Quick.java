@@ -123,7 +123,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
             //
             // Example:
             // [9,3] -> swap -> [3,9]
-            if (r == l + 1 && arr[r] < arr[l])
+            if (l < r && arr[l] > arr[r])
                 swap(arr, l, r);
 
             return;
