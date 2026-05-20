@@ -90,7 +90,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
         // Move smaller element into old pivot position
         // Put pivot into correct sorted position
-        swap(arr, j, l + 1);
+        swap(arr, l + 1, j);
 
         // Return pivot index
         return j;
