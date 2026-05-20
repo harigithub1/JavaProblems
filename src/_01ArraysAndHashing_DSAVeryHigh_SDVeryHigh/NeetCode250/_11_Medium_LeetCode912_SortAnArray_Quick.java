@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 import java.util.*;
 
-// Optimized Quick Sort using:
+// Quick Sort using:
 // 1. Median-of-three pivot selection
 // 2. Hoare-style partitioning
 // 3. Sentinel optimization
@@ -18,7 +18,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
         // Move middle element to l+1 position
         // This implementation keeps pivot candidate at l+1
-        swap(arr, mid, l + 1);
+        swap(arr,l + 1, mid);
 
         // ---------------------------------------------------
         // Median-of-three ordering
@@ -37,13 +37,13 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         if (arr[l] > arr[r])
             swap(arr, l, r);
 
-        // Ensure middle <= right
-        if (arr[l + 1] > arr[r])
-            swap(arr, l + 1, r);
-
         // Ensure left <= middle
         if (arr[l] > arr[l + 1])
             swap(arr, l, l + 1);
+
+        // Ensure middle <= right
+        if (arr[l + 1] > arr[r])
+            swap(arr, l + 1, r);
 
         // Median value becomes pivot
         int pivot = arr[l + 1];
@@ -84,12 +84,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
             swap(arr, i, j);
         }
 
-        // ---------------------------------------------------
-        // Place pivot into final sorted position
-        // ---------------------------------------------------
-
-        // Move smaller element into old pivot position
-        // Put pivot into correct sorted position
+        // Move pivot from l+1 into its final position
         swap(arr, l + 1, j);
 
         // Return pivot index
