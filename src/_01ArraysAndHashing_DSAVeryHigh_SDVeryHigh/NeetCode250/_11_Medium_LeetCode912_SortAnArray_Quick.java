@@ -98,7 +98,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
     // Utility swap function
     private static void swap(int[] arr, int i, int j) {
-        if(i == j)
+        if (i == j)
             return;
         int temp = arr[i];
         arr[i] = arr[j];
@@ -117,13 +117,13 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         // 2
         // ---------------------------------------------------
 
-        if (r <= l + 1) {
+        if (l + 1 >= r) {
 
             // Special handling for size 2 array
             //
             // Example:
             // [9,3] -> swap -> [3,9]
-            if (l < r && arr[l] > arr[r])
+            if (l + 1 == r && arr[l] > arr[r])
                 swap(arr, l, r);
 
             return;
@@ -151,7 +151,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     // Driver Code
     public static void main(String[] args) {
 
-        int[] nums = {8,3,7,4,9,2,6,5};
+        int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
 //        int[] nums = {9,1,8,2,7,3,6,4,5};
 //        int[] nums = {1,2,3,4,5,6,7,8};
 //        int[] nums = {5,5,5,5,5,5};
