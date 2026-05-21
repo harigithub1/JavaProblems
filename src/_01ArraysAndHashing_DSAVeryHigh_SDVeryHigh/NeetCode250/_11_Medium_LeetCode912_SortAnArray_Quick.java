@@ -14,11 +14,11 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     private static int partition(int[] arr, int l, int r) {
 
         // Find middle index
-        int m = (l + r) / 2;
+        int mid = (l + r) / 2;
 
         // Move middle element to l+1 position
         // This implementation keeps pivot candidate at l+1
-        swap(arr,l + 1, m);
+        swap(arr,l + 1, mid);
 
         // ---------------------------------------------------
         // Median-of-three ordering
@@ -146,7 +146,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     // Driver Code
     public static void main(String[] args) {
 
-        int[] nums = {1,2,3,4,5};;
+        int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
 //        int[] nums = {9,1,8,2,7,3,6,4,5};
 //        int[] nums = {1,2,3,4,5,6,7,8};
 //        int[] nums = {5,5,5,5,5,5};
