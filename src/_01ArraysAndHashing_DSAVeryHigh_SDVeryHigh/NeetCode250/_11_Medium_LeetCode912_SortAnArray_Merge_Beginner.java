@@ -25,8 +25,8 @@ public class _11_Medium_LeetCode912_SortAnArray_Merge_Beginner {
             temp.add(arr[j]);
             j++;
         }
-        for (i = l; i <= r; i++) {
-            arr[i] = temp.get(i - l);
+        for (int k = l; k <= r; k++) {
+            arr[k] = temp.get(k - l);
         }
     }
 
