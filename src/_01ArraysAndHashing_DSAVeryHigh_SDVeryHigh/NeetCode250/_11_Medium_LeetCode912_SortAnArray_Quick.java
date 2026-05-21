@@ -14,11 +14,11 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     private static int partition(int[] arr, int l, int r) {
 
         // Find middle index
-        int mid = (l + r) / 2;
+        int m = (l + r) / 2;
 
         // Move middle element to l+1 position
         // This implementation keeps pivot candidate at l+1
-        swap(arr,l + 1, mid);
+        swap(arr,l + 1, m);
 
         // ---------------------------------------------------
         // Median-of-three ordering
@@ -92,12 +92,12 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     }
 
     // Utility swap function
-    private static void swap(int[] arr, int i, int j) {
-        if (i == j)
+    private static void swap(int[] arr, int x, int y) {
+        if (x == y)
             return;
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        int temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
     }
 
     // Recursive quick sort
@@ -146,13 +146,11 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     // Driver Code
     public static void main(String[] args) {
 
-        int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
+        int[] nums = {1,2,3,4,5};;
 //        int[] nums = {9,1,8,2,7,3,6,4,5};
 //        int[] nums = {1,2,3,4,5,6,7,8};
 //        int[] nums = {5,5,5,5,5,5};
 
-        int[] result = sortArray(nums);
-
-        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(sortArray(nums)));
     }
 }
