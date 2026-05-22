@@ -77,7 +77,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
             if (i > j)
                 break;
 
-            // Swap misplaced elements
+            // Swap two misplaced elements
             //
             // Left side found element >= pivot
             // Right side found element <= pivot
