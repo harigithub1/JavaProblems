@@ -5,28 +5,28 @@ import java.util.*;
 //merge sort
 public class _11_Medium_LeetCode912_SortAnArray_Merge_Beginner {
     private static void merge(int[] arr, int l, int m, int r) {
-        ArrayList<Integer> temp = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         int i = l;
         int j = m + 1;
         while (i <= m && j <= r) {
             if (arr[i] <= arr[j]) {
-                temp.add(arr[i]);
+                list.add(arr[i]);
                 i++;
             } else {
-                temp.add(arr[j]);
+                list.add(arr[j]);
                 j++;
             }
         }
         while (i <= m) {
-            temp.add(arr[i]);
+            list.add(arr[i]);
             i++;
         }
         while (j <= r) {
-            temp.add(arr[j]);
+            list.add(arr[j]);
             j++;
         }
         for (int k = l; k <= r; k++) {
-            arr[k] = temp.get(k - l);
+            arr[k] = list.get(k - l);
         }
     }
 
