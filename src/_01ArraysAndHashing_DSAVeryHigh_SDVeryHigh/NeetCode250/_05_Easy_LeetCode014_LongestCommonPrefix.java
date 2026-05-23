@@ -17,7 +17,9 @@ public class _05_Easy_LeetCode014_LongestCommonPrefix {
         return strs[0];
     }
     public static void main(String[] args) {
-        String[] strs = {"flower", "f", "flight"};
+//        String[] strs = {"flower","flow","flight"};
+        String[] strs = {"computer", "com", "compact"};   // understand i == s.length()
+//        String[] strs = {"sun", "sunlight", "sunrise"};   // understand return strs[0]
         String result = longestCommonPrefix(strs);
         System.out.println("Longest Common Prefix: " + result);
     }
