@@ -19,6 +19,8 @@ class _08_Easy_LeetCode169_MajorityElement {
 
     public static void main(String[] args) {
         int[] nums = {2,2,1,1,1,2,2};
+//        int[] nums = {1,2,1,3,1};
+//        int[] nums = {2,2,1,1,1,2,2,3,3,3,3,3,3,1,2,1,2}; this is invalid input because No element appears more than 17/2 = 8. So your method returns a candidate, but not necessarily an actual majority.
         System.out.println(majorityCandidate(nums));
     }
 }
