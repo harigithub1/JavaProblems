@@ -18,6 +18,10 @@ public class _12_Medium_LeetCode075_SortColors {
                 swap(nums, i, r);
                 r--;
                 i--;
+                /*
+                In else if block, i-- is there because after swapping with r, the value that comes into index i is unknown — so you must process that same index again.
+                In if block, since we travel left → right, everything left of i is already processed, therefore swapping with l is safe without rechecking.
+                 */
             }
             i++;
         }
@@ -30,8 +34,8 @@ public class _12_Medium_LeetCode075_SortColors {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 0, 2, 1, 1, 0};
-//        int[] nums = {1,2,0,0};
+//        int[] nums = {2, 0, 2, 1, 1, 0};
+        int[] nums = {1,2,0,0};
         sortColors(nums);
         System.out.println(Arrays.toString(nums));
     }
