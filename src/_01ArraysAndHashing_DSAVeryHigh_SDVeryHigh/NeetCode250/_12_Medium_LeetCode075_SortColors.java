@@ -4,6 +4,11 @@ import java.util.Arrays;
 //Three Pointers - I
 public class _12_Medium_LeetCode075_SortColors {
     public static void sortColors(int[] nums) {
+        /*
+        l → where next 0 goes
+        r → where next 2 goes
+        i → current element
+         */
         int i = 0, l = 0, r = nums.length - 1;
         while (i <= r) {
             if (nums[i] == 0) {
@@ -26,6 +31,7 @@ public class _12_Medium_LeetCode075_SortColors {
 
     public static void main(String[] args) {
         int[] nums = {2, 0, 2, 1, 1, 0};
+//        int[] nums = {1,2,0,0};
         sortColors(nums);
         System.out.println(Arrays.toString(nums));
     }
