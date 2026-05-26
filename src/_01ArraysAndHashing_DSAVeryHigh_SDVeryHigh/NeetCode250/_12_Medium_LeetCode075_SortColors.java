@@ -34,8 +34,9 @@ public class _12_Medium_LeetCode075_SortColors {
     }
 
     public static void main(String[] args) {
-//        int[] nums = {2, 0, 2, 1, 1, 0};
-        int[] nums = {1,2,0,0};
+        int[] nums = {2, 0, 2, 1, 1, 0}; //explains the entire algorithm working together
+//        int[] nums = {1,2,0,0}; //explains why swapping with l does not need rechecking (and also why i-- is needed after swapping with r)
+//        int[] nums = {1,1,2,0}; //explains why i-- is needed in else if block
         sortColors(nums);
         System.out.println(Arrays.toString(nums));
     }
