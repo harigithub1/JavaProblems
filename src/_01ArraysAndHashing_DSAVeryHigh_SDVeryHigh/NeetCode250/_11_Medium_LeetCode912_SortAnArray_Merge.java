@@ -4,38 +4,38 @@ import java.util.*;
 
 //merge sort
 public class _11_Medium_LeetCode912_SortAnArray_Merge {
-    private static void merge(int[] arr, int l, int m, int r) {
-        ArrayList<Integer> list = new ArrayList<>();
+    private static void merge(int[] nums, int l, int m, int r) {
+        List<Integer> list = new ArrayList<>();
         int i = l;
         int j = m + 1;
         while (i <= m && j <= r) {
-            if (arr[i] <= arr[j]) {
-                list.add(arr[i]);
+            if (nums[i] <= nums[j]) {
+                list.add(nums[i]);
                 i++;
             } else {
-                list.add(arr[j]);
+                list.add(nums[j]);
                 j++;
             }
         }
         while (i <= m) {
-            list.add(arr[i]);
+            list.add(nums[i]);
             i++;
         }
         while (j <= r) {
-            list.add(arr[j]);
+            list.add(nums[j]);
             j++;
         }
         for (int k = l; k <= r; k++) {
-            arr[k] = list.get(k - l);
+            nums[k] = list.get(k - l);
         }
     }
 
-    private static void mergeSort(int[] arr, int l, int r) {
+    private static void mergeSort(int[] nums, int l, int r) {
         if (l >= r) return;
         int m = (l + r) / 2;
-        mergeSort(arr, l, m);
-        mergeSort(arr, m + 1, r);
-        merge(arr, l, m, r);
+        mergeSort(nums, l, m);
+        mergeSort(nums, m + 1, r);
+        merge(nums, l, m, r);
     }
 
     public static int[] sortArray(int[] nums) {

@@ -11,42 +11,42 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     // Partition function:
     // Rearranges elements around pivot
     // Returns final pivot index
-    private static int partition(int[] arr, int l, int r) {
+    private static int partition(int[] nums, int l, int r) {
 
         // Find middle index
         int mid = (l + r) / 2;
 
         // Move middle element to l+1 position
         // This implementation keeps pivot candidate at l+1
-        swap(arr,l + 1, mid);
+        swap(nums,l + 1, mid);
 
         // ---------------------------------------------------
         // Median-of-three ordering
         //
         // After these 3 conditions:
         //
-        // arr[l] <= arr[l+1] <= arr[r]
+        // nums[l] <= nums[l+1] <= nums[r]
         //
         // So:
-        // arr[l+1] becomes median value (pivot)
+        // nums[l+1] becomes median value (pivot)
         //
-        // arr[l] and arr[r] act as sentinels
+        // nums[l] and nums[r] act as sentinels
         // ---------------------------------------------------
 
         // Ensure left <= right
-        if (arr[l] > arr[r])
-            swap(arr, l, r);
+        if (nums[l] > nums[r])
+            swap(nums, l, r);
 
         // Ensure left <= middle
-        if (arr[l] > arr[l + 1])
-            swap(arr, l, l + 1);
+        if (nums[l] > nums[l + 1])
+            swap(nums, l, l + 1);
 
         // Ensure middle <= right
-        if (arr[l + 1] > arr[r])
-            swap(arr, l + 1, r);
+        if (nums[l + 1] > nums[r])
+            swap(nums, l + 1, r);
 
         // Median value becomes pivot
-        int pivot = arr[l + 1];
+        int pivot = nums[l + 1];
 
         // i scans from left side
         int i = l + 1;
@@ -64,12 +64,12 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
             j--;
 
             // Keep moving right while elements are smaller than pivot
-            while (arr[i] < pivot) {
+            while (nums[i] < pivot) {
                 i++;
             }
 
             // Keep moving left while elements are larger than pivot
-            while (arr[j] > pivot) {
+            while (nums[j] > pivot) {
                 j--;
             }
 
@@ -81,27 +81,27 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
             //
             // Left side found element >= pivot
             // Right side found element <= pivot
-            swap(arr, i, j);
+            swap(nums, i, j);
         }
 
         // Move pivot from l+1 into its final position
-        swap(arr, l + 1, j);
+        swap(nums, l + 1, j);
 
         // Return pivot index
         return j;
     }
 
     // Utility swap function
-    private static void swap(int[] arr, int x, int y) {
+    private static void swap(int[] nums, int x, int y) {
         if (x == y)
             return;
-        int temp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = temp;
+        int temp = nums[x];
+        nums[x] = nums[y];
+        nums[y] = temp;
     }
 
     // Recursive quick sort
-    private static void quickSort(int[] arr, int l, int r) {
+    private static void quickSort(int[] nums, int l, int r) {
 
         // ---------------------------------------------------
         // Base Case Optimization
@@ -118,20 +118,20 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
             //
             // Example:
             // [9,3] -> swap -> [3,9]
-            if (l + 1 == r && arr[l] > arr[r])
-                swap(arr, l, r);
+            if (l + 1 == r && nums[l] > nums[r])
+                swap(nums, l, r);
 
             return;
         }
 
         // Partition array and get pivot index
-        int pIdx = partition(arr, l, r);
+        int pIdx = partition(nums, l, r);
 
         // Recursively sort left half
-        quickSort(arr, l, pIdx - 1);
+        quickSort(nums, l, pIdx - 1);
 
         // Recursively sort right half
-        quickSort(arr, pIdx + 1, r);
+        quickSort(nums, pIdx + 1, r);
     }
 
     // Main sorting function
