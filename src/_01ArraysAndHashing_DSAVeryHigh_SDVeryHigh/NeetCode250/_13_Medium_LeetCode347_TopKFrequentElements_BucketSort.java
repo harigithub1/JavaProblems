@@ -4,15 +4,15 @@ import java.util.*;
 public class _13_Medium_LeetCode347_TopKFrequentElements_BucketSort {
     public static int[] topKFrequent(int[] nums, int k) {
         // Step 1: Count frequency
-        Map<Integer, Integer> freqMap = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
-            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
         // Step 2: Bucket sort (index = frequency)
         List<Integer>[] bucket = new List[nums.length + 1];
-        for (int key : freqMap.keySet()) {
-            int freq = freqMap.get(key);
+        for (int key : map.keySet()) {
+            int freq = map.get(key);
             if (bucket[freq] == null) {
                 bucket[freq] = new ArrayList<>();
             }
@@ -44,9 +44,9 @@ public class _13_Medium_LeetCode347_TopKFrequentElements_BucketSort {
     public static void main(String[] args) {
 
         // Example 1
-        int[] nums1 = {1,1,1,2,2,3};
-        int k1 = 2;
-        System.out.println(Arrays.toString(topKFrequent(nums1, k1)));
+        int[] nums = {1,1,1,2,2,3};
+        int k = 2;
+        System.out.println(Arrays.toString(topKFrequent(nums, k)));
     }
 }
 /**
