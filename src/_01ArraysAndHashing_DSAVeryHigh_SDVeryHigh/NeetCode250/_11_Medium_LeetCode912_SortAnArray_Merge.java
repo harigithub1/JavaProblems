@@ -5,24 +5,24 @@ import java.util.*;
 //merge sort
 public class _11_Medium_LeetCode912_SortAnArray_Merge {
     private static void merge(int[] nums, int l, int m, int r) {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> temp = new ArrayList<>();
         int i = l;
         int j = m + 1;
         while (i <= m && j <= r) {
             if (nums[i] <= nums[j]) {
-                list.add(nums[i]);
+                temp.add(nums[i]);
                 i++;
             } else {
-                list.add(nums[j]);
+                temp.add(nums[j]);
                 j++;
             }
         }
         while (i <= m) {
-            list.add(nums[i]);
+            temp.add(nums[i]);
             i++;
         }
         while (j <= r) {
-            list.add(nums[j]);
+            temp.add(nums[j]);
             j++;
         }
         for (int k = l; k <= r; k++) {
