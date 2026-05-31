@@ -26,7 +26,7 @@ public class _11_Medium_LeetCode912_SortAnArray_Merge {
             j++;
         }
         for (int k = l; k <= r; k++) {
-            nums[k] = list.get(k - l);
+            nums[k] = temp.get(k - l);
         }
     }
 
