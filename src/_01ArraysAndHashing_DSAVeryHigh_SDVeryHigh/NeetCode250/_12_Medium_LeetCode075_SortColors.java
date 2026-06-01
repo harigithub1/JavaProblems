@@ -7,30 +7,30 @@ public class _12_Medium_LeetCode075_SortColors {
         /*
         l → where next 0 goes
         r → where next 2 goes
-        i → current element
+        c → current element
          */
-        int i = 0, l = 0, r = nums.length - 1;
-        while (i <= r) {
-            if (nums[i] == 0) {
-                swap(nums, l, i);
+        int c = 0, l = 0, r = nums.length - 1;
+        while (c <= r) {
+            if (nums[c] == 0) {
+                swap(nums, l, c);
                 l++;
-            } else if (nums[i] == 2) {
-                swap(nums, i, r);
+            } else if (nums[c] == 2) {
+                swap(nums, c, r);
                 r--;
-                i--;
+                c--;
                 /*
-                In else if block, i-- is there because after swapping with r, the value that comes into index i is unknown — so you must process that same index again.
-                In if block, since we travel left → right, everything left of i is already processed, therefore swapping with l is safe without rechecking.
+                In else if block, c-- is there because after swapping with r, the value that comes into index c is unknown — so you must process that same index again.
+                In if block, since we travel left → right, everything left of c is already processed, therefore swapping with l is safe without rechecking.
                  */
             }
-            i++;
+            c++;
         }
     }
 
-    private static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+    private static void swap(int[] nums, int x, int y) {
+        int temp = nums[x];
+        nums[x] = nums[y];
+        nums[y] = temp;
     }
 
     public static void main(String[] args) {
