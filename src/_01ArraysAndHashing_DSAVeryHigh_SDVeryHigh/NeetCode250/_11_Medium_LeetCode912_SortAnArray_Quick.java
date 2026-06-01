@@ -13,7 +13,6 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
     // Returns final pivot index
     private static int partition(int[] nums, int l, int r) {
 
-        // Find middle index
         int m = l + (r - l) / 2;
 
         // Move middle element to l+1 position
@@ -22,14 +21,10 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
         // ---------------------------------------------------
         // Median-of-three ordering
-        //
         // After these 3 conditions:
-        //
         // nums[l] <= nums[l+1] <= nums[r]
-        //
         // So:
         // nums[l+1] becomes median value (pivot)
-        //
         // nums[l] and nums[r] act as sentinels
         // ---------------------------------------------------
 
@@ -105,7 +100,6 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
         // ---------------------------------------------------
         // Base Case Optimization
-        //
         // Handles arrays of size:
         // 0
         // 1
@@ -113,14 +107,11 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         // ---------------------------------------------------
 
         if (l + 1 >= r) {
-
             // Special handling for size 2 array
-            //
             // Example:
             // [9,3] -> swap -> [3,9]
             if (l + 1 == r && nums[l] > nums[r])
                 swap(nums, l, r);
-
             return;
         }
 
@@ -134,23 +125,16 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         quickSort(nums, pIdx + 1, r);
     }
 
-    // Main sorting function
     public static int[] sortArray(int[] nums) {
-
-        // Sort complete array
         quickSort(nums, 0, nums.length - 1);
-
         return nums;
     }
 
-    // Driver Code
     public static void main(String[] args) {
-
         int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
 //        int[] nums = {9,1,8,2,7,3,6,4,5};
 //        int[] nums = {1,2,3,4,5,6,7,8};
 //        int[] nums = {5,5,5,5,5,5};
-
         System.out.println(Arrays.toString(sortArray(nums)));
     }
 }
