@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._09_Easy_LeetCode705_DesignHashSet;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._09_Easy_LC705_DesignHashSet;
 
 import java.util.ArrayList;
 import java.util.List;
