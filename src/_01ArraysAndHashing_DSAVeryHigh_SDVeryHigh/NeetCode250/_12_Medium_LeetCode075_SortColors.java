@@ -9,7 +9,7 @@ public class _12_Medium_LeetCode075_SortColors {
         r → where next 2 goes
         c → current element
          */
-        int c = 0, l = 0, r = nums.length - 1;
+        int l = 0, r = nums.length - 1,c = 0;
         while (c <= r) {
             if (nums[c] == 0) {
                 swap(nums, l, c);
@@ -19,7 +19,7 @@ public class _12_Medium_LeetCode075_SortColors {
                 r--;
                 c--;
                 /*
-                In else if block, c-- is there because after swapping with r, the value that comes into index c is unknown — so you must process that same index again.
+                In else if block, c-- is there because after swapping with r, the value that comes into index c is unknown(could be either 0 or 1) — so you must process that same index again.
                 In if block, since we travel left → right, everything left of c is already processed, therefore swapping with l is safe without rechecking.
                  */
             }

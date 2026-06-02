@@ -88,8 +88,6 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
 
     // Utility swap function
     private static void swap(int[] nums, int x, int y) {
-        if (x == y)
-            return;
         int temp = nums[x];
         nums[x] = nums[y];
         nums[y] = temp;
