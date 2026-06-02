@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.HashSet;
 import java.util.Set;
 
-public class _02_Easy_LeetCode217_ContainsDuplicate {
+public class _02_Easy_LC217_ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int n : nums) {
@@ -30,4 +30,5 @@ public class _02_Easy_LeetCode217_ContainsDuplicate {
 /**
  * //set.add(num) will add num to the set and returns true if num is not present already
  */
+
 

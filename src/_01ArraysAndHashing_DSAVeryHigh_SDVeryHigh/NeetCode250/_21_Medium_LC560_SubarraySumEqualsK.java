@@ -1,5 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class _15_Medium_LeetCode304_RangeSumQuery2DImmutable {
+public class _21_Medium_LC560_SubarraySumEqualsK {
 }
+
 

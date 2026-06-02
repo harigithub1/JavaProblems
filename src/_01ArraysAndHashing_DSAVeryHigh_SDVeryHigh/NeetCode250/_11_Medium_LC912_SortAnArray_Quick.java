@@ -6,7 +6,7 @@ import java.util.*;
 // 1. Median-of-three pivot selection
 // 2. Hoare-style partitioning
 // 3. Sentinel optimization
-public class _11_Medium_LeetCode912_SortAnArray_Quick {
+public class _11_Medium_LC912_SortAnArray_Quick {
 
     // Partition function:
     // Rearranges elements around pivot
@@ -136,3 +136,4 @@ public class _11_Medium_LeetCode912_SortAnArray_Quick {
         System.out.println(Arrays.toString(sortArray(nums)));
     }
 }
+

@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
 import java.util.Arrays;
 //Three Pointers - I
-public class _12_Medium_LeetCode075_SortColors {
+public class _12_Medium_LC075_SortColors {
     public static void sortColors(int[] nums) {
         /*
         l → where next 0 goes
@@ -41,3 +41,4 @@ public class _12_Medium_LeetCode075_SortColors {
         System.out.println(Arrays.toString(nums));
     }
 }
+

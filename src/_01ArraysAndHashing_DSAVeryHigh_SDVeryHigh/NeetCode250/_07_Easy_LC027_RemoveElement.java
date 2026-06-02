@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class _07_Easy_LeetCode027_RemoveElement {
+public class _07_Easy_LC027_RemoveElement {
     public static int removeElement(int[] nums, int val) {
         int k = 0; // slow pointer
         for (int i = 0; i < nums.length; i++) {
@@ -20,4 +20,5 @@ public class _07_Easy_LeetCode027_RemoveElement {
         }
     }
 }
+
 

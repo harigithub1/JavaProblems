@@ -1,5 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class _21_Medium_LeetCode560_SubarraySumEqualsK {
+public class _19_Medium_LC122_BestTimetoBuyandSellStock2 {
 }
+
 

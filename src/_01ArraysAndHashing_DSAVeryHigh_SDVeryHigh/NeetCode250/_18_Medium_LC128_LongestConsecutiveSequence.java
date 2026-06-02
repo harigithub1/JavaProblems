@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.HashSet;
 import java.util.Set;
 
-public class _18_Medium_LeetCode128_LongestConsecutiveSequence {
+public class _18_Medium_LC128_LongestConsecutiveSequence {
     public static int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int n : nums) {
@@ -32,4 +32,5 @@ public class _18_Medium_LeetCode128_LongestConsecutiveSequence {
         System.out.println("Output 2: " + longestConsecutive(nums2)); // 7
     }
 }
+
 

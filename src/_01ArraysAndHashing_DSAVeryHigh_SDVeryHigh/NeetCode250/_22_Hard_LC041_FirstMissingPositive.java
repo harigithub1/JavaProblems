@@ -1,5 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class _19_Medium_LeetCode122_BestTimetoBuyandSellStock2 {
+public class _22_Hard_LC041_FirstMissingPositive {
 }
+
 

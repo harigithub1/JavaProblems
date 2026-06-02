@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 import java.util.*;
 
 //merge sort
-public class _11_Medium_LeetCode912_SortAnArray_Merge {
+public class _11_Medium_LC912_SortAnArray_Merge {
     private static void merge(int[] nums, int l, int m, int r) {
         List<Integer> temp = new ArrayList<>();
         int i = l;
@@ -51,3 +51,4 @@ public class _11_Medium_LeetCode912_SortAnArray_Merge {
         System.out.println(Arrays.toString(sortArray(nums)));
     }
 }
+

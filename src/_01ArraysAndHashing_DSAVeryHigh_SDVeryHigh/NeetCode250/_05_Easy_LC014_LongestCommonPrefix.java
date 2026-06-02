@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
 
-public class _05_Easy_LeetCode014_LongestCommonPrefix {
+public class _05_Easy_LC014_LongestCommonPrefix {
     /*
     vertical scan / column-wise traversal pattern.
      */
@@ -22,3 +22,4 @@ public class _05_Easy_LeetCode014_LongestCommonPrefix {
         System.out.println("Longest Common Prefix: " + result);
     }
 }
+
