@@ -1,4 +1,5 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250;
+
 import java.util.*;
 
 public class _13_Medium_LC347_TopKFrequentElements_BucketSort {
@@ -19,11 +20,6 @@ public class _13_Medium_LC347_TopKFrequentElements_BucketSort {
             bucket[freq].add(key);
         }
 
-        System.out.println("bucket");
-        for(List<Integer> l: bucket) {
-            System.out.println(l);
-        }
-
         // Step 3: Collect top k elements
         List<Integer> result = new ArrayList<>();
         for (int i = bucket.length - 1; i >= 0 && result.size() < k; i--) {
@@ -32,33 +28,15 @@ public class _13_Medium_LC347_TopKFrequentElements_BucketSort {
             }
         }
 
-        System.out.println("result");
-        for(List<Integer> l: bucket) {
-            System.out.println(l);
-        }
-
         // Convert to array
         return result.stream().limit(k).mapToInt(i -> i).toArray();
     }
 
     public static void main(String[] args) {
-
-        // Example 1
-        int[] nums = {1,1,1,2,2,3};
-        int k = 2;
+//        int[] nums = {1,1,1,2,2,3};
+//        int k = 2;
+        int[] nums = {1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5};
+        int k = 3;
         System.out.println(Arrays.toString(topKFrequent(nums, k)));
     }
 }
-/**
- *
- * Step 3: Collect top k elements (because bucket may contain empty check below comments [ null, [3], [2], [1], null, null, null] for input         int[] nums1 = {1,1,1,2,2,3}; )
- * bucket[0] = null
- * bucket[1] = [3]
- * bucket[2] = [2]
- * bucket[3] = [1]
- * bucket[4] = null
- * bucket[5] = null
- * bucket[6] = null
- */
-
-
