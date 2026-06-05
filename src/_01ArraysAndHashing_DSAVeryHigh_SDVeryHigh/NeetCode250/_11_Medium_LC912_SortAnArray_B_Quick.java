@@ -6,7 +6,7 @@ import java.util.*;
 // 1. Median-of-three pivot selection
 // 2. Hoare-style partitioning
 // 3. Sentinel optimization
-public class _11_Medium_LC912_SortAnArray_Quick {
+public class _11_Medium_LC912_SortAnArray_B_Quick {
 
     // Partition function:
     // Rearranges elements around pivot
