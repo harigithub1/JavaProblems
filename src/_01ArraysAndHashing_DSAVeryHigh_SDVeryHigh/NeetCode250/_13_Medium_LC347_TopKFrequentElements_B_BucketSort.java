@@ -21,7 +21,8 @@ public class _13_Medium_LC347_TopKFrequentElements_B_BucketSort {
         int index = 0;
         for (int i = arr.length - 1; i > 0 && index < k; i--) {
             for (int n : arr[i]) {
-                res[index++] = n;
+                res[index] = n;
+                index++;
                 if (index == k) {
                     return res;
                 }
