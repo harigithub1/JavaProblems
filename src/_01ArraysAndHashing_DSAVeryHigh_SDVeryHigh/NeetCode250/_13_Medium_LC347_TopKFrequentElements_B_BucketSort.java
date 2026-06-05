@@ -13,13 +13,13 @@ public class _13_Medium_LC347_TopKFrequentElements_B_BucketSort {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = new ArrayList<>();
         }
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            arr[entry.getValue()].add(entry.getKey());
+        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+            arr[e.getValue()].add(e.getKey());
         }
 
         int[] res = new int[k];
         int index = 0;
-        for (int i = arr.length - 1; i > 0 && index < k; i--) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             for (int n : arr[i]) {
                 res[index] = n;
                 index++;
