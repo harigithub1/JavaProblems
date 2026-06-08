@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._15B_Medium_LC304_RangeSumQuery2DImmutable;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._15A_Medium_LC304_RangeSumQuery2DImmutable_1D;
 
 public class NumMatrix {
 
@@ -36,13 +36,12 @@ public class NumMatrix {
                 {1, 0, 3, 0, 5}
         };
         NumMatrix obj = new NumMatrix(matrix);
-        System.out.println(obj.sumRegion(2, 1, 4, 3)); // 8
-        System.out.println(obj.sumRegion(1, 1, 2, 2)); // 11
-        System.out.println(obj.sumRegion(1, 2, 2, 4)); // 12
-        System.out.println(obj.sumRegion(1, 1, 1, 3));
-        System.out.println(obj.sumRegion(1, 1, 3, 3));
-        System.out.println(obj.sumRegion(1, 0, 3, 2));
-        System.out.println(obj.sumRegion(2, 3, 2, 3));
-        System.out.println(obj.sumRegion(0, 0, 4, 4));
+//        System.out.println(obj.sumRegion(2, 1, 4, 3));
+//        System.out.println(obj.sumRegion(1, 0, 3, 2));
+//        System.out.println(obj.sumRegion(1, 1, 1, 3));
+//        System.out.println(obj.sumRegion(2, 3, 2, 3));
+//        System.out.println(obj.sumRegion(0, 0, 4, 4));
+//        System.out.println(obj.sumRegion(1, 1, 2, 2));
+        System.out.println(obj.sumRegion(1, 2, 2, 4));
     }
 }
