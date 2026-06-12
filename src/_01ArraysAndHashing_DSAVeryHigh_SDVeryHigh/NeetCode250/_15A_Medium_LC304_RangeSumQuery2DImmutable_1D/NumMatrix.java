@@ -6,7 +6,7 @@ public class NumMatrix {
 
     public NumMatrix(int[][] matrix) {
         prefixSum = new int[matrix.length][matrix[0].length];
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < matrix.length; i++) {
             prefixSum[i][0] = matrix[i][0];
             for (int j = 1; j < cols; j++) {
                 prefixSum[i][j] = prefixSum[i][j - 1] + matrix[i][j];
