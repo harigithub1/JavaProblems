@@ -5,15 +5,15 @@ public class NumMatrix2D {
     private int[][] sumMat;
 
     public NumMatrix2D(int[][] matrix) {
-        int ROWS = matrix.length, COLS = matrix[0].length;
-        sumMat = new int[ROWS + 1][COLS + 1];
+        int rows = matrix.length, cols = matrix[0].length;
+        sumMat = new int[rows + 1][cols + 1];
 
-        for (int r = 0; r < ROWS; r++) {
+        for (int i = 0; i < rows; i++) {
             int prefix = 0;
-            for (int c = 0; c < COLS; c++) {
-                prefix += matrix[r][c];
-                int above = sumMat[r][c + 1];
-                sumMat[r + 1][c + 1] = prefix + above;
+            for (int j = 0; j < cols; j++) {
+                prefix += matrix[i][j];
+                int above = sumMat[i][j + 1];
+                sumMat[i + 1][j + 1] = prefix + above;
             }
         }
     }
@@ -35,7 +35,7 @@ public class NumMatrix2D {
                 {4, 1, 0, 1, 7},
                 {1, 0, 3, 0, 5}
         };
-        NumMatrix1D obj = new NumMatrix1D(matrix);
+        NumMatrix2D obj = new NumMatrix2D(matrix);
 //        System.out.println(obj.sumRegion(2, 1, 4, 3));
 //        System.out.println(obj.sumRegion(1, 0, 3, 2));
 //        System.out.println(obj.sumRegion(1, 1, 1, 3));
