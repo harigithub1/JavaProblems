@@ -1,0 +1,6 @@
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_FirstMissingPositive;
+
+public class _22_Hard_LC041_FirstMissingPositive {
+}
+
+
