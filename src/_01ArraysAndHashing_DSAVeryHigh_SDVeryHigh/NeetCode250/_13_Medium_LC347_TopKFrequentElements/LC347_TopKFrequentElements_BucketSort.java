@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._13_Medium_LC347_
 
 import java.util.*;
 
-public class _13B_Medium_LC347_TopKFrequentElements_BucketSort {
+public class LC347_TopKFrequentElements_BucketSort {
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
