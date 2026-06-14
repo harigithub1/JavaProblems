@@ -2,28 +2,28 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._15_Medium_LC304_
 
 public class NumMatrix2D {
 
-    private int[][] sumMat;
+    private int[][] prefixSum;
 
     public NumMatrix2D(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
-        sumMat = new int[rows + 1][cols + 1];
+        prefixSum = new int[rows + 1][cols + 1];
 
         for (int i = 0; i < rows; i++) {
             int prefix = 0;
             for (int j = 0; j < cols; j++) {
                 prefix += matrix[i][j];
-                int above = sumMat[i][j + 1];
-                sumMat[i + 1][j + 1] = prefix + above;
+                int above = prefixSum[i][j + 1];
+                prefixSum[i + 1][j + 1] = prefix + above;
             }
         }
     }
 
     public int sumRegion(int row1, int col1, int row2, int col2) {
         row1++; col1++; row2++; col2++;
-        int bottomRight = sumMat[row2][col2];
-        int above = sumMat[row1 - 1][col2];
-        int left = sumMat[row2][col1 - 1];
-        int topLeft = sumMat[row1 - 1][col1 - 1];
+        int bottomRight = prefixSum[row2][col2];
+        int above = prefixSum[row1 - 1][col2];
+        int left = prefixSum[row2][col1 - 1];
+        int topLeft = prefixSum[row1 - 1][col1 - 1];
         return bottomRight - above - left + topLeft;
     }
 
