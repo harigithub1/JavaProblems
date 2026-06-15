@@ -11,7 +11,7 @@ public class NumMatrix2D {
         for (int i = 0; i < rows; i++) {
             int prefix = 0;
             for (int j = 0; j < cols; j++) {
-                prefix += matrix[i][j];
+                prefix = prefix + matrix[i][j];
                 int above = prefixSum[i][j + 1];
                 prefixSum[i + 1][j + 1] = prefix + above;
             }
