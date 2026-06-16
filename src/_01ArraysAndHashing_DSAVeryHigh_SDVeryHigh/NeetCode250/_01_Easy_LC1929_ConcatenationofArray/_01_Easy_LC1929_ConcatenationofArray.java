@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class _01_Easy_LC1929_ConcatenationofArray {
     public static int[] getConcatenation(int[] nums) {
         int l = nums.length;
-        int[] res = new int[2 * l];
+        int[] res = new int[l*2];
         for (int i = 0; i < l; i++) {
             res[i] = nums[i];
             res[i + l] = nums[i];
@@ -16,7 +16,6 @@ public class _01_Easy_LC1929_ConcatenationofArray {
     public static void main(String[] args) {
         int[] nums = {1, 2, 1};
         int[] result = getConcatenation(nums);
-        System.out.println("Input: " + Arrays.toString(nums));
-        System.out.println("Output: " + Arrays.toString(result));
+        System.out.println(Arrays.toString(result));
     }
 }
