@@ -20,12 +20,11 @@ public class NumMatrix2D {
 
     public int sumRegion(int row1, int col1, int row2, int col2) {
         row1++; col1++; row2++; col2++;
-        int bottomRightInsidePrefixSumSubMatrix = prefixSum2D[row2][col2];
-        int abovePrefixSumSubMatrix = prefixSum2D[row1 - 1][col2];
-        int leftToPrefixSumSubMatrix = prefixSum2D[row2][col1 - 1];
-        int topLeftAbovePrefixSumSubMatrix = prefixSum2D[row1 - 1][col1 - 1];
-        return bottomRightInsidePrefixSumSubMatrix - abovePrefixSumSubMatrix - leftToPrefixSumSubMatrix
-                + topLeftAbovePrefixSumSubMatrix;
+        int r2c2 = prefixSum2D[row2][col2];
+        int r1_1c2 = prefixSum2D[row1 - 1][col2];
+        int r2c1_1 = prefixSum2D[row2][col1 - 1];
+        int r1_1c1_1 = prefixSum2D[row1 - 1][col1 - 1];
+        return r2c2 - r1_1c2 - r2c1_1 + r1_1c1_1;
     }
 
     public static void main(String[] args) {
