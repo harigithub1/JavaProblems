@@ -1,17 +1,17 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._03_Easy_LC242_ValidAnagram;
 
-public class _03_Easy_LC242_ValidAnagram {
+public class LC242_ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
-        int[] arr = new int[26]; // for lowercase letters
+        int[] count = new int[26]; // for lowercase letters
         for (int i = 0; i < s.length(); i++) {
-            arr[s.charAt(i) - 'a']++;
-            arr[t.charAt(i) - 'a']--;
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
         }
-        for (int a : arr) {
-            if (a != 0) {
+        for (int c : count) {
+            if (c != 0) {
                 return false;
             }
         }
