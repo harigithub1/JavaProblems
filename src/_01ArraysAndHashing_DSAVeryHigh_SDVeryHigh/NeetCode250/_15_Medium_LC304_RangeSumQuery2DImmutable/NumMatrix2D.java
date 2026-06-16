@@ -18,12 +18,12 @@ public class NumMatrix2D {
         }
     }
 
-    public int sumRegion(int row1, int col1, int row2, int col2) {
-        row1++; col1++; row2++; col2++;
-        int r2c2 = prefixSum2D[row2][col2];
-        int r1_1c2 = prefixSum2D[row1 - 1][col2];
-        int r2c1_1 = prefixSum2D[row2][col1 - 1];
-        int r1_1c1_1 = prefixSum2D[row1 - 1][col1 - 1];
+    public int sumRegion(int r1, int c1, int r2, int c2) {
+        r1++; c1++; r2++; c2++;
+        int r2c2 = prefixSum2D[r2][c2];
+        int r1_1c2 = prefixSum2D[r1 - 1][c2];
+        int r2c1_1 = prefixSum2D[r2][c1 - 1];
+        int r1_1c1_1 = prefixSum2D[r1 - 1][c1 - 1];
         return r2c2 - r1_1c2 - r2c1_1 + r1_1c1_1;
     }
 
@@ -35,13 +35,13 @@ public class NumMatrix2D {
                 {4, 1, 0, 1, 7},
                 {1, 0, 3, 0, 5}
         };
-        NumMatrix2D obj = new NumMatrix2D(matrix);
-//        System.out.println(obj.sumRegion(2, 1, 4, 3));
-//        System.out.println(obj.sumRegion(1, 0, 3, 2));
-//        System.out.println(obj.sumRegion(1, 1, 1, 3));
-//        System.out.println(obj.sumRegion(2, 3, 2, 3));
-//        System.out.println(obj.sumRegion(0, 0, 4, 4));
-//        System.out.println(obj.sumRegion(1, 1, 2, 2));
-        System.out.println(obj.sumRegion(1, 2, 2, 4));
+        NumMatrix2D numMatrix2D = new NumMatrix2D(matrix);
+//        System.out.println(numMatrix2D.sumRegion(2, 1, 4, 3));
+//        System.out.println(numMatrix2D.sumRegion(1, 0, 3, 2));
+//        System.out.println(numMatrix2D.sumRegion(1, 1, 1, 3));
+//        System.out.println(numMatrix2D.sumRegion(2, 3, 2, 3));
+//        System.out.println(numMatrix2D.sumRegion(0, 0, 4, 4));
+//        System.out.println(numMatrix2D.sumRegion(1, 1, 2, 2));
+        System.out.println(numMatrix2D.sumRegion(1, 2, 2, 4));
     }
 }
