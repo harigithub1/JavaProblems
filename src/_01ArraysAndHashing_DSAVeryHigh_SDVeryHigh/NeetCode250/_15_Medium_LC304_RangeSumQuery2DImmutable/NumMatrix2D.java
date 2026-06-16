@@ -2,29 +2,30 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._15_Medium_LC304_
 
 public class NumMatrix2D {
 
-    private int[][] prefixSum;
+    private int[][] prefixSum2D;
 
     public NumMatrix2D(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
-        prefixSum = new int[rows + 1][cols + 1];
+        prefixSum2D = new int[rows + 1][cols + 1];
 
         for (int i = 0; i < rows; i++) {
             int prefix = 0;
             for (int j = 0; j < cols; j++) {
                 prefix = prefix + matrix[i][j];
-                int above = prefixSum[i][j + 1];
-                prefixSum[i + 1][j + 1] = prefix + above;
+                int above = prefixSum2D[i][j + 1];
+                prefixSum2D[i + 1][j + 1] = prefix + above;
             }
         }
     }
 
     public int sumRegion(int row1, int col1, int row2, int col2) {
         row1++; col1++; row2++; col2++;
-        int bottomRight = prefixSum[row2][col2];
-        int above = prefixSum[row1 - 1][col2];
-        int left = prefixSum[row2][col1 - 1];
-        int topLeft = prefixSum[row1 - 1][col1 - 1];
-        return bottomRight - above - left + topLeft;
+        int bottomRightInsidePrefixSumSubMatrix = prefixSum2D[row2][col2];
+        int abovePrefixSumSubMatrix = prefixSum2D[row1 - 1][col2];
+        int leftToPrefixSumSubMatrix = prefixSum2D[row2][col1 - 1];
+        int topLeftAbovePrefixSumSubMatrix = prefixSum2D[row1 - 1][col1 - 1];
+        return bottomRightInsidePrefixSumSubMatrix - abovePrefixSumSubMatrix - leftToPrefixSumSubMatrix
+                + topLeftAbovePrefixSumSubMatrix;
     }
 
     public static void main(String[] args) {
