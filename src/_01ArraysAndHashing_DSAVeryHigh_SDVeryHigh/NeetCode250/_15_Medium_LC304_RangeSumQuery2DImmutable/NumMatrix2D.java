@@ -21,8 +21,8 @@ public class NumMatrix2D {
     public int sumRegion(int r1, int c1, int r2, int c2) {
         r1++; c1++; r2++; c2++;
         int r2c2 = prefixSum2D[r2][c2];
-        int r1_1c2 = prefixSum2D[r1 - 1][c2];
         int r2c1_1 = prefixSum2D[r2][c1 - 1];
+        int r1_1c2 = prefixSum2D[r1 - 1][c2];
         int r1_1c1_1 = prefixSum2D[r1 - 1][c1 - 1];
         return r2c2 - r1_1c2 - r2c1_1 + r1_1c1_1;
     }
