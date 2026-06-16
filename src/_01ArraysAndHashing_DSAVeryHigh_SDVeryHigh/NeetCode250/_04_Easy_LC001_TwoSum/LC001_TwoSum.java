@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_Tw
 import java.util.HashMap;
 import java.util.Map;
 
-public class _04_Easy_LC001_TwoSum {
+public class LC001_TwoSum {
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -38,16 +38,3 @@ public class _04_Easy_LC001_TwoSum {
  * If multiple valid pairs exist, this method returns
  * the first pair found while scanning from left to right.
  */
-
-/**
- *below is a better way since it has only one hashing
- *if map.containsKey(complement) is used two hashing happens
- *checking if complement is present and then returning indices (only one hashing)
- * Integer index = map.get(complement);
- * if (index != null) {
- * return new int[] {index, i};
- * }
- * map.put(nums[i], i);
- */
-
-
