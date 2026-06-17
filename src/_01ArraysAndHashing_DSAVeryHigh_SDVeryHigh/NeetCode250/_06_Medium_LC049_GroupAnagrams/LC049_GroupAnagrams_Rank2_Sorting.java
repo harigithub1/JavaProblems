@@ -24,4 +24,11 @@ public class LC049_GroupAnagrams_Rank2_Sorting {
     }
 }
 
+/*
+| Approach        | Time           | Space    | Interview Rating |
+| --------------- | -------------- | -------- | ---------------- |
+| Sorting         | O(N × K log K) | O(N × K) | ⭐⭐⭐⭐⭐            |
+| Frequency Count | O(N × K)       | O(N × K) | ⭐⭐⭐⭐⭐⭐           |
+ */
+
 
