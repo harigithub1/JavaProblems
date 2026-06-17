@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._06_Medium_LC049_
 
 import java.util.*;
 
-public class _06_Medium_LC049_GroupAnagrams {
+public class LC049_GroupAnagrams_Rank1_FreqCount {
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> res = new HashMap<>();
         for (String s : strs) {
