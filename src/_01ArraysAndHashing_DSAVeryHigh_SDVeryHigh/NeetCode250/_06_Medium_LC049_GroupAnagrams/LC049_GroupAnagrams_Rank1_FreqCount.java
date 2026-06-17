@@ -14,23 +14,21 @@ public class LC049_GroupAnagrams_Rank1_FreqCount {
             res.putIfAbsent(key, new ArrayList<>());
             res.get(key).add(s);
         }
-        return new ArrayList<>(res.values());
+        return new ArrayList<List<String>>(res.values());
     }
 
     public static void main(String[] args) {
         String[] input = {"eat", "tea", "tan", "ate", "nat", "bat"};
         List<List<String>> result = groupAnagrams(input);
-        // Print result
         for (List<String> group : result) {
             System.out.println(group);
         }
     }
 }
+
 /*
 | Approach        | Time           | Space    | Interview Rating |
 | --------------- | -------------- | -------- | ---------------- |
 | Sorting         | O(N × K log K) | O(N × K) | ⭐⭐⭐⭐⭐            |
 | Frequency Count | O(N × K)       | O(N × K) | ⭐⭐⭐⭐⭐⭐           |
  */
-
-
