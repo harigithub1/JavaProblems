@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._05_Easy_LC014_LongestCommonPrefix;
 
-public class _05_Easy_LC014_LongestCommonPrefix {
+public class LC014_LongestCommonPrefix {
     /*
     vertical scan / column-wise traversal pattern.
      */
@@ -15,7 +15,7 @@ public class _05_Easy_LC014_LongestCommonPrefix {
         return strs[0];
     }
     public static void main(String[] args) {
-        String[] strs = {"flower","flow","flight"};       //understand s.charAt(i) != strs[0].charAt(i) condition
+        String[] strs = {"flower","flow","flight"};
 //        String[] strs = {"computer", "com", "compact"};   // understand i == s.length() condition
 //        String[] strs = {"sun", "sunlight", "sunrise"};   // understand return strs[0] and reason for using i < strs[0].length() in the for loop
         String result = longestCommonPrefix(strs);
