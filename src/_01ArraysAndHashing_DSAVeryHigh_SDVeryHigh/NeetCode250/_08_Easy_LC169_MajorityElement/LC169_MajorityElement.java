@@ -26,7 +26,9 @@ class LC169_MajorityElement {
 }
 
 /**
- * ✅ This code uses the Boyer-Moore Majority Vote Algorithm (because You may assume that the majority element always exists in the array.)
+ * ✅ This code uses the Boyer-Moore Majority Vote Algorithm
+ * (Boyer-Moore Majority Vote Algorithm works here because you may assume that the majority element always exists in the array.
+ * The majority element is the element that appears more than ⌊n / 2⌋ times.)
  * Algorithm Type:
  * 👉 Greedy Algorithm
  * Because it makes local decisions without backtracking.
