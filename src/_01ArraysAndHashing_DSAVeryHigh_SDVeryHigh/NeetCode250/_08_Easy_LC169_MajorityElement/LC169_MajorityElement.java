@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._08_Easy_LC169_MajorityElement;
 
-class _08_Easy_LC169_MajorityElement {
+class LC169_MajorityElement {
     public static int majorityCandidate(int[] nums) {
         int candidate = 0;
         int count = 0;
@@ -26,28 +26,11 @@ class _08_Easy_LC169_MajorityElement {
 }
 
 /**
- * ✅ This code uses the Boyer-Moore Majority Vote Algorithm
- * That is the official, correct name of the pattern/technique you're using.
- *
- * If someone asks:
- * "What pattern is this?"
- *
- * You should say:
- * "This is the Boyer-Moore Majority Vote algorithm."
- * That's the answer interviewers expect.
- *
- * If they go one level deeper:
- *
- * 1️⃣ Algorithm Name
- * 👉 Boyer-Moore Majority Vote
- *
- * 2️⃣ Algorithm Type
- * 👉 _02_Greedy Algorithm
- *
+ * ✅ This code uses the Boyer-Moore Majority Vote Algorithm (because You may assume that the majority element always exists in the array.)
+ * Algorithm Type:
+ * 👉 Greedy Algorithm
  * Because it makes local decisions without backtracking.
  *
  * So you can also say:
  * "It's a greedy voting algorithm using Boyer-Moore."
  */
-
-
