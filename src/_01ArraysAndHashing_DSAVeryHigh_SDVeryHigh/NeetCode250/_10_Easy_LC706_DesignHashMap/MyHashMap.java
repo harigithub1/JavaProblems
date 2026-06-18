@@ -3,22 +3,22 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._10_Easy_LC706_De
 import java.util.Arrays;
 
 public class MyHashMap {
-    private int[] map;
+    private int[] arr;
 
     public MyHashMap() {
-        map = new int[1000001];
-        Arrays.fill(map, -1);
+        arr = new int[1000001];
+        Arrays.fill(arr, -1);
     }
 
     public void put(int key, int value) {
-        map[key] = value;
+        arr[key] = value;
     }
 
     public int get(int key) {
-        return map[key];
+        return arr[key];
     }
 
     public void remove(int key) {
-        map[key] = -1;
+        arr[key] = -1;
     }
 }
