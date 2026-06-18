@@ -20,5 +20,3 @@ public class LC027_RemoveElement {
         }
     }
 }
-
-
