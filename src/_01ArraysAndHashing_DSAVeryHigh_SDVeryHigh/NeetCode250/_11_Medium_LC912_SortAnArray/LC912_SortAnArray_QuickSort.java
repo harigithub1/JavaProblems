@@ -86,7 +86,6 @@ public class LC912_SortAnArray_QuickSort {
         return j;
     }
 
-    // Utility swap function
     private static void swap(int[] nums, int x, int y) {
         int temp = nums[x];
         nums[x] = nums[y];
@@ -136,4 +135,3 @@ public class LC912_SortAnArray_QuickSort {
         System.out.println(Arrays.toString(sortArray(nums)));
     }
 }
-
