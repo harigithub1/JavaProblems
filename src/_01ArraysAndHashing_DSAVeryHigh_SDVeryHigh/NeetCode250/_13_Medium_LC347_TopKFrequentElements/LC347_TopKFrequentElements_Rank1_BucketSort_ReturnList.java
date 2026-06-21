@@ -17,17 +17,28 @@ public class LC347_TopKFrequentElements_Rank1_BucketSort_ReturnList {
             arrayBucket[e.getValue()].add(e.getKey());
         }
 
-        List<Integer> res = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         for (int i = arrayBucket.length - 1; i >= 0; i--) {
             for (int n : arrayBucket[i]) {
-                res.add(n);
-
-                if (res.size() == k) {
-                    return res;
+                list.add(n);
+                if (list.size() == k) {
+                    return list;
                 }
             }
         }
-        return res;
+        /*
+        Below code will not work since there could be multiple numbers with same frequency for example if input is {1,1,2,2,3,3}
+        List<Integer> list = new ArrayList<>();
+        for(int i = arrayBucket.length-1;i>0;i--){
+            if (!arrayBucket[i].isEmpty()) {
+                if (list.size() == k) {
+                    return list;
+                }
+                list.add(arrayBucket[i].get(0));
+            }
+        }
+         */
+        return list;
     }
 
     public static void main(String[] args) {
