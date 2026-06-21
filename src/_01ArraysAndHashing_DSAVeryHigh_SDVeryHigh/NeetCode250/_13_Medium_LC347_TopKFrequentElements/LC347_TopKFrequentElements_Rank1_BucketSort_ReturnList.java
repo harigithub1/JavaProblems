@@ -13,13 +13,11 @@ public class LC347_TopKFrequentElements_Rank1_BucketSort_ReturnList {
         for (int i = 0; i < arrayBucket.length; i++) {
             arrayBucket[i] = new ArrayList<>();
         }
-
         for (Map.Entry<Integer, Integer> e : map.entrySet()) {
             arrayBucket[e.getValue()].add(e.getKey());
         }
 
         List<Integer> res = new ArrayList<>();
-
         for (int i = arrayBucket.length - 1; i >= 0; i--) {
             for (int n : arrayBucket[i]) {
                 res.add(n);
@@ -29,14 +27,12 @@ public class LC347_TopKFrequentElements_Rank1_BucketSort_ReturnList {
                 }
             }
         }
-
         return res;
     }
 
     public static void main(String[] args) {
         int[] nums = {1,1,1,2,2,3};
         int k = 2;
-
         List<Integer> result = topKFrequent(nums, k);
         System.out.println(result);
     }
