@@ -9,18 +9,27 @@ public class LC347_TopKFrequentElements_Rank1_BucketSort {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }
 
-        List<Integer>[] arr = new List[nums.length + 1];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = new ArrayList<>();
+        /*
+        Bucket sort avoids sorting frequencies and directly places elements into frequency buckets,
+        reducing the time complexity from O(n log n) to O(n).
+        The "sorting" happens implicitly by placing elements into indexed buckets and visiting the buckets in order,
+        rather than by comparing elements like in QuickSort or MergeSort.
+         */
+        List<Integer>[] arrayBucket = new List[nums.length + 1];
+        // initialize each bucket list
+        for (int i = 0; i < arrayBucket.length; i++) {
+            arrayBucket[i] = new ArrayList<>();
         }
+        // place each number into the bucket corresponding to its frequency
         for (Map.Entry<Integer, Integer> e : map.entrySet()) {
-            arr[e.getValue()].add(e.getKey());
+            arrayBucket[e.getValue()].add(e.getKey());
         }
 
         int[] res = new int[k];
         int index = 0;
-        for (int i = arr.length - 1; i >= 0; i--) {
-            for (int n : arr[i]) {
+        // collect results starting from highest frequency
+        for (int i = arrayBucket.length - 1; i >= 0; i--) {
+            for (int n : arrayBucket[i]) {
                 res[index] = n;
                 index++;
                 if (index == k) {
