@@ -15,8 +15,12 @@ public class LC347_TopKFrequentElements_Rank1_BucketSort {
         The "sorting" happens implicitly by placing elements into indexed buckets and visiting the buckets in order,
         rather than by comparing elements like in QuickSort or MergeSort.
          */
+        /*
+        We have used List<Integer>[] instead of int[] because multiple elements can have the same frequency,
+        and each bucket must be able to store multiple numbers.
+         */
         List<Integer>[] arrayBucket = new List[nums.length + 1];
-        // initialize each bucket list
+        // initialize each bucket list, i will be the frequency, so we need to initialize all buckets from 0 to nums.length
         for (int i = 0; i < arrayBucket.length; i++) {
             arrayBucket[i] = new ArrayList<>();
         }
