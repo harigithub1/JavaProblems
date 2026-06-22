@@ -1,10 +1,10 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._14_Medium_LC271_EncodeAndDecodeStrings;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250.LC271_EncodeAndDecodeStrings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class _14_Medium_LC271_EncodeAndDecodeStrings {
+public class LC271_EncodeAndDecodeStrings {
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
         for (String s : strs) {
