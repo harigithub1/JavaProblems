@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class _14_Medium_LC271_EncodeAndDecodeStrings {
-    public static String encode(List<String> list) {
-        StringBuilder sbl = new StringBuilder();
-        for (String s : list) {
-            sbl.append(s.length()).append('#').append(s);
+    public static String encode(List<String> strs) {
+        StringBuilder sb = new StringBuilder();
+        for (String s : strs) {
+            sb.append(s.length()).append('#').append(s);
         }
-        return sbl.toString();
+        return sb.toString();
     }
 
     public static List<String> decode(String s) {
