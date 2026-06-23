@@ -59,3 +59,9 @@ public class LC271_EncodeAndDecodeStrings {
         System.out.println("Decoded: " + decoded);
     }
 }
+/*
+Pattern: Serialization & Deserialization (Length-Prefix Encoding)
+Technique: Parsing + Two Pointers
+Time: O(n)
+Space: O(n) for output.
+ */
