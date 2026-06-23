@@ -7,8 +7,8 @@ public class NumMatrix2D {
     public NumMatrix2D(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
 
+        //now all 0s will be added as default values in below prefixSum matrix after initialization
         prefixSum = new int[rows + 1][cols + 1];
-        //now default values will be all 0s in above prefixSum matrix after initialization
 
         for (int i = 0; i < rows; i++) {
             int prefix = 0;
