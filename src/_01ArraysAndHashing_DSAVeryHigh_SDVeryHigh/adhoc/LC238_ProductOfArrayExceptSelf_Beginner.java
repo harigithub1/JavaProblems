@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._16_Medium_LC238_ProductOfArrayExceptSelf;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.adhoc;
 
 import java.util.Arrays;
 
