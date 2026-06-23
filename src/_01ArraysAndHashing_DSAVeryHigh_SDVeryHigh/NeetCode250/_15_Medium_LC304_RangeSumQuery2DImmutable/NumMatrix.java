@@ -1,10 +1,10 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._15_Medium_LC304_RangeSumQuery2DImmutable;
 
-public class NumMatrix2D {
+public class NumMatrix {
 
     private int[][] prefixSum;
 
-    public NumMatrix2D(int[][] matrix) {
+    public NumMatrix(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
 
         //now all 0s will be added as default values in below prefixSum matrix after initialization
@@ -32,13 +32,13 @@ public class NumMatrix2D {
                 {4, 1, 0, 1, 7},
                 {1, 0, 3, 0, 5}
         };
-        NumMatrix2D numMatrix2D = new NumMatrix2D(matrix);
-//        System.out.println(numMatrix2D.sumRegion(2, 1, 4, 3));
-//        System.out.println(numMatrix2D.sumRegion(1, 0, 3, 2));
-//        System.out.println(numMatrix2D.sumRegion(1, 1, 1, 3));
-//        System.out.println(numMatrix2D.sumRegion(2, 3, 2, 3));
-//        System.out.println(numMatrix2D.sumRegion(0, 0, 4, 4));
-//        System.out.println(numMatrix2D.sumRegion(1, 1, 2, 2));
-        System.out.println(numMatrix2D.sumRegion(1, 2, 2, 4));
+        NumMatrix numMatrix = new NumMatrix(matrix);
+//        System.out.println(numMatrix.sumRegion(2, 1, 4, 3));
+//        System.out.println(numMatrix.sumRegion(1, 0, 3, 2));
+//        System.out.println(numMatrix.sumRegion(1, 1, 1, 3));
+//        System.out.println(numMatrix.sumRegion(2, 3, 2, 3));
+//        System.out.println(numMatrix.sumRegion(0, 0, 4, 4));
+//        System.out.println(numMatrix.sumRegion(1, 1, 2, 2));
+        System.out.println(numMatrix.sumRegion(1, 2, 2, 4));
     }
 }
