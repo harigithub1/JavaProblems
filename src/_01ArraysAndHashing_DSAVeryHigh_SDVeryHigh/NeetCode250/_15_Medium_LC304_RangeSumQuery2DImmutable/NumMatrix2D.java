@@ -6,14 +6,15 @@ public class NumMatrix2D {
 
     public NumMatrix2D(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
+
         prefixSum = new int[rows + 1][cols + 1];
+        //now default values will be all 0s in above prefixSum matrix after initialization
 
         for (int i = 0; i < rows; i++) {
             int prefix = 0;
             for (int j = 0; j < cols; j++) {
                 prefix = prefix + matrix[i][j];
-                int above = prefixSum[i][j + 1];
-                prefixSum[i + 1][j + 1] = prefix + above;
+                prefixSum[i + 1][j + 1] = prefix + prefixSum[i][j + 1];
             }
         }
     }
