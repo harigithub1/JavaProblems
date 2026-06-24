@@ -1,11 +1,11 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._19_Medium_LC122_BestTimetoBuyandSellStock2;
 
 public class LC122_BestTimetoBuyandSellStock2 {
-public static int maxProfit(int[] prices) {
+    public static int maxProfit(int[] prices) {
         int profit = 0;
         for (int i = 1; i < prices.length; i++) {
             if (prices[i] > prices[i - 1]) {
-                profit += (prices[i] - prices[i - 1]);
+                profit = profit + prices[i] - prices[i - 1];
             }
         }
         return profit;
@@ -22,5 +22,12 @@ public static int maxProfit(int[] prices) {
         System.out.println(maxProfit(prices3)); // 0
     }
 }
-
-
+/**
+ * Pattern used: Greedy
+ * Why Greedy?
+ *
+ * At every step, you make the locally optimal choice:
+ *
+ * If today's price is higher than yesterday's, take the profit immediately.
+ * Don't wait for a potentially higher future price.
+ */
