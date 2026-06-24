@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._19_Medium_LC122_BestTimetoBuyandSellStock2;
 
-public class _19_Medium_LC122_BestTimetoBuyandSellStock2 {
-public int maxProfit(int[] prices) {
+public class LC122_BestTimetoBuyandSellStock2 {
+public static int maxProfit(int[] prices) {
         int profit = 0;
         for (int i = 1; i < prices.length; i++) {
             if (prices[i] > prices[i - 1]) {

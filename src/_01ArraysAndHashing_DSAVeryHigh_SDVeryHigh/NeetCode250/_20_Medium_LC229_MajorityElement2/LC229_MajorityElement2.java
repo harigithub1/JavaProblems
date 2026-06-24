@@ -1,8 +1,9 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_MajorityElement2;
 
-public class _20_Medium_LC229_MajorityElement2 {
+import java.util.*;
 
-public List<Integer> majorityElement(int[] nums) {
+public class LC229_MajorityElement2 {
+    public static List<Integer> majorityElement(int[] nums) {
         Map<Integer, Integer> count = new HashMap<>();
 
         for (int num : nums) {
@@ -34,7 +35,7 @@ public List<Integer> majorityElement(int[] nums) {
     }
 
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         int[] nums1 = {3, 2, 3};
         System.out.println(majorityElement(nums1)); // [3]
 

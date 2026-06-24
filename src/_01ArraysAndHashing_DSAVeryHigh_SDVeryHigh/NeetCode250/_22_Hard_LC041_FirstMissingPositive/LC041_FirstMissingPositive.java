@@ -1,8 +1,8 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_FirstMissingPositive;
 
-public class _22_Hard_LC041_FirstMissingPositive {
+public class LC041_FirstMissingPositive {
 
-public int firstMissingPositive(int[] nums) {
+    public static int firstMissingPositive(int[] nums) {
         int n = nums.length;
 
         for (int i = 0; i < n; i++) {
@@ -31,7 +31,7 @@ public int firstMissingPositive(int[] nums) {
         return n + 1;
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         int[] nums1 = {1, 2, 0};
         System.out.println(firstMissingPositive(nums1)); // 3
 
