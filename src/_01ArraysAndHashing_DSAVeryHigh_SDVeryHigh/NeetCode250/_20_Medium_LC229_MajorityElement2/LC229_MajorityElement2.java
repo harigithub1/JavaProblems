@@ -20,6 +20,8 @@ public class LC229_MajorityElement2 {
             }
         }
 
+        //Edge case: This second pass is there to verify the candidates,
+        // because the first pass only finds potential majority elements.
         List<Integer> res = new ArrayList<>();
         for (int key : count.keySet()) {
             int frequency = 0;
