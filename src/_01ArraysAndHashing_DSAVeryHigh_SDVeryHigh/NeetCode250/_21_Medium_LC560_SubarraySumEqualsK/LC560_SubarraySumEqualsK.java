@@ -1,7 +1,9 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._21_Medium_LC560_SubarraySumEqualsK;
 
+import java.util.*;
+
 public class LC560_SubarraySumEqualsK {
-public int subarraySum(int[] nums, int k) {
+    public static int subarraySum(int[] nums, int k) {
         int res = 0, curSum = 0;
         Map<Integer, Integer> prefixSums = new HashMap<>();
         prefixSums.put(0, 1);
@@ -16,7 +18,7 @@ public int subarraySum(int[] nums, int k) {
         return res;
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         // Test Case 1
         int[] nums1 = {1, 1, 1};
         int k1 = 2;
