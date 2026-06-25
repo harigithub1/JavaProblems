@@ -36,17 +36,17 @@ public class LC229_MajorityElement2 {
 
 
     public static void main(String[] args) {
-        int[] nums1 = {3, 2, 3};
-        System.out.println(majorityElement(nums1)); // [3]
+//        int[] nums1 = {3, 2, 3};
+//        System.out.println(majorityElement(nums1)); // [3]
+//
+//        int[] nums2 = {1};
+//        System.out.println(majorityElement(nums2)); // [1]
+//
+//        int[] nums3 = {1, 2};
+//        System.out.println(majorityElement(nums3)); // [1, 2]
 
-        int[] nums2 = {1};
-        System.out.println(majorityElement(nums2)); // [1]
-
-        int[] nums3 = {1, 2};
-        System.out.println(majorityElement(nums3)); // [1, 2]
-
-        int[] nums4 = {1, 1, 1, 3, 3, 2, 2, 2};
-        System.out.println(majorityElement(nums4)); // [1, 2]
+        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
+        System.out.println(majorityElement(nums)); // [1, 2]
     }
 }
 

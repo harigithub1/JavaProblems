@@ -12,14 +12,14 @@ public class LC122_BestTimetoBuyandSellStock2 {
     }
 
     public static void main(String[] args) {
-        int[] prices1 = {7, 1, 5, 3, 6, 4};
-        System.out.println(maxProfit(prices1)); // 7
+        int[] prices = {7, 1, 5, 3, 6, 4};
+        System.out.println(maxProfit(prices)); // 7
 
-        int[] prices2 = {1, 2, 3, 4, 5};
-        System.out.println(maxProfit(prices2)); // 4
-
-        int[] prices3 = {7, 6, 4, 3, 1};
-        System.out.println(maxProfit(prices3)); // 0
+//        int[] prices2 = {1, 2, 3, 4, 5};
+//        System.out.println(maxProfit(prices2)); // 4
+//
+//        int[] prices3 = {7, 6, 4, 3, 1};
+//        System.out.println(maxProfit(prices3)); // 0
     }
 }
 /**
