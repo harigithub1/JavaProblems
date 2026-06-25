@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 import java.util.*;
 
 public class LC229_MajorityElement2 {
-    public static List<Integer> majorityElement(int[] nums) {
+    public static List<Integer> majorityElements2(int[] nums) {
         Map<Integer, Integer> count = new HashMap<>();
 
         for (int num : nums) {
@@ -48,8 +48,7 @@ public class LC229_MajorityElement2 {
 //        System.out.println(majorityElement(nums3)); // [1, 2]
 
         int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
-        System.out.println(majorityElement(nums)); // [1, 2]
+        List<Integer> res = majorityElements2(nums); // [1, 2]
+        System.out.println(res);
     }
 }
-
-
