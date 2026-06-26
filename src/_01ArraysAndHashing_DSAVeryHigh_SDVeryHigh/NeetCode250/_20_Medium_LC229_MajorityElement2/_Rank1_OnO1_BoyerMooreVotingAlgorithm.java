@@ -5,19 +5,32 @@ import java.util.*;
 public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
     public static List<Integer> majorityElement2(int[] nums) {
         int l = nums.length;
-        int num1 = -1, num2 = -1, cnt1 = 0, cnt2 = 0;
+        /*
+        candidate1
+        first candidate
+        cnt1
+        votes for first candidate
+
+        candidate2
+        second candidate
+        cnt2
+        votes for second candidate
+
+        Initially there are no candidates.
+         */
+        int candidate1 = -1, candidate2 = -1, cnt1 = 0, cnt2 = 0;
 
         for (int n : nums) {
-            if (n == num1) {
+            if (n == candidate1) {
                 cnt1++;
-            } else if (n == num2) {
+            } else if (n == candidate2) {
                 cnt2++;
             } else if (cnt1 == 0) {
                 cnt1 = 1;
-                num1 = n;
+                candidate1 = n;
             } else if (cnt2 == 0) {
                 cnt2 = 1;
-                num2 = n;
+                candidate2 = n;
             } else {
                 cnt1--;
                 cnt2--;
@@ -26,16 +39,16 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
 
         cnt1 = cnt2 = 0;
         for (int num : nums) {
-            if (num == num1) {
+            if (num == candidate1) {
                 cnt1++;
-            } else if (num == num2) {
+            } else if (num == candidate2) {
                 cnt2++;
             }
         }
 
         List<Integer> res = new ArrayList<>();
-        if (cnt1 > l / 3) res.add(num1);
-        if (cnt2 > l / 3) res.add(num2);
+        if (cnt1 > l / 3) res.add(candidate1);
+        if (cnt2 > l / 3) res.add(candidate2);
 
         return res;
     }
