@@ -54,14 +54,10 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
+//        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
+        int[] nums = {1,2,3,4}; //no majority element, second pass is necessary
+//        int[] nums = {1,2,3,1,2,3}; //There is no majority.
         List<Integer> res = majorityElement2(nums); // [1, 2]
         System.out.println(res);
-//        int[] nums1 = {3, 2, 3};
-//        System.out.println(majorityElement(nums1)); // [3]
-//        int[] nums2 = {1};
-//        System.out.println(majorityElement(nums2)); // [1]
-//        int[] nums3 = {1, 2};
-//        System.out.println(majorityElement(nums3)); // [1, 2]
     }
 }
