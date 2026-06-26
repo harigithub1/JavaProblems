@@ -2,12 +2,17 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 import java.util.*;
 public class _Rank2_OnOn_FrequencyCount {
     public static List<Integer> majorityElement2(int[] nums) {
+
+        //Space complexity O(n)
         Map<Integer, Integer> map = new HashMap<>();
-        for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+        //Time Complexity O(n)
+        for (int n : nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
         }
 
+        //Space Complexity O(1) (The result list can contain at most 2 elements)
         List<Integer> list = new ArrayList<>();
+        //Time Complexity O(k)
         for (int key : map.keySet()) {
             if (map.get(key) > nums.length / 3) {
                 list.add(key);
