@@ -8,47 +8,47 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
         /*
         candidate1
         first candidate
-        cnt1
+        count1
         votes for first candidate
 
         candidate2
         second candidate
-        cnt2
+        count2
         votes for second candidate
 
         Initially there are no candidates.
          */
-        int candidate1 = -1, candidate2 = -1, cnt1 = 0, cnt2 = 0;
+        int candidate1 = -1, candidate2 = -1, count1 = 0, count2 = 0;
 
         for (int n : nums) {
             if (n == candidate1) {
-                cnt1++;
+                count1++;
             } else if (n == candidate2) {
-                cnt2++;
-            } else if (cnt1 == 0) {
-                cnt1 = 1;
+                count2++;
+            } else if (count1 == 0) {
+                count1 = 1;
                 candidate1 = n;
-            } else if (cnt2 == 0) {
-                cnt2 = 1;
+            } else if (count2 == 0) {
+                count2 = 1;
                 candidate2 = n;
             } else {
-                cnt1--;
-                cnt2--;
+                count1--;
+                count2--;
             }
         }
 
-        cnt1 = cnt2 = 0;
+        count1 = count2 = 0;
         for (int num : nums) {
             if (num == candidate1) {
-                cnt1++;
+                count1++;
             } else if (num == candidate2) {
-                cnt2++;
+                count2++;
             }
         }
 
         List<Integer> res = new ArrayList<>();
-        if (cnt1 > l / 3) res.add(candidate1);
-        if (cnt2 > l / 3) res.add(candidate2);
+        if (count1 > l / 3) res.add(candidate1);
+        if (count2 > l / 3) res.add(candidate2);
 
         return res;
     }
