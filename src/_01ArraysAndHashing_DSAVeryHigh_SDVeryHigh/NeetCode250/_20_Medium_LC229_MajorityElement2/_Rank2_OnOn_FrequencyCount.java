@@ -2,19 +2,19 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 import java.util.*;
 public class _Rank2_OnOn_FrequencyCount {
     public static List<Integer> majorityElement2(int[] nums) {
-        Map<Integer, Integer> count = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
-            count.put(num, count.getOrDefault(num, 0) + 1);
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
-        List<Integer> res = new ArrayList<>();
-        for (int key : count.keySet()) {
-            if (count.get(key) > nums.length / 3) {
-                res.add(key);
+        List<Integer> list = new ArrayList<>();
+        for (int key : map.keySet()) {
+            if (map.get(key) > nums.length / 3) {
+                list.add(key);
             }
         }
 
-        return res;
+        return list;
     }
     public static void main(String[] args) {
 //        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
