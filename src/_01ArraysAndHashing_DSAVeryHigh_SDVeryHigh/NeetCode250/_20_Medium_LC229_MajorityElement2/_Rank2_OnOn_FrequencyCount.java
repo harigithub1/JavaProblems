@@ -22,8 +22,7 @@ public class _Rank2_OnOn_FrequencyCount {
         return list;
     }
     public static void main(String[] args) {
-//        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
-        int[] nums = {1, 3, 3, 2, 2, 2, 2, 2};
+        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
         List<Integer> res = majorityElement2(nums); // [1, 2]
         System.out.println(res);
 //        int[] nums1 = {3, 2, 3};
