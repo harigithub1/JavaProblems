@@ -54,9 +54,9 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
     }
 
     public static void main(String[] args) {
-//        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2};
+//        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2}; // majority element exists
         int[] nums = {1,2,3,4}; //no majority element, second pass is necessary
-//        int[] nums = {1,2,3,1,2,3}; //There is no majority.
+//        int[] nums = {1,2,3,1,2,3}; //there is no majority.
         List<Integer> res = majorityElement2(nums); // [1, 2]
         System.out.println(res);
     }
