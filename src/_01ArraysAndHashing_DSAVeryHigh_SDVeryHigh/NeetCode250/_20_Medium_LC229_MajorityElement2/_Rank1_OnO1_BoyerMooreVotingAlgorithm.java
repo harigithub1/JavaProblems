@@ -26,11 +26,11 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
             } else if (n == candidate2) {
                 count2++;
             } else if (count1 == 0) {
-                count1 = 1;
                 candidate1 = n;
+                count1 = 1;
             } else if (count2 == 0) {
-                count2 = 1;
                 candidate2 = n;
+                count2 = 1;
             } else {
                 count1--;
                 count2--;
