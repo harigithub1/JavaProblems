@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 
 import java.util.*;
 
-public class BoyerMooreVotingAlgorithmRank1 {
+public class Rank1_OnO1_BoyerMooreVotingAlgorithm {
     public static List<Integer> majorityElement2(int[] nums) {
         int n = nums.length;
         int num1 = -1, num2 = -1, cnt1 = 0, cnt2 = 0;
