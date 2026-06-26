@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_MajorityElement2;
 import java.util.*;
-public class Rank2_OnOn_FrequencyCount {
+public class _Rank2_OnOn_FrequencyCount {
     public static List<Integer> majorityElement2(int[] nums) {
         Map<Integer, Integer> count = new HashMap<>();
         for (int num : nums) {

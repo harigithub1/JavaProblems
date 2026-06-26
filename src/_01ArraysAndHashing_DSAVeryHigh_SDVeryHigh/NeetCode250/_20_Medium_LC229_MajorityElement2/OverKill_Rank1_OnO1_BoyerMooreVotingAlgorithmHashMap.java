@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 
 import java.util.*;
 //Boyer-Moore Voting Algorithm (Hash Map)
-public class Rank1_OnO1_OverKill_BoyerMooreVotingAlgorithmHashMap {
+public class OverKill_Rank1_OnO1_BoyerMooreVotingAlgorithmHashMap {
     public static List<Integer> majorityElement2(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
 
