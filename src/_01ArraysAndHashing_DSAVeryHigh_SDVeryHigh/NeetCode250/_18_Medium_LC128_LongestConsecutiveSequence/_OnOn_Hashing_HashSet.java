@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._18_Medium_LC128_
 import java.util.HashSet;
 import java.util.Set;
 
-public class LC128_LongestConsecutiveSequence {
+public class _OnOn_Hashing_HashSet {
     public static int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int n : nums) {
@@ -17,8 +17,8 @@ public class LC128_LongestConsecutiveSequence {
                 int count = 1;
                 // Expand sequence
                 while (set.contains(currentNum + 1)) {
-                    currentNum++;
                     count++;
+                    currentNum++;
                 }
                 longest = Math.max(longest, count);
             }
