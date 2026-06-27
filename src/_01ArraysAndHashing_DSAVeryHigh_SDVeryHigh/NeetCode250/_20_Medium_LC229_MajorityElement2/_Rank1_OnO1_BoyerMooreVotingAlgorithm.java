@@ -6,20 +6,16 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
     public static List<Integer> majorityElement2(int[] nums) {
         int l = nums.length;
         /*
-        candidate1
-        first candidate
-        count1
-        votes for first candidate
+         An element occurring more than n/3 times can be at most 2 elements.
 
-        candidate2
-        second candidate
-        count2
-        votes for second candidate
+         candidate1, candidate2 -> current majority candidates
+         count1, count2         -> vote counts for the candidates
 
-        Initially there are no candidates.
-         */
+         Initially there are no candidates.
+        */
         int candidate1 = -1, candidate2 = -1, count1 = 0, count2 = 0;
 
+        // First Pass: Find potential majority candidates
         for (int n : nums) {
             if (n == candidate1) {
                 count1++;
@@ -37,6 +33,11 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
             }
         }
 
+        /*
+         Second Pass:
+         Verify whether the candidates actually occur
+         more than floor(n/3) times.
+         */
         count1 = count2 = 0;
         for (int num : nums) {
             if (num == candidate1) {
@@ -54,9 +55,9 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2}; // majority element exists
-//        int[] nums = {1,2,3,4}; //no majority element, second pass is necessary
-//        int[] nums = {1,2,3,1,2,3}; //there is no majority.
+        int[] nums = {1, 1, 1, 3, 3, 2, 2, 2}; // majority element exists, Output: [1, 2]
+//        int[] nums = {1,2,3,4}; //no majority element, second pass is necessary, Output: []
+//        int[] nums = {1,2,3,1,2,3}; //no majority element, second pass is necessary, Output: []
         List<Integer> res = majorityElement2(nums); // [1, 2]
         System.out.println(res);
     }
