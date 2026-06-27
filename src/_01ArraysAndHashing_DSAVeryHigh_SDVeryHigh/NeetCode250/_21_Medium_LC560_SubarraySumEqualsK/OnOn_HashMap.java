@@ -4,19 +4,25 @@ import java.util.*;
 
 public class OnOn_HashMap {
     public static int subarraySum(int[] nums, int k) {
-        int res = 0, curSum = 0;
-        //map is prefixSums
-        Map<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        // Prefix sum 0 occurs once
         map.put(0, 1);
 
-        for (int n : nums) {
-            curSum = curSum + n;
-            int diff = curSum - k;
-            res = res + map.getOrDefault(diff, 0);
-            map.put(curSum, map.getOrDefault(curSum, 0) + 1);
+        int sum = 0;
+        int count = 0;
+
+        for (int num : nums) {
+            sum += num;
+
+            if (map.containsKey(sum - k)) {
+                count += map.get(sum - k);
+            }
+
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
 
-        return res;
+        return count;
     }
 
     public static void main(String[] args) {
