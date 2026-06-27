@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class On2On2_HashSet_OnePass_inbuiltMethod {
+public class O81O1_HashSet_OnePass_inbuiltMethod {
     public static boolean isValidSudoku(char[][] board) {
         Map<Integer, Set<Character>> cols = new HashMap<>();
         Map<Integer, Set<Character>> rows = new HashMap<>();
