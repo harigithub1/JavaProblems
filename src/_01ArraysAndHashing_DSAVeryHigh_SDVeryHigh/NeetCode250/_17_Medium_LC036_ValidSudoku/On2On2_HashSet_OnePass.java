@@ -13,7 +13,6 @@ public class On2On2_HashSet_OnePass {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') continue;
-
                 rows.putIfAbsent(i,new HashSet<>());
                 if (!rows.get(i).add(board[i][j])) {
                     return false;
