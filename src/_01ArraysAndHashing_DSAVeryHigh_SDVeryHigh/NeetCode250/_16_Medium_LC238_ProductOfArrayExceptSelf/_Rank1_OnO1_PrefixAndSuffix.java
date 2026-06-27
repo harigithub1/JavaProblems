@@ -1,13 +1,13 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._16_Medium_LC238_ProductOfArrayExceptSelf;
 
-public class LC238_ProductOfArrayExceptSelf {
+public class _Rank1_OnO1_PrefixAndSuffix {
     public static int[] productExceptSelf(int[] nums) {
-        int n = nums.length;
+        int l = nums.length;
 
         //creating res array to store prefix product values initially
-        int[] res = new int[n];
+        int[] res = new int[l];
         res[0] = 1;
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < l; i++) {
             res[i] = res[i - 1] * nums[i - 1];
         }
         // now res has all the prefix product values
@@ -21,7 +21,7 @@ public class LC238_ProductOfArrayExceptSelf {
         // dont forget to update suffix values after multiplying
 
         int suffix = 1;
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = l - 1; i >= 0; i--) {
             //below is the main logic where we multiply suffix values with prefix values since res contains prefix product
             res[i] = res[i] * suffix;
 
