@@ -2,14 +2,14 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._19_Medium_LC122_
 
 public class OnO1_Greedy {
     public static int maxProfit(int[] nums) {
-        int maxProfit = 0;
+        int totalProfit = 0;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] > nums[i - 1]) {
-                int profit = nums[i] - nums[i - 1];
-                maxProfit = maxProfit + profit;
+                int dayProfit = nums[i] - nums[i - 1];
+                totalProfit = totalProfit + dayProfit;
             }
         }
-        return maxProfit;
+        return totalProfit;
     }
 
     public static void main(String[] args) {
