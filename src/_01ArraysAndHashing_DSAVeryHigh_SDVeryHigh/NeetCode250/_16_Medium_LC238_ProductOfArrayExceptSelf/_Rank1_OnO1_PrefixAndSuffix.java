@@ -21,12 +21,16 @@ public class _Rank1_OnO1_PrefixAndSuffix {
         // dont forget to update suffix values after multiplying
 
         int suffix = 1;
-        for (int i = l - 1; i >= 0; i--) {
-            //below is the main logic where we multiply suffix values with prefix values since res contains prefix product
-            res[i] = res[i] * suffix;
-
-            suffix = suffix * nums[i];
+        for(int i =l-2;i>=0;i--){
+            suffix = suffix*nums[i+1];
+            res[i]=res[i]*suffix;
         }
+//        for (int i = l - 1; i >= 0; i--) {
+//            //below is the main logic where we multiply suffix values with prefix values since res contains prefix product
+//            res[i] = res[i] * suffix;
+//
+//            suffix = suffix * nums[i];
+//        }
         return res;
     }
 
