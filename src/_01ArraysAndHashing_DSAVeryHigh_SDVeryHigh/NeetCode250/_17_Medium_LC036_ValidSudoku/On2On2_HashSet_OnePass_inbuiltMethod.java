@@ -5,32 +5,22 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class LC036_ValidSudoku {
+public class On2On2_HashSet_OnePass_inbuiltMethod {
     public static boolean isValidSudoku(char[][] board) {
-        Map<Integer, Set<Character>> rows = new HashMap<>();
         Map<Integer, Set<Character>> cols = new HashMap<>();
+        Map<Integer, Set<Character>> rows = new HashMap<>();
         Map<String, Set<Character>> squares = new HashMap<>();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') continue;
-
-                rows.putIfAbsent(i,new HashSet<>());
-                if (rows.get(i).contains(board[i][j])) {
+                String squareKey = (i / 3) + "," + (j / 3);
+                if (rows.computeIfAbsent(i, k -> new HashSet<>()).contains(board[i][j]) ||
+                        cols.computeIfAbsent(j, k -> new HashSet<>()).contains(board[i][j]) ||
+                        squares.computeIfAbsent(squareKey, k -> new HashSet<>()).contains(board[i][j])) {
                     return false;
                 }
                 rows.get(i).add(board[i][j]);
-
-                cols.putIfAbsent(j, new HashSet<>());
-                if (cols.get(j).contains(board[i][j])) {
-                    return false;
-                }
                 cols.get(j).add(board[i][j]);
-
-                String squareKey = (i / 3) + "," + (j / 3);
-                squares.putIfAbsent(squareKey, new HashSet<>());
-                if (squares.get(squareKey).contains(board[i][j])) {
-                    return false;
-                }
                 squares.get(squareKey).add(board[i][j]);
             }
         }
@@ -49,8 +39,9 @@ public class LC036_ValidSudoku {
                 {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         };
-
         boolean result = isValidSudoku(board);
-        System.out.println(result);
+        System.out.println("Is valid Sudoku? " + result);
     }
 }
+
+

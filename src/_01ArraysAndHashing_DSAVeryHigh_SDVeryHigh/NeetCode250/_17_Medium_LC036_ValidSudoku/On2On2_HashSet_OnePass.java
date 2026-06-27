@@ -5,23 +5,28 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class LC036_ValidSudoku_inbuiltMethod {
+public class On2On2_HashSet_OnePass {
     public static boolean isValidSudoku(char[][] board) {
-        Map<Integer, Set<Character>> cols = new HashMap<>();
         Map<Integer, Set<Character>> rows = new HashMap<>();
+        Map<Integer, Set<Character>> cols = new HashMap<>();
         Map<String, Set<Character>> squares = new HashMap<>();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') continue;
-                String squareKey = (i / 3) + "," + (j / 3);
-                if (rows.computeIfAbsent(i, k -> new HashSet<>()).contains(board[i][j]) ||
-                        cols.computeIfAbsent(j, k -> new HashSet<>()).contains(board[i][j]) ||
-                        squares.computeIfAbsent(squareKey, k -> new HashSet<>()).contains(board[i][j])) {
+
+                rows.putIfAbsent(i,new HashSet<>());
+                if (!rows.get(i).add(board[i][j])) {
                     return false;
                 }
-                rows.get(i).add(board[i][j]);
-                cols.get(j).add(board[i][j]);
-                squares.get(squareKey).add(board[i][j]);
+                cols.putIfAbsent(j, new HashSet<>());
+                if(!cols.get(j).add(board[i][j])) {
+                    return false;
+                }
+                String squareKey = (i / 3) + "," + (j / 3);
+                squares.putIfAbsent(squareKey, new HashSet<>());
+                if(!squares.get(squareKey).add(board[i][j])) {
+                    return false;
+                }
             }
         }
         return true;
@@ -39,9 +44,8 @@ public class LC036_ValidSudoku_inbuiltMethod {
                 {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         };
+
         boolean result = isValidSudoku(board);
-        System.out.println("Is valid Sudoku? " + result);
+        System.out.println(result);
     }
 }
-
-
