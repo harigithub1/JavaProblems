@@ -11,6 +11,7 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
             prefixSum = prefixSum + nums[i];
+            //Have I seen the exact prefix sum that satisfies Current Prefix Sum − Previous Prefix Sum = k?
             if (map.containsKey(prefixSum - k)) {
                 count = count + map.get(prefixSum - k);
             }
