@@ -21,9 +21,9 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
         // Total number of subarrays whose prefixSum equals k
         int count = 0;
 
-        for (int n : nums) {
+        for (int i = 0; i < nums.length; i++) {
             // Calculate current prefix prefixSum
-            prefixSum = prefixSum + n;
+            prefixSum = prefixSum +  nums[i];
 
             if (map.containsKey(prefixSum - k)) {
 
@@ -47,32 +47,9 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
         int k = 3;
         System.out.println(subarraySum(nums, k));
 
-//        // 1. Subarray starts at index 0 (map.put(0, 1))
-//        int[] nums = {3};
+//        int[] nums = {3,-3,1,1,1};
 //        int k = 3;
-//
-//        // 2. Basic prefix sum lookup
-//        int[] nums = {1, 1, 1};
-//        int k = 2;
-//
-//        // 3. Multiple valid subarrays
-//        int[] nums = {1, 2, 3};
-//        int k = 3;
-//
-//        // 4. Negative numbers
-//        int[] nums = {1, 2, -1, 2};
-//        int k = 3;
-//
-//        // 5. Repeated prefix sums (frequency map)
-//        int[] nums = {1, -1, 1, -1, 1};
-//        int k = 0;
+//        System.out.println(subarraySum(nums, k));
 
-//        // 6. Complete example (covers almost everything)
-//        int[] nums = {3, 4, 7, 2, -3, 1, 4, 2};
-//        int k = 7;
-
-//        // 7. No answer
-//        int[] nums = {1, 2, 3};
-//        int k = 10;
     }
 }
