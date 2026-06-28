@@ -55,3 +55,30 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
  * = 3
  * so sub array is [1, 1, 1]
  */
+
+/**
+ * The one formula to remember forever
+ * Subarray Sum
+ * =
+ * Current Prefix Sum
+ * -
+ * Previous Prefix Sum
+ *
+ * Rearrange it:
+ *
+ * Previous Prefix Sum
+ * =
+ * Current Prefix Sum
+ * -
+ * Subarray Sum
+ *
+ * Since the required subarray sum is k:
+ *
+ * Previous Prefix Sum
+ * =
+ * Current Prefix Sum
+ * -
+ * k
+ *
+ * That single equation explains the entire algorithm.
+ */
