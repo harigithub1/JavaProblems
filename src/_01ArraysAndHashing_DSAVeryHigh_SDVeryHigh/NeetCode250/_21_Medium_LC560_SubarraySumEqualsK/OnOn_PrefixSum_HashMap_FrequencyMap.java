@@ -1,7 +1,8 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._21_Medium_LC560_SubarraySumEqualsK;
 
 import java.util.*;
-
+//refer below video
+//https://www.youtube.com/watch?v=xvNwoz-ufXA
 public class OnOn_PrefixSum_HashMap_FrequencyMap {
     public static int subarraySum(int[] nums, int k) {
 
@@ -23,6 +24,7 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
         for (int n : nums) {
             // Calculate current prefix prefixSum
             prefixSum = prefixSum + n;
+
             if (map.containsKey(prefixSum - k)) {
 
                 // Add all possible subarrays ending at current index
