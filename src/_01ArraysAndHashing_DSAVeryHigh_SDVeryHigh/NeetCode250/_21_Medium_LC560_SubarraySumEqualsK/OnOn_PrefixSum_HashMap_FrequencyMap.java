@@ -23,7 +23,6 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
         for (int n : nums) {
             // Calculate current prefix prefixSum
             prefixSum = prefixSum + n;
-
             if (map.containsKey(prefixSum - k)) {
 
                 // Add all possible subarrays ending at current index
@@ -42,6 +41,10 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
     }
 
     public static void main(String[] args) {
+        int[] nums = {1, 2, 3, -3, 1, 1, 1, 4, 2, -3};
+        int k = 3;
+        System.out.println(subarraySum(nums, k));
+
 //        // 1. Subarray starts at index 0 (map.put(0, 1))
 //        int[] nums = {3};
 //        int k = 3;
@@ -62,13 +65,12 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
 //        int[] nums = {1, -1, 1, -1, 1};
 //        int k = 0;
 
-        // 6. Complete example (covers almost everything)
-        int[] nums = {3, 4, 7, 2, -3, 1, 4, 2};
-        int k = 7;
+//        // 6. Complete example (covers almost everything)
+//        int[] nums = {3, 4, 7, 2, -3, 1, 4, 2};
+//        int k = 7;
 
 //        // 7. No answer
 //        int[] nums = {1, 2, 3};
 //        int k = 10;
-        System.out.println(subarraySum(nums, k));
     }
 }
