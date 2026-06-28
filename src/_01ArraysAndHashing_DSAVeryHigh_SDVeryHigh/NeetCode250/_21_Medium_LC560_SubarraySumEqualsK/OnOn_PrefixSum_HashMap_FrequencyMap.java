@@ -29,3 +29,29 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
 //        System.out.println(subarraySum(nums, k));
     }
 }
+
+/**
+ * at i = 4:
+ * (1 + 2 + 3 + (-3) + 1)
+ *      -
+ * (1)
+ * = 2 + 3 + (-3) + 1
+ * = 3
+ * so sub array is [2, 3, -3, 1]
+ *
+ * at i = 6:
+ * 1st occurrence (Previous Prefix Sum at index 1)
+ * (1 + 2 + 3 + (-3) + 1 + 1 + 1)
+ *      -
+ * (1 + 2)
+ * = 3 + (-3) + 1 + 1 + 1
+ * = 3
+ * so sub array is [3, -3, 1, 1, 1]
+ * 2nd occurrence (Previous Prefix Sum at index 3)
+ * (1 + 2 + 3 + (-3) + 1 + 1 + 1)
+ *      -
+ * (1 + 2 + 3 + (-3))
+ * = 1 + 1 + 1
+ * = 3
+ * so sub array is [1, 1, 1]
+ */
