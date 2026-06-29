@@ -11,6 +11,7 @@ public class OnO1_InPlaceHashing {
         }
         // Mark existing numbers [1..l]
         for (int i = 0; i < l; i++) {
+            //main logic
             int val = Math.abs(nums[i]);
             if (val >= 1 && val <= l) {
                 if (nums[val - 1] > 0) {
@@ -18,12 +19,13 @@ public class OnO1_InPlaceHashing {
                 } else if (nums[val - 1] == 0) {
                     nums[val - 1] = -1 * (l + 1);
                 }
+                // if (nums[val - 1] < 0) we do nothing
             }
         }
         // First unmarked index is the answer
-        for (int i = 1; i <= l; i++) {
-            if (nums[i - 1] >= 0) {
-                return i;
+        for (int i = 0; i < l; i++) {
+            if (nums[i] >= 0) {
+                return i + 1;
             }
         }
         // All numbers 1..l exist
@@ -31,10 +33,7 @@ public class OnO1_InPlaceHashing {
     }
 
     public static void main(String[] args) {
-//        int[] nums = {1, 2, 0};
-        int[] nums = {3, 4, -1, 1};
-//        int[] nums = {1, 0};
-//        int[] nums = {1, 1};
+        int[] nums = {8, 3, -2, 1, 0, 2, 2, 6, 10, 4};
         System.out.println(firstMissingPositive(nums));
     }
 }
