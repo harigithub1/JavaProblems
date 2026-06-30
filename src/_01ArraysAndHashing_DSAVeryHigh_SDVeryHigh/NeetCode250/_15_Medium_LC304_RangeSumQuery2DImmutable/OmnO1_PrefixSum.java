@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._15_Medium_LC304_RangeSumQuery2DImmutable;
 
-public class PrefixSum {
+public class OmnO1_PrefixSum {
     public static void main(String[] args) {
         int[][] matrix = {
                 {3, 0, 1, 4, 2},
