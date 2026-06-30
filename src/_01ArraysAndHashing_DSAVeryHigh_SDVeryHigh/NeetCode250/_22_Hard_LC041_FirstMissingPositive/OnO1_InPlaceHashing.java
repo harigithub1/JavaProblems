@@ -37,6 +37,7 @@ public class OnO1_InPlaceHashing {
             }
         }
         // All numbers 1..l exist
+        // so returning l+1 so that for inputs like [1,2,3] the algorithm works
         return l + 1;
     }
 
