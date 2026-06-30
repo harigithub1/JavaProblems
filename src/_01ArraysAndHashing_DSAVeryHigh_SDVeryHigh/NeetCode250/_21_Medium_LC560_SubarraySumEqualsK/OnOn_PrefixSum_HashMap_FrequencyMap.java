@@ -9,9 +9,15 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
         map.put(0, 1);
         int prefixSum = 0;
         int count = 0;
+        // For a subarray with sum = k to exist, this condition must be true:
+        //
+        // currentPrefixSum - previousPrefixSum = k
+        //
+        // The key is to determine which previousPrefixSum value satisfies this condition
+        // and how many times that value has already appeared.
+        // Each occurrence represents one valid subarray ending at the current index.
         for (int i = 0; i < nums.length; i++) {
             prefixSum = prefixSum + nums[i];
-            //Have I seen the exact prefix sum that satisfies Current Prefix Sum − Previous Prefix Sum = k?
             if (map.containsKey(prefixSum - k)) {
                 count = count + map.get(prefixSum - k);
             }
@@ -32,53 +38,26 @@ public class OnOn_PrefixSum_HashMap_FrequencyMap {
 
 /**
  * at i = 4:
- * (1 + 2 + 3 + (-3) + 1)
+ * 1 + 2 + 3 + (-3) + 1
  *      -
- * (1)
+ * 1
  * = 2 + 3 + (-3) + 1
  * = 3
  * so sub array is [2, 3, -3, 1]
  *
  * at i = 6:
  * 1st occurrence (Previous Prefix Sum at index 1)
- * (1 + 2 + 3 + (-3) + 1 + 1 + 1)
+ * 1 + 2 + 3 + (-3) + 1 + 1 + 1
  *      -
- * (1 + 2)
+ * 1 + 2
  * = 3 + (-3) + 1 + 1 + 1
  * = 3
  * so sub array is [3, -3, 1, 1, 1]
  * 2nd occurrence (Previous Prefix Sum at index 3)
- * (1 + 2 + 3 + (-3) + 1 + 1 + 1)
+ * 1 + 2 + 3 + (-3) + 1 + 1 + 1
  *      -
- * (1 + 2 + 3 + (-3))
+ * 1 + 2 + 3 + (-3)
  * = 1 + 1 + 1
  * = 3
  * so sub array is [1, 1, 1]
- */
-
-/**
- * The one formula to remember forever
- * Subarray Sum
- * =
- * Current Prefix Sum
- * -
- * Previous Prefix Sum
- *
- * Rearrange it:
- *
- * Previous Prefix Sum
- * =
- * Current Prefix Sum
- * -
- * Subarray Sum
- *
- * Since the required subarray sum is k:
- *
- * Previous Prefix Sum
- * =
- * Current Prefix Sum
- * -
- * k
- *
- * That single equation explains the entire algorithm.
  */
