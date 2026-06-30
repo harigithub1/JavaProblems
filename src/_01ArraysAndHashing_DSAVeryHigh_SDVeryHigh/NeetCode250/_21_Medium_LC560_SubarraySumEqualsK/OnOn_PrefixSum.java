@@ -6,9 +6,10 @@ import java.util.*;
 public class OnOn_PrefixSum {
     public static int subarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0, 1);
         int prefixSum = 0;
         int count = 0;
+        map.put(0, 1);
+
         // For a subarray with sum = k to exist, this condition must be true:
         //
         // currentPrefixSum - previousPrefixSum = k
