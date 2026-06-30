@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._21_Medium_LC560_
 import java.util.*;
 
 //refer video https://www.youtube.com/watch?v=xvNwoz-ufXA for understanding
-public class OnOn_PrefixSum_HashMap_FrequencyMap {
+public class OnOn_PrefixSum {
     public static int subarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
