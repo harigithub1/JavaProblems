@@ -22,4 +22,3 @@ public class LC014_LongestCommonPrefix {
         System.out.println("Longest Common Prefix: " + result);
     }
 }
-
