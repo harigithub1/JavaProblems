@@ -1,5 +1,8 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._03_Easy_LC242_ValidAnagram;
-
+/*
+O(n),O(1)
+Pattern: Frequency Counting
+ */
 public class LC242_ValidAnagram {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
@@ -24,36 +27,8 @@ public class LC242_ValidAnagram {
     }
 }
 
-// valid anagrm vs anagram
+// valid anagram vs anagram
 // space special chars and case is ignored in anagram
 
-//anagram/valid anagram vs palindrome 
-// order is ignored in anagram/valid anagram but not in palindrome 
-
-//Pattern: Frequency Counting pattern with a fixed-size counting array
-//Time complexity — O(n), Space complexity — O(1)
-
-/*
-The standard pattern name for this approach is:
-✓ Frequency Counting (Hashing) Pattern
-More specifically for strings:
-✓ Character Frequency Array Pattern
-And in many DSA/interview contexts, it's also called:
-✓ Counting / Bucket Counting Pattern
-So the best single name to remember is:
-→ Frequency Counting Pattern
-*/
-
-//here in first for loop a is used because if other char like b ,c etc are used the index of freq may become negative and negative index is not allowed in array
-
-// for better understanding of second for loop
-/*
-for (int count : freq) {
-    if (count == 0) {
-    } else {
-        return false;
-    }
-}
-*/
-
-
+// anagram/valid anagram vs palindrome
+// order is ignored in anagram/valid anagram but not in palindrome
