@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._06_Medium_LC049_GroupAnagrams;
 import java.util.*;
 
-public class LC049_GroupAnagrams_Rank2_Sorting {
+public class _Rank2_OmxnlognOmxn_HashMap_CanonicalRepresentation {
 
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
@@ -12,7 +12,7 @@ public class LC049_GroupAnagrams_Rank2_Sorting {
             map.putIfAbsent(key, new ArrayList<>());
             map.get(key).add(s);
         }
-        return new ArrayList<List<String>>(map.values());
+        return new ArrayList<>(map.values());
     }
 
     public static void main(String[] args) {
