@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._01_Easy_LC1929_C
 
 import java.util.Arrays;
 
-public class LC1929_ConcatenationofArray {
+public class OnOn_ArrayTraversal {
     public static int[] getConcatenation(int[] nums) {
         int l = nums.length;
         int[] res = new int[l*2];
@@ -15,7 +15,6 @@ public class LC1929_ConcatenationofArray {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 1};
-        int[] result = getConcatenation(nums);
-        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(getConcatenation(nums)));
     }
 }
