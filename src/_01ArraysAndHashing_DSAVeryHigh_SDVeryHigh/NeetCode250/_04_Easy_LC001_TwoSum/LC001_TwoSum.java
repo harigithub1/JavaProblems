@@ -2,7 +2,10 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_Tw
 
 import java.util.HashMap;
 import java.util.Map;
-
+/*
+O(n),O(n)
+Pattern: Hash Map (One Pass)
+ */
 public class LC001_TwoSum {
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -23,14 +26,6 @@ public class LC001_TwoSum {
         System.out.println("Indices: " + result[0] + ", " + result[1]);
     }
 }
-/**
- * notes:
- * LeetCode#1
- * Technique: Hashing (here it happens - map.containsKey(complement) means using hashing technique)
- * Pattern: One-pass HashMap / Complement Map
- * Category: Space–Time Tradeoff
- */
-
 //we should not implement twoSum using containsValue, because its O(n2) since it involves loops
 
 /*
