@@ -2,12 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._02_Easy_LC217_Co
 
 import java.util.HashSet;
 import java.util.Set;
-/*
- O(n),O(n)
- Pattern: Hashing
- Data Structure: HashSet
- */
-public class LC217_ContainsDuplicate {
+public class OnOn_Hashing {
     public static boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int n : nums) {

@@ -1,9 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._03_Easy_LC242_ValidAnagram;
-/*
-O(n),O(1)
-Pattern: Frequency Counting
- */
-public class LC242_ValidAnagram {
+
+public class OnO1_FrequencyCounting {
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;

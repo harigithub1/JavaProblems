@@ -2,11 +2,8 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_Tw
 
 import java.util.HashMap;
 import java.util.Map;
-/*
-O(n),O(n)
-Pattern: Hash Map (One Pass)
- */
-public class LC001_TwoSum {
+
+public class OnOn_HashMapOnePass {
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
