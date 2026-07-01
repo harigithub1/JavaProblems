@@ -1,14 +1,14 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._05_Easy_LC014_LongestCommonPrefix;
-
+/*
+O(n*m),O(1)
+Pattern: Vertical Scanning
+ */
 public class LC014_LongestCommonPrefix {
-    /*
-    vertical scan / column-wise traversal pattern.
-     */
     public static String longestCommonPrefix(String[] strs) {
         for (int i = 0; i < strs[0].length(); i++) {
             for (String s : strs) {
                 if (i == s.length() || s.charAt(i) != strs[0].charAt(i)) {
-                    return s.substring(0, i);
+                    return strs[0].substring(0, i);
                 }
             }
         }
