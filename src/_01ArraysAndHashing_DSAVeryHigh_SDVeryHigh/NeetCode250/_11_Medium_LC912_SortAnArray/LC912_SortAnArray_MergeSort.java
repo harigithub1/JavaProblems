@@ -31,7 +31,7 @@ public class LC912_SortAnArray_MergeSort {
     }
 
     private static void mergeSort(int[] nums, int l, int r) {
-        if (l >= r) return;
+        if (l == r) return;
         int m = l + (r - l) / 2;
         mergeSort(nums, l, m);
         mergeSort(nums, m + 1, r);
