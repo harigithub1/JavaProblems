@@ -2,18 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._08_Easy_LC169_Ma
 
 class OnO1_BoyerMooreVotingAlgorithm {
     public static int majorityElement(int[] nums) {
-        //Space Complexity: O(1)
-        /*
-        Regardless of whether the array has:
-        10 elements,
-        1,000 elements,
-        or 1,000,000 elements,
-        the amount of extra memory remains the same.
-         */
         int candidate = 0, count = 0;
-
-        //Time Complexity: O(n)
-        //n iterations × O(1) work = O(n)
         for (int n : nums) {
             if (count == 0) {
                 candidate = n;
@@ -43,7 +32,4 @@ class OnO1_BoyerMooreVotingAlgorithm {
  * Algorithm Type:
  * 👉 Greedy Algorithm
  * Because it makes local decisions without backtracking.
- *
- * So you can also say:
- * "It's a greedy voting algorithm using Boyer-Moore."
  */
