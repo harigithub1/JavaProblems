@@ -2,17 +2,9 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_
 
 import java.util.*;
 
-// Quick Sort using:
-// 1. Median-of-three pivot selection
-// 2. Hoare-style partitioning
-// 3. Sentinel optimization
-public class LC912_SortAnArray_QuickSort {
+public class On2Ologn_DivideAndConquer_HoaresPartition_QuickSort {
 
-    // Partition function:
-    // Rearranges elements around pivot
-    // Returns final pivot index
     private static int partition(int[] nums, int l, int r) {
-
         int m = l + (r - l) / 2;
 
         // Move middle element to l+1 position
@@ -27,51 +19,35 @@ public class LC912_SortAnArray_QuickSort {
         // nums[l+1] becomes median value (pivot)
         // nums[l] and nums[r] act as sentinels
         // ---------------------------------------------------
-
-        // Ensure left <= right
         if (nums[l] > nums[r])
             swap(nums, l, r);
-
-        // Ensure left <= middle
         if (nums[l] > nums[l + 1])
             swap(nums, l, l + 1);
-
-        // Ensure middle <= right
         if (nums[l + 1] > nums[r])
             swap(nums, l + 1, r);
 
-        // Median value becomes pivot
         int pivot = nums[l + 1];
-
-        // i scans from left side
         int i = l + 1;
-
-        // j scans from right side
         int j = r;
 
+        //Hoarse's partition
         // Infinite loop until pointers cross
         while (true) {
-
             // Move i once to start scanning after pivot
             i++;
-
             // Move j once to start scanning from right side
             j--;
-
             // Keep moving right while elements are smaller than pivot
             while (nums[i] < pivot) {
                 i++;
             }
-
             // Keep moving left while elements are larger than pivot
             while (nums[j] > pivot) {
                 j--;
             }
-
             // If pointers crossed, partition complete
-            if (i > j)
+            if (i >= j)
                 break;
-
             // Swap two misplaced elements
             //
             // Left side found element >= pivot
@@ -92,7 +68,6 @@ public class LC912_SortAnArray_QuickSort {
         nums[y] = temp;
     }
 
-    // Recursive quick sort
     private static void quickSort(int[] nums, int l, int r) {
 
         // ---------------------------------------------------
@@ -103,12 +78,12 @@ public class LC912_SortAnArray_QuickSort {
         // 2
         // ---------------------------------------------------
 
-        if (l + 1 >= r) {
-            // Special handling for size 2 array
-            // Example:
-            // [9,3] -> swap -> [3,9]
-            if (l + 1 == r && nums[l] > nums[r])
+        if (l == r)
+            return;
+        if (r == l + 1) {
+            if (nums[l] > nums[r]) {
                 swap(nums, l, r);
+            }
             return;
         }
 
