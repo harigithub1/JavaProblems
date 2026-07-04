@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LengthPrefixedForEncodeTwoPointerParsingForDecode {
+public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
         for (String s : strs) {
@@ -27,9 +27,7 @@ public class LengthPrefixedForEncodeTwoPointerParsingForDecode {
             while (s.charAt(j) != '#') {
                 j++;
             }
-            // Extract length
             int length = Integer.parseInt(s.substring(i, j));
-            // Extract actual string using the length
             result.add(s.substring(j + 1, j + 1 + length));
             // Move i to the beginning of the next encoded string
             // Example:
