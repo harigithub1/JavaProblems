@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._16_Medium_LC238_ProductOfArrayExceptSelf;
 
-public class _Rank1_OnO1_PrefixSuffixProd {
+public class _Rank1_OnO1_PrefixSuffixProd_SpaceOptimized {
     public static int[] productExceptSelf(int[] nums) {
         int l = nums.length;
         int[] prefProd = new int[l];
