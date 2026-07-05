@@ -10,13 +10,20 @@ public class NumMatrix {
         //now all 0s will be added as default values in below prefixSum matrix after initialization
         prefixSum = new int[rows + 1][cols + 1];
 
-        for (int i = 0; i < rows; i++) {
-            int prefix = 0;
-            for (int j = 0; j < cols; j++) {
-                prefix = prefix + matrix[i][j];
-                prefixSum[i + 1][j + 1] = prefix + prefixSum[i][j + 1];
+        for(int i = 0;i<rows;i++){
+            for(int j =0;j<cols;j++){
+//                prefixSum[i][j]=prefixSum[i][j-1]+prefixSum[i-1][j]+matrix[i-1][j-1]-prefixSum[i-1][j-1];
+                prefixSum[i+1][j+1]=prefixSum[i+1][j]+prefixSum[i][j+1]+matrix[i][j]-prefixSum[i][j];
             }
         }
+//        another method of generating prefixSumMatrix
+//        for (int i = 0; i < rows; i++) {
+//            int prefix = 0;
+//            for (int j = 0; j < cols; j++) {
+//                prefix = prefix + matrix[i][j];
+//                prefixSum[i + 1][j + 1] = prefix + prefixSum[i][j + 1];
+//            }
+//        }
     }
 
     public int sumRegion(int row1, int col1, int row2, int col2) {
