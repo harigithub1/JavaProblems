@@ -2,30 +2,23 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._16_Medium_LC238_
 
 public class _Rank2_OnOn_PrefixAndSuffix {
     public static int[] productExceptSelf(int[] nums) {
-
-        int l = nums.length;
-
-        int[] prefix = new int[l];
-        int[] suffix = new int[l];
-        int[] res = new int[l];
-
-        // Build prefix array
-        prefix[0] = 1;
-        for (int i = 1; i < l; i++) {
-            prefix[i] = prefix[i - 1] * nums[i - 1];
+        int[] prefProd = new int[nums.length];
+        int[] suffProd = new int[nums.length];
+        int[] res = new int[nums.length];
+        // Build prefProd array
+        prefProd[0] = 1;
+        for (int i = 1; i < nums.length; i++) {
+            prefProd[i] = prefProd[i - 1] * nums[i - 1];
         }
-
-        // Build suffix array
-        suffix[l - 1] = 1;
-        for (int i = l - 2; i >= 0; i--) {
-            suffix[i] = suffix[i + 1] * nums[i + 1];
+        // Build suffProd array
+        suffProd[nums.length - 1] = 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            suffProd[i] = suffProd[i + 1] * nums[i + 1];
         }
-
-        // Multiply prefix and suffix
-        for (int i = 0; i < l; i++) {
-            res[i] = prefix[i] * suffix[i];
+        // Multiply prefProd and suffProd
+        for (int i = 0; i < nums.length; i++) {
+            res[i] = prefProd[i] * suffProd[i];
         }
-
         return res;
     }
 
