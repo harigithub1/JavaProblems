@@ -24,7 +24,7 @@ public class OnO1_InPlaceHashing {
                 }
                 //if target index val-1 (not i) contains value 0,  use -(l + 1) as a special marker because 0 cannot be negated.
                 else if (nums[val - 1] == 0) {
-                    nums[val - 1] = -1 * (nums.length + 1);
+                    nums[val - 1] = (nums.length + 1)*-1;
                 }
                 // if (nums[val - 1] < 0) we do nothing
             }
