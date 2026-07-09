@@ -2,9 +2,8 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_Fi
 
 public class OnO1_InPlaceHashing {
     public static int firstMissingPositive(int[] nums) {
-        int l = nums.length;
         // Remove negatives
-        for (int i = 0; i < l; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] < 0) {
                 nums[i] = 0;
             }
@@ -15,30 +14,30 @@ public class OnO1_InPlaceHashing {
         // We use nums[val - 1] > 0 because we should only negate an unmarked (positive) value.
             // If we used nums[val - 1] <= l, error because: the condition would also be true for already negative
             // values (e.g., -3 <= l), causing them to become positive again and losing the mark.
-        for (int i = 0; i < l; i++) {
+        for (int i = 0; i < nums.length; i++) {
             //main logic
             int val = Math.abs(nums[i]);
             //if val == 0 we do nothing
-            if (val >= 1 && val <= l) {
+            if (val >= 1 && val <= nums.length) {
                 if (nums[val - 1] > 0) {
                     nums[val - 1] *= -1;
                 }
                 //if target index val-1 (not i) contains value 0,  use -(l + 1) as a special marker because 0 cannot be negated.
                 else if (nums[val - 1] == 0) {
-                    nums[val - 1] = -1 * (l + 1);
+                    nums[val - 1] = -1 * (nums.length + 1);
                 }
                 // if (nums[val - 1] < 0) we do nothing
             }
         }
         // First unmarked index is the answer
-        for (int i = 0; i < l; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] >= 0) {
                 return i + 1;
             }
         }
         // All numbers 1..l exist
         // so returning l+1 so that for inputs like [1,2,3] the algorithm works
-        return l + 1;
+        return nums.length + 1;
     }
 
     public static void main(String[] args) {
