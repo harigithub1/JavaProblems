@@ -4,13 +4,10 @@ import java.util.*;
 
 public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
     public static List<Integer> majorityElement2(int[] nums) {
-        int l = nums.length;
         /*
          An element occurring more than n/3 times can be at most 2 elements.
-
          candidate1, candidate2 -> current majority candidates
          count1, count2         -> vote counts for the candidates
-
          Initially there are no candidates.
         */
         int candidate1 = -1, candidate2 = -1, count1 = 0, count2 = 0;
@@ -38,18 +35,18 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
          Verify whether the candidates actually occur
          more than floor(n/3) times.
          */
-        count1 = count2 = 0;
+        int freq1 = 0, freq2 = 0;
         for (int num : nums) {
             if (num == candidate1) {
-                count1++;
+                freq1++;
             } else if (num == candidate2) {
-                count2++;
+                freq2++;
             }
         }
 
         List<Integer> res = new ArrayList<>();
-        if (count1 > l / 3) res.add(candidate1);
-        if (count2 > l / 3) res.add(candidate2);
+        if (freq1 > nums.length / 3) res.add(candidate1);
+        if (freq2 > nums.length / 3) res.add(candidate2);
 
         return res;
     }
