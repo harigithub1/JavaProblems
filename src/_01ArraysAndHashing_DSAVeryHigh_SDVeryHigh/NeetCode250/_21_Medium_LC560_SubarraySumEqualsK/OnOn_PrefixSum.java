@@ -4,9 +4,9 @@ import java.util.*;
 
 //refer video https://www.youtube.com/watch?v=xvNwoz-ufXA for understanding
 public class OnOn_PrefixSum {
-    public static int subarraySum(int[] nums, int k) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int prefixSum = 0;
+    public static int noOfSubArrays(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int currentPrefixSum = 0;
         int count = 0;
         map.put(0, 1);
 
@@ -18,11 +18,11 @@ public class OnOn_PrefixSum {
         // and how many times that value has already appeared.
         // Each occurrence represents one valid subarray ending at the current index.
         for (int i = 0; i < nums.length; i++) {
-            prefixSum = prefixSum + nums[i];
-            if (map.containsKey(prefixSum - k)) {
-                count = count + map.get(prefixSum - k);
+            currentPrefixSum = currentPrefixSum + nums[i];
+            if (map.containsKey(currentPrefixSum - k)) {
+                count = count + map.get(currentPrefixSum - k);
             }
-            map.put(prefixSum, map.getOrDefault(prefixSum, 0) + 1);
+            map.put(currentPrefixSum, map.getOrDefault(currentPrefixSum, 0) + 1);
         }
         return count;
     }
@@ -30,7 +30,7 @@ public class OnOn_PrefixSum {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, -3, 1, 1, 1, 4, 2, -3};
         int k = 3;
-        System.out.println(subarraySum(nums, k));
+        System.out.println(noOfSubArrays(nums, k));
 //        int[] nums = {3,-3,1,1,1};
 //        int k = 3;
 //        System.out.println(subarraySum(nums, k));
