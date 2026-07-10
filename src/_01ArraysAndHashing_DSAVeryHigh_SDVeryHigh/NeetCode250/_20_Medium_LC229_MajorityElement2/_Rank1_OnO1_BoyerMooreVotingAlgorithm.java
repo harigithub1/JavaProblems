@@ -24,7 +24,9 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
             } else if (count2 == 0) {
                 candidate2 = n;
                 count2 = 1;
-            } else {
+            }
+            //We already have two active candidates, and we encounter a third different number. So we remove one vote from both candidates.
+            else {
                 count1--;
                 count2--;
             }
