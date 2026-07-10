@@ -2,9 +2,9 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._21_Medium_LC560_
 
 import java.util.*;
 
-//refer video https://www.youtube.com/watch?v=xvNwoz-ufXA for understanding
+//refer takeUForward video https://www.youtube.com/watch?v=xvNwoz-ufXA for understanding
 public class OnOn_PrefixSum {
-    public static int noOfSubArrays(int[] nums, int k) {
+    public static int noOfSubArraysWithSumK(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         int currentPrefixSum = 0;
         int count = 0;
@@ -16,7 +16,7 @@ public class OnOn_PrefixSum {
         //
         // The key is to determine which previousPrefixSum value satisfies this condition
         // and how many times that value has already appeared.
-        // Each occurrence represents one valid subarray ending at the current index.
+        // ********** Each occurrence represents one valid subarray ending at the current index.
         for (int i = 0; i < nums.length; i++) {
             currentPrefixSum = currentPrefixSum + nums[i];
             if (map.containsKey(currentPrefixSum - k)) {
@@ -30,35 +30,6 @@ public class OnOn_PrefixSum {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, -3, 1, 1, 1, 4, 2, -3};
         int k = 3;
-        System.out.println(noOfSubArrays(nums, k));
-//        int[] nums = {3,-3,1,1,1};
-//        int k = 3;
-//        System.out.println(subarraySum(nums, k));
+        System.out.println(noOfSubArraysWithSumK(nums, k));
     }
 }
-
-/**
- * at i = 4:
- * 1 + 2 + 3 + (-3) + 1
- *      -
- * 1
- * = 2 + 3 + (-3) + 1
- * = 3
- * so sub array is [2, 3, -3, 1]
- *
- * at i = 6:
- * 1st occurrence (Previous Prefix Sum at index 1)
- * 1 + 2 + 3 + (-3) + 1 + 1 + 1
- *      -
- * 1 + 2
- * = 3 + (-3) + 1 + 1 + 1
- * = 3
- * so sub array is [3, -3, 1, 1, 1]
- * 2nd occurrence (Previous Prefix Sum at index 3)
- * 1 + 2 + 3 + (-3) + 1 + 1 + 1
- *      -
- * 1 + 2 + 3 + (-3)
- * = 1 + 1 + 1
- * = 3
- * so sub array is [1, 1, 1]
- */
