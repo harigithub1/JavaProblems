@@ -12,7 +12,6 @@ public class Easy1_LC125_ValidPalindrome {
             while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
                 right--;
             }
-            // Compare ignoring case
             if (Character.toLowerCase(s.charAt(left)) !=
                     Character.toLowerCase(s.charAt(right))) {
                 return false;
