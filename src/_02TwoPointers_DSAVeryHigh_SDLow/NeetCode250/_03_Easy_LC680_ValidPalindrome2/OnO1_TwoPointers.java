@@ -1,12 +1,11 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._03_Easy_LC680_ValidPalindrome2;
 
 public class OnO1_TwoPointers {
-    public static boolean validPalindrome(String s) {
+    public static boolean validPalindrome2(String s) {
         int l = 0, r = s.length() - 1;
         while (l < r) {
             if (s.charAt(l) != s.charAt(r)) {
-                return isPalindrome(s, l + 1, r) ||
-                        isPalindrome(s, l, r - 1);
+                return isPalindrome(s, l + 1, r) || isPalindrome(s, l, r - 1);
             }
             l++;
             r--;
@@ -26,7 +25,7 @@ public class OnO1_TwoPointers {
     }
 
     public static void main(String[] args) {
-        String s = "abca";
-        System.out.println(validPalindrome(s));
+        String s = "ebcbbe";
+        System.out.println(validPalindrome2(s));
     }
 }
