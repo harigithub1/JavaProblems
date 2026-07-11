@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._12_Medium_LC075_
 import java.util.Arrays;
 
 //Three Pointers - I
-public class OnO1_ThreePointer_DutchNationalFlagAlgorithm {
+public class OnO1_ThreePointers_DutchNationalFlagAlgorithm {
 
     private static void swap(int[] nums, int x, int y) {
         int temp = nums[x];
