@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_
 
 import java.util.*;
 
-//merge sort
+//mergeSortedArray sort
 public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
     private static void merge(int[] nums, int l, int m, int r) {
         List<Integer> temp = new ArrayList<>();
