@@ -1,4 +1,0 @@
-package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250;
-
-public class Medium2_LC424LongestRepeatingCharacterReplacement {
-}
