@@ -10,6 +10,7 @@ public class OnO1_TwoPointers {
             left++;
             right--;
         }
+        //below return is if String is already a palindrome example: racecar. The loop finishes without entering the if.
         return true;
     }
 
@@ -26,6 +27,7 @@ public class OnO1_TwoPointers {
 
     public static void main(String[] args) {
         String s = "ebcbbe";
+//        String s = "aba";
         System.out.println(validPalindrome2(s));
     }
 }
