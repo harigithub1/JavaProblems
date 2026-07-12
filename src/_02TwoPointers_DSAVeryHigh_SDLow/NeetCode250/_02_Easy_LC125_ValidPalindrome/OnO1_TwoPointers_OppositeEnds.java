@@ -2,22 +2,22 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._02_Easy_LC125_ValidPalindr
 
 public class OnO1_TwoPointers_OppositeEnds {
     public static boolean isValidPalindrome(String s) {
-        int left = 0;
-        int right = s.length() - 1;
-        while (left < right) {
-            // in below loop using left < right, to handle inputs like "!!!", where left can become 3 and cause StringIndexOutOfBoundsException
-            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
-                left++;
+        int l = 0;
+        int r = s.length() - 1;
+        while (l < r) {
+            // in below loop using l < r, to handle inputs like "!!!", where l can become 3 and cause StringIndexOutOfBoundsException
+            while (l < r && !Character.isLetterOrDigit(s.charAt(l))) {
+                l++;
             }
-            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
-                right--;
+            while (l < r && !Character.isLetterOrDigit(s.charAt(r))) {
+                r--;
             }
-            if (Character.toLowerCase(s.charAt(left)) !=
-                    Character.toLowerCase(s.charAt(right))) {
+            if (Character.toLowerCase(s.charAt(l)) !=
+                    Character.toLowerCase(s.charAt(r))) {
                 return false;
             }
-            left++;
-            right--;
+            l++;
+            r--;
         }
         return true;
     }

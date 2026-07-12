@@ -4,13 +4,13 @@ import java.util.*;
 
 public class OnO1_TwoPointers_OppositeEnds {
     public static void reverseString(char[] chars) {
-        int left = 0, right = chars.length - 1;
-        while (left < right) {
-            char temp = chars[left];
-            chars[left] = chars[right];
-            chars[right] = temp;
-            left++;
-            right--;
+        int l = 0, r = chars.length - 1;
+        while (l < r) {
+            char temp = chars[l];
+            chars[l] = chars[r];
+            chars[r] = temp;
+            l++;
+            r--;
         }
     }
 

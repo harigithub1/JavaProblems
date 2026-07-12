@@ -2,25 +2,25 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._03_Easy_LC680_ValidPalindr
 
 public class OnO1_TwoPointers {
     public static boolean validPalindrome2(String s) {
-        int left = 0, right = s.length() - 1;
-        while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
-                return isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);
+        int l = 0, r = s.length() - 1;
+        while (l < r) {
+            if (s.charAt(l) != s.charAt(r)) {
+                return isPalindrome(s, l + 1, r) || isPalindrome(s, l, r - 1);
             }
-            left++;
-            right--;
+            l++;
+            r--;
         }
         //below return is if String is already a palindrome example: racecar. The loop finishes without entering the if.
         return true;
     }
 
-    private static boolean isPalindrome(String s, int left, int right) {
-        while (left < right) {
-            if (s.charAt(left) != s.charAt(right)) {
+    private static boolean isPalindrome(String s, int l, int r) {
+        while (l < r) {
+            if (s.charAt(l) != s.charAt(r)) {
                 return false;
             }
-            left++;
-            right--;
+            l++;
+            r--;
         }
         return true;
     }
