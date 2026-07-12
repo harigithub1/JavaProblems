@@ -8,11 +8,11 @@ public class OnO1_TwoPointers_FastAndSlowPointers {
         int i = 0;
         for (int j = 1; j < nums.length; j++) {
             if (nums[j] != nums[i]) {
-                i++;                // move unique pointer
-                nums[i] = nums[j];  // place next unique element
+                i++;
+                nums[i] = nums[j];
             }
         }
-        return i + 1; // length = number of unique elements
+        return i + 1;
     }
 
     public static void main(String[] args) {

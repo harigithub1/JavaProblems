@@ -5,7 +5,7 @@ public class OnO1_TwoPointers_OppositeEnds {
         int left = 0;
         int right = s.length() - 1;
         while (left < right) {
-            // Skip non-alphanumeric characters
+            // in below loop using left < right, to handle inputs like "!!!", where left can become 3 and cause StringIndexOutOfBoundsException
             while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
                 left++;
             }
