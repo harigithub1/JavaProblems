@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedAr
 
 import java.util.Arrays;
 
-public class OnplusmO1_TwoPointers_PlusWritePointer {
+public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer {
     public static void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1;
         int j = n - 1;
