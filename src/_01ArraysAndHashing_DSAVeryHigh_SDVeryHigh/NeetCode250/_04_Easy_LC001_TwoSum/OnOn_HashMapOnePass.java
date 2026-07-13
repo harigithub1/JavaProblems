@@ -23,7 +23,7 @@ public class OnOn_HashMapOnePass {
         System.out.println("Indices: " + result[0] + ", " + result[1]);
     }
 }
-//we should not implement twoSum using containsValue, because its O(n2) since it involves loops
+//we should not implement twoSum2SortedInputArray using containsValue, because its O(n2) since it involves loops
 
 /*
  * Design choice:
