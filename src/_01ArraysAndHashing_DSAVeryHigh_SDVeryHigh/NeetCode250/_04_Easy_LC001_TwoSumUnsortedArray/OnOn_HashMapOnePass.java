@@ -13,7 +13,7 @@ public class OnOn_HashMapOnePass {
             }
             map.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution found for given input");
+        throw new IllegalArgumentException("No two sum solution found for given input array");
     }
 
     public static void main(String[] args) {
