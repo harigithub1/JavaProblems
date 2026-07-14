@@ -7,21 +7,20 @@ public class TwoPointers {
         int l = 0, r = nums.length - 1;
         while (l < r) {
             int sum = nums[l] + nums[r];
-            if (sum == target) {
-                return new int[]{l + 1, r + 1};
-            }
-            if (sum < target) {
+            if (sum > target) {
+                r--;
+            } else if (sum < target) {
                 l++;
             } else {
-                r--;
+                return new int[]{l, r};
             }
         }
         throw new IllegalArgumentException("No two sum solution");
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
+        int[] nums = {2, 4, 7, 11, 15, 18, 21, 25};
+        int target = 26;
         System.out.println(Arrays.toString(twoSum2SortedInputArray(nums, target)));
     }
 }
