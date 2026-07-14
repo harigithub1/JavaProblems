@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._07_Medium_LC_167_TwoSum2In
 
 import java.util.Arrays;
 
-public class TwoPointers {
+public class OnO1_TwoPointers_OppositeEnds {
     public static int[] twoSum2SortedInputArray(int[] nums, int target) {
         int l = 0, r = nums.length - 1;
         while (l < r) {
