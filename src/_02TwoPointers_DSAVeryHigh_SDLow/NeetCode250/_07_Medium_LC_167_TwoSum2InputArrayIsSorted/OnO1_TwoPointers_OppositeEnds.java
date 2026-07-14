@@ -15,7 +15,7 @@ public class OnO1_TwoPointers_OppositeEnds {
                 return new int[]{l, r};
             }
         }
-        throw new IllegalArgumentException("No two sum solution");
+        throw new IllegalArgumentException("No two sum solution for given input array");
     }
 
     public static void main(String[] args) {
