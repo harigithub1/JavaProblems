@@ -15,6 +15,7 @@ public class On2O1_TwoPointers {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
+            //initialize two pointers
             int l = i + 1, r = nums.length - 1;
             while (l < r) {
                 int sum = nums[i] + nums[l] + nums[r];
