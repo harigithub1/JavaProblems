@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_TwoSum;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_TwoSumUnsortedArray;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ public class OnOn_HashMapOnePass {
             }
             map.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution found");
+        throw new IllegalArgumentException("No two sum solution found for given input");
     }
 
     public static void main(String[] args) {
