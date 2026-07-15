@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TwoPointers_Recursion {
+public class On3O1_TwoPointers_Recursion {
     private List<List<Integer>> res;
     private List<Integer> quad;
 
@@ -49,7 +49,7 @@ public class TwoPointers_Recursion {
     public static void main(String[] args){
         int[] nums = {1,0,-1,0,-2,2};
         int target = 0;
-        TwoPointers_Recursion twoPointersRecursion = new TwoPointers_Recursion();
+        On3O1_TwoPointers_Recursion twoPointersRecursion = new On3O1_TwoPointers_Recursion();
         System.out.println(twoPointersRecursion.fourSum(nums,target));
     }
 }
