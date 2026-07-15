@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._08_Medium_LC15_3Sum;
 
 import java.util.*;
 
-public class On2O1_TwoPointers {
+public class On2O1_SortPlusTwoPointers {
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
@@ -16,7 +16,7 @@ public class On2O1_TwoPointers {
                 continue;
             }
             int l = i + 1;
-            //here this r should always be inside the for loop
+            // here this r should always be inside the for loop
             int r = nums.length - 1;
             while (l < r) {
                 int sum = nums[i] + nums[l] + nums[r];
