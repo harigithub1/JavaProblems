@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OnOn_HashMapOnePass {
+    /*
+    The problem statement guarantees:
+    Exactly one solution exists.
+    Here, the only pair of numbers in the array that sums up to 9 is 7 and 2.
+     */
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -18,7 +23,7 @@ public class OnOn_HashMapOnePass {
 
     public static void main(String[] args) {
         int[] nums = {7, 2, 11, 15};
-        int target = 30;
+        int target = 9;
         int[] result = twoSum(nums, target);
         System.out.println("Indices: " + result[0] + ", " + result[1]);
     }

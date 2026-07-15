@@ -1,8 +1,6 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._08_Medium_LC15_3Sum;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class On2O1_TwoPointers {
     public static List<List<Integer>> threeSum(int[] nums) {
