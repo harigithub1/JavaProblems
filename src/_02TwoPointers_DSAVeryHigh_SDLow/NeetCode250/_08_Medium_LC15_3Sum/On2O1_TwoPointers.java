@@ -16,6 +16,7 @@ public class On2O1_TwoPointers {
                 continue;
             }
             int l = i + 1;
+            //here this r should always be inside the for loop
             int r = nums.length - 1;
             while (l < r) {
                 int sum = nums[i] + nums[l] + nums[r];
