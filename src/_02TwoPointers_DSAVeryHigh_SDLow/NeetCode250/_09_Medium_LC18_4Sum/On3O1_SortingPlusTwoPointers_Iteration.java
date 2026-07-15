@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._09_Medium_LC18_4Sum;
 
 import java.util.*;
 
-public class TwoPointers_Iteration {
+public class On3O1_SortingPlusTwoPointers_Iteration {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length < 4) {
@@ -44,11 +44,11 @@ public class TwoPointers_Iteration {
         }
         return result;
     }
-    
+
     public static void main(String[] args) {
         int[] nums = {1, 0, -1, 0, -2, 2};
         int target = 0;
-        TwoPointers_Iteration twoPointersIteration = new TwoPointers_Iteration();
+        On3O1_SortingPlusTwoPointers_Iteration twoPointersIteration = new On3O1_SortingPlusTwoPointers_Iteration();
         System.out.println(twoPointersIteration.fourSum(nums, target));
     }
 }

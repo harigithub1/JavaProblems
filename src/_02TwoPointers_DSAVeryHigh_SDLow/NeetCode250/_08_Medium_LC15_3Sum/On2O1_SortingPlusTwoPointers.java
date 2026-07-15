@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._08_Medium_LC15_3Sum;
 
 import java.util.*;
 
-public class On2O1_SortPlusTwoPointers {
+public class On2O1_SortingPlusTwoPointers {
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
