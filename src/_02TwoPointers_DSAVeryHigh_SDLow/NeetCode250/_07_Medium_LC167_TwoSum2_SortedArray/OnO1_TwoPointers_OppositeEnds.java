@@ -1,4 +1,4 @@
-package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._07_Medium_LC167_TwoSum2InputArrayIsSorted;
+package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._07_Medium_LC167_TwoSum2_SortedArray;
 
 import java.util.Arrays;
 

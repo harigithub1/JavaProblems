@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_TwoSumUnsortedArray;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._04_Easy_LC001_TwoSum_UnsortedArray;
 
 import java.util.HashMap;
 import java.util.Map;
