@@ -12,19 +12,20 @@ public class On3O1_SortingPlusTwoPointers_Iteration {
         }
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 3; i++) {
-            // Skip duplicate first element
+            //  fixing i as the first element of the quadruplet.
+            // Skip duplicates of first fixed element if any
             if (i >= 1 && nums[i] == nums[i - 1]) {
                 continue;
             }
-            //  fixed i as the first element of the quadruplet.
 
             for (int j = i + 1; j < nums.length - 2; j++) {
-                // Skip duplicate second element
+                //  fixing j as the second element of the quadruplet.
+                // Skip duplicates of second fixed element if any
                 if (j > i + 1 && nums[j] == nums[j - 1]) {
                     continue;
                 }
 
-                //  fixed j as the second element of the quadruplet.
+                // now two pointers technique
                 int left = j + 1;
                 int right = nums.length - 1;
                 while (left < right) {
@@ -34,11 +35,13 @@ public class On3O1_SortingPlusTwoPointers_Iteration {
                                 nums[i], nums[j], nums[left], nums[right]));
                         left++;
                         right--;
+
                         // Skip duplicates
                         while (left < right && nums[left] == nums[left - 1])
                             left++;
                         while (left < right && nums[right] == nums[right + 1])
                             right--;
+
                     } else if (sum < target) {
                         left++;
                     } else {
