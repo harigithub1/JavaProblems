@@ -7,11 +7,12 @@ public class On2O1_SortingPlusTwoPointers {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
+            //  fixing i as the first element of the triplet.
             // Early termination
             if (nums[i] > 0) {
                 break;
             }
-            // Skip duplicate first elements
+            // Skip duplicate first elements if any
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -24,10 +25,11 @@ public class On2O1_SortingPlusTwoPointers {
                     result.add(Arrays.asList(nums[i], nums[l], nums[r]));
                     l++;
                     r--;
-                    // Skip duplicates
+                    // Skip duplicates if any
                     while (l < r && nums[l] == nums[l - 1]) {
                         l++;
                     }
+                    // Skip duplicates if any
                     while (l < r && nums[r] == nums[r + 1]) {
                         r--;
                     }
@@ -40,7 +42,6 @@ public class On2O1_SortingPlusTwoPointers {
         }
         return result;
     }
-
 
     public static void main(String[] args) {
         int[] nums = {-1, 0, 1, 2, -1, -4};
