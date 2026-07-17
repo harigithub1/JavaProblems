@@ -16,12 +16,14 @@ public class On2O1_SortingPlusTwoPointers {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-            int l = i + 1;
-            // here this r should always be inside the for loop
-            int r = nums.length - 1;
+            int l = i + 1, r = nums.length - 1;
+
+            // Since nums[i] is fixed as the first element of the triplet,
+            // the remaining two elements of the triplet must sum to -nums[i].
+            int target = -nums[i];
             while (l < r) {
-                int sum = nums[i] + nums[l] + nums[r];
-                if (sum == 0) {
+                int twoSum = nums[l] + nums[r];
+                if (twoSum == target) {
                     result.add(Arrays.asList(nums[i], nums[l], nums[r]));
                     l++;
                     r--;
@@ -33,7 +35,7 @@ public class On2O1_SortingPlusTwoPointers {
                     while (l < r && nums[r] == nums[r + 1]) {
                         r--;
                     }
-                } else if (sum < 0) {
+                } else if (twoSum < target) {
                     l++;
                 } else {
                     r--;
