@@ -6,18 +6,17 @@ public class OnO1_TwoPointers_OppositeEnds {
     /*
     The problem statement guarantees:
     Exactly one solution exists.
-    Here, the only pair of numbers in the array that sums up to 26 is 11 and 15.
      */
     public static int[] twoSum2SortedInputArray(int[] nums, int target) {
         int l = 0, r = nums.length - 1;
         while (l < r) {
             int sum = nums[l] + nums[r];
-            if (sum > target) {
-                r--;
+            if(sum==target){
+                return new int[]{l, r};
             } else if (sum < target) {
                 l++;
             } else {
-                return new int[]{l, r};
+                r--;
             }
         }
         throw new IllegalArgumentException("No two sum solution for given input array");
