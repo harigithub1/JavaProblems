@@ -54,8 +54,8 @@ public class On3O1_SortingPlusTwoPointers_Iteration {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 0, -1, 0, -2, 2};
-        int target = 0;
+        int[] nums = {-3, -2, -1, 0, 1, 2, 3};
+        int target = 2;
         On3O1_SortingPlusTwoPointers_Iteration obj = new On3O1_SortingPlusTwoPointers_Iteration();
         System.out.println(obj.fourSum(nums, target));
     }
