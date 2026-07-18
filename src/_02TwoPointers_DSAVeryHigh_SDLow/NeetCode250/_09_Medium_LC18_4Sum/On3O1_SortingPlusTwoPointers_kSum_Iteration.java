@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class On3O1_SortingPlusTwoPointers_Iteration {
+public class On3O1_SortingPlusTwoPointers_kSum_Iteration {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length < 4) {
@@ -56,7 +56,7 @@ public class On3O1_SortingPlusTwoPointers_Iteration {
     public static void main(String[] args) {
         int[] nums = {-3, -2, -1, 0, 1, 2, 3};
         int target = 2;
-        On3O1_SortingPlusTwoPointers_Iteration obj = new On3O1_SortingPlusTwoPointers_Iteration();
+        On3O1_SortingPlusTwoPointers_kSum_Iteration obj = new On3O1_SortingPlusTwoPointers_kSum_Iteration();
         System.out.println(obj.fourSum(nums, target));
     }
 }
