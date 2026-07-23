@@ -28,7 +28,7 @@ public class OnO1_TwoPointers_OppositeEnds {
     }
 
     public static void main(String[] args) {
-        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        int[] height = {2, 1, 3, 1, 2};
         OnO1_TwoPointers_OppositeEnds obj = new OnO1_TwoPointers_OppositeEnds();
         System.out.println(obj.trap(height));
     }
