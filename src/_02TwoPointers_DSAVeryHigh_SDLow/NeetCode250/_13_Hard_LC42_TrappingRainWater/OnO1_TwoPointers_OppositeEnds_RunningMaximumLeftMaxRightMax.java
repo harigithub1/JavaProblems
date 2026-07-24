@@ -1,6 +1,6 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._13_Hard_LC42_TrappingRainWater;
 
-public class OnO1_TwoPointers_OppositeEnds {
+public class OnO1_TwoPointers_OppositeEnds_RunningMaximumLeftMaxRightMax {
     public int trap(int[] height) {
         int l = 0;
         int r = height.length - 1;
@@ -9,14 +9,15 @@ public class OnO1_TwoPointers_OppositeEnds {
         int res = 0;
         while (l < r) {
             if (height[l] < height[r]) {
-                if (height[l] > leftMax) {
+                if (height[l] >= leftMax) {
                     leftMax = height[l];
                 } else {
                     res += leftMax - height[l];
                 }
                 l++;
             } else {
-                if (height[r] > rightMax) {
+                //i.e. height[l] >= height[r]
+                if (height[r] >= rightMax) {
                     rightMax = height[r];
                 } else {
                     res += rightMax - height[r];
@@ -28,8 +29,8 @@ public class OnO1_TwoPointers_OppositeEnds {
     }
 
     public static void main(String[] args) {
-        int[] height = {2, 1, 3, 1, 2};
-        OnO1_TwoPointers_OppositeEnds obj = new OnO1_TwoPointers_OppositeEnds();
+        int[] height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        OnO1_TwoPointers_OppositeEnds_RunningMaximumLeftMaxRightMax obj = new OnO1_TwoPointers_OppositeEnds_RunningMaximumLeftMaxRightMax();
         System.out.println(obj.trap(height));
     }
 }
