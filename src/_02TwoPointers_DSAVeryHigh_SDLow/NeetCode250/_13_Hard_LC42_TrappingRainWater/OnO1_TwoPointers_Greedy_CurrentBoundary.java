@@ -6,19 +6,18 @@ public class OnO1_TwoPointers_Greedy_CurrentBoundary {
         int leftMax = 0, rightMax = 0;
         int res = 0;
         while (l < r) {
-            if (height[l] < height[r]) {
-                if (height[l] >= leftMax) {
-                    leftMax = height[l];
-                } else {
+            if (height[l] <= height[r]) {
+                if (leftMax > height[l]) {
                     res += leftMax - height[l];
+                } else {
+                    leftMax = height[l];
                 }
                 l++;
             } else {
-                //i.e. height[l] >= height[r]
-                if (height[r] >= rightMax) {
-                    rightMax = height[r];
-                } else {
+                if (rightMax > height[r]) {
                     res += rightMax - height[r];
+                } else {
+                    rightMax = height[r];
                 }
                 r--;
             }
