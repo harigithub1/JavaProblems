@@ -1,4 +1,4 @@
-package _13_1DDynamicProgramming_DSAHigh_SDMedium;
+package _13DynamicProgramming1D_DSAHigh_SDMedium;
 
 import java.util.List;
 import java.util.ArrayList;

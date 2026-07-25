@@ -1,4 +1,4 @@
-package _13_1DDynamicProgramming_DSAHigh_SDMedium;
+package _13DynamicProgramming1D_DSAHigh_SDMedium;
 
 public class LC053_MaximumSubArraySum {
     public static int maxSubArray(int[] nums) {

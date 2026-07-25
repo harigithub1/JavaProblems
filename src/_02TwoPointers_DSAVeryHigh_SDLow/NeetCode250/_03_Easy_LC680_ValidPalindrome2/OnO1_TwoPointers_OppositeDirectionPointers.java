@@ -27,7 +27,9 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
 
     public static void main(String[] args) {
         String s = "ebcbbe";
-//        String s = "aba";
+        //String s = "deeee";
+        //String s = "aba";
+        //String s = "abc";
         System.out.println(validPalindrome2(s));
     }
 }
