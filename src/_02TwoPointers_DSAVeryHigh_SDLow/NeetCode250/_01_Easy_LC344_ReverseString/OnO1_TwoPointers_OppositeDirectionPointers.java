@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._01_Easy_LC344_ReverseStrin
 
 import java.util.*;
 
-public class OnO1_TwoPointers_OppositeEnds {
+public class OnO1_TwoPointers_OppositeDirectionPointers {
     public static void reverseString(char[] chars) {
         int l = 0, r = chars.length - 1;
         while (l < r) {

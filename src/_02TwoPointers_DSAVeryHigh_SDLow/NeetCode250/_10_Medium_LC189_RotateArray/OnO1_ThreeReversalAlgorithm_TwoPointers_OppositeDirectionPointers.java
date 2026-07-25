@@ -1,6 +1,6 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._10_Medium_LC189_RotateArray;
 
-public class OnO1_ThreeReversalAlgorithm_TwoPointers {
+public class OnO1_ThreeReversalAlgorithm_TwoPointers_OppositeDirectionPointers {
     private void reverse(int[] nums, int l, int r) {
         while (l < r) {
             int temp = nums[l];
@@ -20,7 +20,7 @@ public class OnO1_ThreeReversalAlgorithm_TwoPointers {
     }
 
     public static void main(String[] args) {
-        OnO1_ThreeReversalAlgorithm_TwoPointers obj = new OnO1_ThreeReversalAlgorithm_TwoPointers();
+        OnO1_ThreeReversalAlgorithm_TwoPointers_OppositeDirectionPointers obj = new OnO1_ThreeReversalAlgorithm_TwoPointers_OppositeDirectionPointers();
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
         obj.rotate(nums, k);

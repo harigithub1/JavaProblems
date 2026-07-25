@@ -1,6 +1,6 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._02_Easy_LC125_ValidPalindrome;
 
-public class OnO1_TwoPointers_OppositeEnds {
+public class OnO1_TwoPointers_OppositeDirectionPointers {
     public static boolean isValidPalindrome(String s) {
         int l = 0;
         int r = s.length() - 1;

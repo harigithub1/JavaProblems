@@ -2,7 +2,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._07_Medium_LC167_TwoSum2_So
 
 import java.util.Arrays;
 
-public class OnO1_TwoPointers_OppositeEnds {
+public class OnO1_TwoPointers_OppositeDirectionPointers {
     /*
     The problem statement guarantees:
     Exactly one solution exists.
