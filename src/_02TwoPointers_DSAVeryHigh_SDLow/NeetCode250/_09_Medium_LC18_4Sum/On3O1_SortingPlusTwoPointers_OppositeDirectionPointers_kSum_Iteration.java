@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iteration {
-    public List<List<Integer>> fourSum(int[] nums, int target) {
+    public static List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length < 4) {
             return res;
@@ -56,7 +56,6 @@ public class On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iterati
     public static void main(String[] args) {
         int[] nums = {-3, -2, -1, 0, 1, 2, 3};
         int target = 2;
-        On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iteration obj = new On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iteration();
-        System.out.println(obj.fourSum(nums, target));
+        System.out.println(fourSum(nums, target));
     }
 }

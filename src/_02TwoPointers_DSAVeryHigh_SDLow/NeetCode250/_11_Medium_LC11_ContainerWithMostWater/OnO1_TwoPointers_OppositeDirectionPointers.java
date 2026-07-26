@@ -1,7 +1,7 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._11_Medium_LC11_ContainerWithMostWater;
 
 public class OnO1_TwoPointers_OppositeDirectionPointers {
-    public int maxArea(int[] heights) {
+    public static int maxArea(int[] heights) {
         int l = 0;
         int r = heights.length - 1;
         int maxArea = 0;
@@ -20,7 +20,6 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
 
     public static void main(String[] args) {
         int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
-        OnO1_TwoPointers_OppositeDirectionPointers obj = new OnO1_TwoPointers_OppositeDirectionPointers();
-        System.out.println(obj.maxArea(height));
+        System.out.println(maxArea(height));
     }
 }
