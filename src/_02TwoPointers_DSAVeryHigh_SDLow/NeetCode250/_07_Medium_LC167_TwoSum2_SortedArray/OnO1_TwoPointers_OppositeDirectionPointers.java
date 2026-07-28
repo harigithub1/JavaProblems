@@ -23,8 +23,8 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 4, 7, 11, 15, 18, 21, 25};
-        int target = 26;
+        int[] nums = {1, 3, 5, 7, 10};
+        int target = 12;
         int[] result = twoSum2SortedInputArray(nums, target);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + " ");
