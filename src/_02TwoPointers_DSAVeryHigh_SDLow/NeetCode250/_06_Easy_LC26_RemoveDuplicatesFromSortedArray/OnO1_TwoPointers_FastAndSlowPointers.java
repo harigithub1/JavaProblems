@@ -5,15 +5,18 @@ public class OnO1_TwoPointers_FastAndSlowPointers {
         if (nums.length == 0) {
             return 0;
         }
+        int res=1;
         int l1 = 0, l2 = 1;
-        while (l2 < nums.length) {
+        int r = nums.length-1;
+        while (l2 <= r) {
             if (nums[l1] != nums[l2]) {
+                nums[l1+1] = nums[l2];
                 l1++;
-                nums[l1] = nums[l2];
+                res++;
             }
             l2++;
         }
-        return l1 + 1;
+        return res;
     }
 
     public static void main(String[] args) {
