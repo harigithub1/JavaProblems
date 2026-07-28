@@ -35,6 +35,8 @@ public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer {
         int[] nums2 = {1,2,3};
         int n = 3;
         mergeSortedArray(nums1, m, nums2, n);
-        System.out.println(Arrays.toString(nums1));
+        for (int i = 0; i < nums1.length; i++) {
+            System.out.print(nums1[i] + " ");
+        }
     }
 }

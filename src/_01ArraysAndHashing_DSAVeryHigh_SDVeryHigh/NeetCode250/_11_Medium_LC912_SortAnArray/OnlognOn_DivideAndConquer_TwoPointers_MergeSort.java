@@ -48,7 +48,10 @@ public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
 //        int[] nums = {1,4,7,10,2,3};
 //        int[] nums = {1,3,5,7,2,4,6,8};
 //        int[] nums = {8,7,6,5,4,3,2,1};
-        System.out.println(Arrays.toString(sortArray(nums)));
+        int[] result = sortArray(nums);
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
     }
 }
 

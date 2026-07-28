@@ -41,6 +41,9 @@ public class _Rank1_OnOn_BucketSort {
     public static void main(String[] args) {
         int[] nums = {1,2,1,2,1,2,3,1,3,2};
         int k = 2;
-        System.out.println(Arrays.toString(topKFrequent(nums, k)));
+        int[] result = topKFrequent(nums, k);
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
     }
 }

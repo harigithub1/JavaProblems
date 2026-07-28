@@ -107,6 +107,9 @@ public class On2Ologn_DivideAndConquer_HoaresPartition_QuickSort {
 //        int[] nums = {9,1,8,2,7,3,6,4,5};
 //        int[] nums = {1,2,3,4,5,6,7,8};
 //        int[] nums = {5,5,5,5,5,5};
-        System.out.println(Arrays.toString(sortArray(nums)));
+        int[] result = sortArray(nums);
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
     }
 }

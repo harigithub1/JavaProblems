@@ -17,6 +17,8 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     public static void main(String[] args) {
         char[] chars = {'h', 'e', 'l', 'l', 'o'};
         reverseString(chars);
-        System.out.println(Arrays.toString(chars));
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i] + " ");
+        }
     }
 }

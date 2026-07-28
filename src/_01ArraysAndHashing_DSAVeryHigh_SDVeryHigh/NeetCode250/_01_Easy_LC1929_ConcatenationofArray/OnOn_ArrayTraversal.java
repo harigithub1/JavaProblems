@@ -15,6 +15,9 @@ public class OnOn_ArrayTraversal {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 1};
-        System.out.println(Arrays.toString(getConcatenation(nums)));
+        int[] result = getConcatenation(nums);
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
     }
 }

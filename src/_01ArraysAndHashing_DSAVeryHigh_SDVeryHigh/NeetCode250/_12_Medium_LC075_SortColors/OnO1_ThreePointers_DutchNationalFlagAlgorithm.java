@@ -37,7 +37,9 @@ public class OnO1_ThreePointers_DutchNationalFlagAlgorithm {
         int[] nums = {1, 2, 0, 0}; //explains why swapping with i does not need rechecking (and also why currentEle-- is needed after swapping with j)
 //        int[] nums = {1,1,2,0}; //explains why currentEle-- is needed in else if block
         sortColors(nums);
-        System.out.println(Arrays.toString(nums));
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
     }
 }
 

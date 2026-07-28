@@ -25,6 +25,9 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     public static void main(String[] args) {
         int[] nums = {2, 4, 7, 11, 15, 18, 21, 25};
         int target = 26;
-        System.out.println(Arrays.toString(twoSum2SortedInputArray(nums, target)));
+        int[] result = twoSum2SortedInputArray(nums, target);
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " ");
+        }
     }
 }
