@@ -21,7 +21,6 @@ public class On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iterati
                 if (j > i + 1 && nums[j] == nums[j - 1]) {
                     continue;
                 }
-
                 // now two pointers technique
                 int l = j + 1;
                 int r = nums.length - 1;

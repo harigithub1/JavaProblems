@@ -20,8 +20,8 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
             // the remaining two elements of the triplet must sum to -nums[i].
             int target = -nums[i];
             while (l < r) {
-                int twoSum = nums[l] + nums[r];
-                if (twoSum == target) {
+                int sum = nums[l] + nums[r];
+                if (sum == target) {
                     result.add(Arrays.asList(nums[i], nums[l], nums[r]));
                     //skip duplicates both sides
                     while (l < r && nums[l] == nums[l + 1]) {
@@ -32,7 +32,7 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
                     }
                     l++;
                     r--;
-                } else if (twoSum < target) {
+                } else if (sum < target) {
                     l++;
                 } else {
                     r--;
