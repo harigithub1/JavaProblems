@@ -7,7 +7,7 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     The problem statement guarantees:
     Exactly one solution exists.
      */
-    public static int[] twoSum2SortedInputArray(int[] nums, int target) {
+    public static int[] twoSumSortedArrayIndices(int[] nums, int target) {
         int l = 0, r = nums.length - 1;
         while (l < r) {
             int sum = nums[l] + nums[r];
@@ -25,7 +25,7 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     public static void main(String[] args) {
         int[] nums = {1, 3, 5, 7, 10};
         int target = 12;
-        int[] result = twoSum2SortedInputArray(nums, target);
+        int[] result = twoSumSortedArrayIndices(nums, target);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + " ");
         }

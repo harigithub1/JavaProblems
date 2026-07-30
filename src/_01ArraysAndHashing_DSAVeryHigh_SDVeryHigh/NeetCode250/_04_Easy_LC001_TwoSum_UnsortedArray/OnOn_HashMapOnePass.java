@@ -9,7 +9,7 @@ public class OnOn_HashMapOnePass {
     Exactly one solution exists.
     Here, the only pair of numbers in the array that sums up to 9 is 7 and 2.
      */
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] twoSumIndices(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int diff = target - nums[i];
@@ -24,7 +24,7 @@ public class OnOn_HashMapOnePass {
     public static void main(String[] args) {
         int[] nums = {7, 2, 11, 15};
         int target = 9;
-        int[] result = twoSum(nums, target);
+        int[] result = twoSumIndices(nums, target);
         System.out.println("Indices: " + result[0] + ", " + result[1]);
     }
 }

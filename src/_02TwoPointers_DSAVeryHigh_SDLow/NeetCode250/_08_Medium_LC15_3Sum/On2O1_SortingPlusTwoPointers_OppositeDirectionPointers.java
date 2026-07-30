@@ -7,7 +7,6 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
-            // fixing i as the first element of the triplet.
             // Early termination
             if (nums[i] > 0) {
                 break;
@@ -17,7 +16,6 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
                 continue;
             }
             int l = i + 1, r = nums.length - 1;
-
             // Since nums[i] is fixed as the first element of the triplet,
             // the remaining two elements of the triplet must sum to -nums[i].
             int target = -nums[i];
@@ -25,16 +23,15 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
                 int twoSum = nums[l] + nums[r];
                 if (twoSum == target) {
                     result.add(Arrays.asList(nums[i], nums[l], nums[r]));
-                    l++;
-                    r--;
-                    // Skip duplicates if any
-                    while (l < r && nums[l] == nums[l - 1]) {
+                    //skip duplicates both sides
+                    while (l < r && nums[l] == nums[l + 1]) {
                         l++;
                     }
-                    // Skip duplicates if any
-                    while (l < r && nums[r] == nums[r + 1]) {
+                    while (l < r && nums[r] == nums[r - 1]) {
                         r--;
                     }
+                    l++;
+                    r--;
                 } else if (twoSum < target) {
                     l++;
                 } else {
