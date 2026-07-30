@@ -12,14 +12,11 @@ public class On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iterati
         }
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 3; i++) {
-            //  fixing i as the first element of the quadruplet.
             // Skip duplicates of first fixed element if any
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-
             for (int j = i + 1; j < nums.length - 2; j++) {
-                //  fixing j as the second element of the quadruplet.
                 // Skip duplicates of second fixed element if any
                 if (j > i + 1 && nums[j] == nums[j - 1]) {
                     continue;
@@ -33,15 +30,15 @@ public class On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iterati
                     if (sum == target) {
                         res.add(Arrays.asList(
                                 nums[i], nums[j], nums[l], nums[r]));
+                        //skip duplicates both sides
+                        while (l < r && nums[l] == nums[l + 1]) {
+                            l++;
+                        }
+                        while (l < r && nums[r] == nums[r - 1]) {
+                            r--;
+                        }
                         l++;
                         r--;
-
-                        // Skip duplicates
-                        while (l < r && nums[l] == nums[l - 1])
-                            l++;
-                        while (l < r && nums[r] == nums[r + 1])
-                            r--;
-
                     } else if (sum < target) {
                         l++;
                     } else {
@@ -54,8 +51,9 @@ public class On3O1_SortingPlusTwoPointers_OppositeDirectionPointers_kSum_Iterati
     }
 
     public static void main(String[] args) {
-        int[] nums = {-3, -2, -1, 0, 1, 2, 3};
-        int target = 2;
+//        int[] nums = {-3, -2, -1, 0, 1, 2, 3};
+        int[] nums = {1,0,-1,0,-2,2};
+        int target = 0;
         System.out.println(fourSum(nums, target));
     }
 }
