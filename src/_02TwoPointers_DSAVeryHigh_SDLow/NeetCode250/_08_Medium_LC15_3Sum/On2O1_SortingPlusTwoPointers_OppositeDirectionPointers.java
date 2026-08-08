@@ -15,7 +15,8 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-            int l = i + 1, r = nums.length - 1;
+            int l = i + 1;
+            int r = nums.length - 1;
             // Since nums[i] is fixed as the first element of the triplet,
             // the remaining two elements of the triplet must sum to -nums[i].
             int target = -nums[i];

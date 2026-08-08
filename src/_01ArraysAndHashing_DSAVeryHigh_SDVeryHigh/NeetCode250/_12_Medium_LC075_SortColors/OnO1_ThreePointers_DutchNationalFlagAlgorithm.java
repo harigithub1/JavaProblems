@@ -17,7 +17,9 @@ public class OnO1_ThreePointers_DutchNationalFlagAlgorithm {
         j → where next 2 goes
         c → current element
          */
-        int i = 0, j = nums.length - 1, c = 0;
+        int i = 0;
+        int j = nums.length - 1;
+        int c = 0;
         while (c <= j) {
             if (nums[c] == 0) {
                 swap(nums, i, c);

@@ -8,7 +8,8 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     Exactly one solution exists.
      */
     public static int[] twoSumSortedArrayIndices(int[] nums, int target) {
-        int l = 0, r = nums.length - 1;
+        int l = 0;
+        int r = nums.length - 1;
         while (l < r) {
             int sum = nums[l] + nums[r];
             if(sum==target){

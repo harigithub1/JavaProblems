@@ -37,7 +37,8 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
          Verify whether the candidates actually occur
          more than floor(n/3) times.
          */
-        int freq1 = 0, freq2 = 0;
+        int freq1 = 0;
+        int freq2 = 0;
         for (int num : nums) {
             if (num == candidate1) {
                 freq1++;

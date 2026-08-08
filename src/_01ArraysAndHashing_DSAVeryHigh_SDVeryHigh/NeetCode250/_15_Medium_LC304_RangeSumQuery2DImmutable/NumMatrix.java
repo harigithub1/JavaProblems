@@ -5,7 +5,8 @@ public class NumMatrix {
     private int[][] prefixSum;
 
     public NumMatrix(int[][] matrix) {
-        int rows = matrix.length, cols = matrix[0].length;
+        int rows = matrix.length;
+        int cols = matrix[0].length;
 
         //now all 0s will be added as default values in below prefixSum matrix after initialization
         prefixSum = new int[rows + 1][cols + 1];

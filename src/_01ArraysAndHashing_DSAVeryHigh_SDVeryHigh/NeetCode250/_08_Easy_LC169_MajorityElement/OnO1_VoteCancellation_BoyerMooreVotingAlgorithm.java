@@ -2,7 +2,8 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._08_Easy_LC169_Ma
 
 class OnO1_VoteCancellation_BoyerMooreVotingAlgorithm {
     public static int majorityElement(int[] nums) {
-        int candidate = 0, count = 0;
+        int candidate = 0;
+        int count = 0;
         for (int n : nums) {
             if (count == 0) {
                 candidate = n;

@@ -3,7 +3,10 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._04_Easy_LC1768_MergeString
 public class OnplusmOnplusm_TwoPointers_ParallelTraversal {
     public static String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
-        int l1 = 0, l2 = 0, n1 = word1.length(), n2 = word2.length();
+        int l1 = 0;
+        int l2 = 0;
+        int n1 = word1.length();
+        int n2 = word2.length();
         while (l1 < n1 && l2 < n2) {
             sb.append(word1.charAt(l1));
             sb.append(word2.charAt(l2));
