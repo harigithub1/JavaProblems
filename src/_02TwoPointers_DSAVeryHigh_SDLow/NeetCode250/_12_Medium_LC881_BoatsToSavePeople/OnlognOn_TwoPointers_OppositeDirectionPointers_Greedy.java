@@ -3,7 +3,7 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._12_Medium_LC881_BoatsToSav
 import java.util.Arrays;
 
 public class OnlognOn_TwoPointers_OppositeDirectionPointers_Greedy {
-    public static int boatsToSavePeople(int[] people, int limit) {
+    public static int minimumNumberOfBoatsRequired(int[] people, int limit) {
         Arrays.sort(people);
         int l = 0;
         int r = people.length - 1;
@@ -21,6 +21,6 @@ public class OnlognOn_TwoPointers_OppositeDirectionPointers_Greedy {
     public static void main(String[] args) {
         int[] people = {3, 2, 2, 1};
         int limit = 3;
-        System.out.println(boatsToSavePeople(people, limit));
+        System.out.println(minimumNumberOfBoatsRequired(people, limit));
     }
 }
