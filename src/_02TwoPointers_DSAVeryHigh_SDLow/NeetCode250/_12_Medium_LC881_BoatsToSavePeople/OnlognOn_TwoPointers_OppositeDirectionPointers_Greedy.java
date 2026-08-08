@@ -9,8 +9,7 @@ public class OnlognOn_TwoPointers_OppositeDirectionPointers_Greedy {
         int r = people.length - 1;
         int boats = 0;
         while (l <= r) {
-            int remainingCapacity = limit - people[r];
-            if (remainingCapacity >= people[l]) {
+            if (people[l] + people[r] <= limit) {
                 l++;
             }
             boats++;
