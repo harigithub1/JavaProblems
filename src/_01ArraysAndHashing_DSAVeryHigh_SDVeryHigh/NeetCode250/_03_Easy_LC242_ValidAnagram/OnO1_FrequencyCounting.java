@@ -5,13 +5,13 @@ public class OnO1_FrequencyCounting {
         if (s.length() != t.length()) {
             return false;
         }
-        int[] count = new int[26]; // for lowercase letters
+        int[] arr = new int[26]; // for lowercase letters
         for (int i = 0; i < s.length(); i++) {
-            count[s.charAt(i) - 'a']++;
-            count[t.charAt(i) - 'a']--;
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i) - 'a']--;
         }
-        for (int c : count) {
-            if (c != 0) {
+        for (int n : arr) {
+            if (n != 0) {
                 return false;
             }
         }
@@ -24,8 +24,5 @@ public class OnO1_FrequencyCounting {
     }
 }
 
-// valid anagram vs anagram
-// space special chars and case is ignored in anagram
-
-// anagram/valid anagram vs palindrome
-// order is ignored in anagram/valid anagram but not in palindrome
+// anagram vs palindrome
+// order is ignored in anagram but not in palindrome
