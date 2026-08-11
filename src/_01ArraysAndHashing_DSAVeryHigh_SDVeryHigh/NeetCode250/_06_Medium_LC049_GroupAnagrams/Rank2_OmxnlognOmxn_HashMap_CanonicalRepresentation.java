@@ -1,7 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._06_Medium_LC049_GroupAnagrams;
 import java.util.*;
 
-public class _Rank2_OmxnlognOmxn_HashMap_CanonicalRepresentation {
+public class Rank2_OmxnlognOmxn_HashMap_CanonicalRepresentation {
 
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
