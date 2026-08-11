@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._05_Easy_LC014_LongestCommonPrefix;
 
-public class OnxmO1_VerticalScanning_A {
+public class OnxmO1_VerticalScanning_A_NeetCode {
 
     public static String longestCommonPrefix(String[] strs) {
         //Outer loop Characters
