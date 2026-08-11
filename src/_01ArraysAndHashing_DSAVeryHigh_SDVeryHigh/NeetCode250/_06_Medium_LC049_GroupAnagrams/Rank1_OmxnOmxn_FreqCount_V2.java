@@ -10,13 +10,13 @@ public class Rank1_OmxnOmxn_FreqCount_V2 {
             for (char c : s.toCharArray()) {
                 count[c - 'a']++;
             }
-            StringBuilder keyBuilder = new StringBuilder();
+            StringBuilder key = new StringBuilder();
             for (int i = 0; i < 26; i++) {
-                keyBuilder.append('#').append(count[i]);
+                key.append('#').append(count[i]);
             }
-            String key = keyBuilder.toString();
-            map.putIfAbsent(key, new ArrayList<>());
-            map.get(key).add(s);
+            String keyString = key.toString();
+            map.putIfAbsent(keyString, new ArrayList<>());
+            map.get(keyString).add(s);
         }
         return new ArrayList<>(map.values());
     }
@@ -30,6 +30,6 @@ public class Rank1_OmxnOmxn_FreqCount_V2 {
 /*
 | Approach        | Time           | Space    | Interview Rating |
 | --------------- | -------------- | -------- | ---------------- |
-| Sorting         | O(N × K log K) | O(N × K) | ⭐⭐⭐⭐⭐            |
-| Frequency Count | O(N × K)       | O(N × K) | ⭐⭐⭐⭐⭐⭐           |
+| Sorting         | O(M × N log N) | O(M × N) | ⭐⭐⭐⭐⭐      |
+| Frequency Count | O(M × N)       | O(M × N) | ⭐⭐⭐⭐⭐⭐    |
  */
