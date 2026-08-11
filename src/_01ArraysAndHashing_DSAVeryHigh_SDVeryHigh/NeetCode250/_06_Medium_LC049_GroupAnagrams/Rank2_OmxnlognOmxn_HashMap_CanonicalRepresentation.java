@@ -9,6 +9,7 @@ public class Rank2_OmxnlognOmxn_HashMap_CanonicalRepresentation {
             char[] c = s.toCharArray();
             Arrays.sort(c);
             String key = new String(c);
+            //Create an empty list only if this key doesn't already have one. so using putIfAbsent instead of put
             map.putIfAbsent(key, new ArrayList<>());
             map.get(key).add(s);
         }
