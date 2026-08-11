@@ -24,12 +24,3 @@ public class Rank2_OmxnlognOmxn_HashMap_CanonicalRepresentation {
         }
     }
 }
-
-/*
-| Approach        | Time           | Space    | Interview Rating |
-| --------------- | -------------- | -------- | ---------------- |
-| Sorting         | O(N × K log K) | O(N × K) | ⭐⭐⭐⭐⭐            |
-| Frequency Count | O(N × K)       | O(N × K) | ⭐⭐⭐⭐⭐⭐           |
- */
-
-
