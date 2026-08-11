@@ -3,12 +3,12 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._06_Medium_LC049_
 import java.util.*;
 
 public class Rank1_OmxnOmxn_FreqCount_V2 {
-    public static List<List<String>> groupAnagrams(String[] strs) {
+    public static List<List<String>> getGroupedAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
             int[] count = new int[26];
-            for (char c : s.toCharArray()) {
-                count[c - 'a']++;
+            for(int i =0;i<s.length();i++){
+                count[s.charAt(i)-'a']++;
             }
             StringBuilder key = new StringBuilder();
             for (int i = 0; i < 26; i++) {
@@ -23,7 +23,7 @@ public class Rank1_OmxnOmxn_FreqCount_V2 {
 
     public static void main(String[] args) {
         String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
-        System.out.println(groupAnagrams(strs));
+        System.out.println(getGroupedAnagrams(strs));
     }
 }
 
