@@ -24,8 +24,10 @@ public class OnOn_HashMapOnePass {
     public static void main(String[] args) {
         int[] nums = {7, 2, 11, 15};
         int target = 9;
-        int[] result = twoSumIndices(nums, target);
-        System.out.println("Indices: " + result[0] + ", " + result[1]);
+        int[] res = twoSumIndices(nums, target);
+        for(int n : res){
+            System.out.print(n+" ");
+        }
     }
 }
 //we should not implement twoSum2SortedInputArray using containsValue, because its O(n2) since it involves loops
