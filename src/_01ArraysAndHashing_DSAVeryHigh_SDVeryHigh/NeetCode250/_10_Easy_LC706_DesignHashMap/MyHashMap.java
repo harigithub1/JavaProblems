@@ -7,7 +7,7 @@ public class MyHashMap {
 
     public MyHashMap() {
         arr = new int[1000001];
-        Arrays.fill(arr, -1);
+        Arrays.fill(arr, -1); //initializes every key as "not present", because 0 is a valid value in the problem.
     }
 
     public void put(int key, int value) {
