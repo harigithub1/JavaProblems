@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._07_Easy_LC027_RemoveElement;
 
-public class OnO1_ReadPointerWritePointer {
+public class OnO1_ReadPointerWritePointer_V1 {
     public static int removeElement(int[] nums, int val) {
         int k = 0; // slow pointer
         for (int i = 0; i < nums.length; i++) {

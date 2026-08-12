@@ -17,6 +17,8 @@ public class MyHashSet {
     }
 
     public void remove(int val) {
+        //list.remove(val);                   remove by INDEX
+        //list.remove(Integer.valueOf(val));  remove by VALUE
         list.remove(Integer.valueOf(val));
     }
 
