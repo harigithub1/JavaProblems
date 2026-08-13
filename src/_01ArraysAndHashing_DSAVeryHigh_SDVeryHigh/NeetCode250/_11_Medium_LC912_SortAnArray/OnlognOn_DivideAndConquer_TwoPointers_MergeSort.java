@@ -25,13 +25,20 @@ public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
             temp.add(nums[j]);
             j++;
         }
+        //copy back
         for (int k = l; k <= r; k++) {
             nums[k] = temp.get(k - l);
         }
+        //copy back
+//        int a=l;
+//        for(int k=0;k<tempList.size();k++){
+//            nums[a]=tempList.get(k);
+//            a++;
+//        }
     }
 
     private static void mergeSort(int[] nums, int l, int r) {
-        if (l == r) return;
+        if (l >= r) return;
         int m = l + (r - l) / 2;
         mergeSort(nums, l, m);
         mergeSort(nums, m + 1, r);
@@ -39,7 +46,8 @@ public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
     }
 
     public static int[] sortArray(int[] nums) {
-        mergeSort(nums, 0, nums.length - 1);
+        int l=0,r=nums.length-1;
+        mergeSort(nums, l, r);
         return nums;
     }
 
