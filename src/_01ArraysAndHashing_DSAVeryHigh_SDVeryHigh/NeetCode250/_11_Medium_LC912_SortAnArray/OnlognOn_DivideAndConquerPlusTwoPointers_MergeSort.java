@@ -3,7 +3,10 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_
 import java.util.*;
 
 //mergeSortedArray sort
-public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
+public class OnlognOn_DivideAndConquerPlusTwoPointers_MergeSort {
+    /**
+     * merge using two pointers technique
+     */
     private static void merge(int[] nums, int l, int m, int r) {
         List<Integer> temp = new ArrayList<>();
         int i = l;
@@ -29,7 +32,7 @@ public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
         for (int k = l; k <= r; k++) {
             nums[k] = temp.get(k - l);
         }
-        //copy back
+//        //copy back version 2
 //        int a=l;
 //        for(int k=0;k<tempList.size();k++){
 //            nums[a]=tempList.get(k);
@@ -62,4 +65,20 @@ public class OnlognOn_DivideAndConquer_TwoPointers_MergeSort {
         }
     }
 }
-
+/**
+ * input 5, 1, 1, 2, 0, 0
+ * [5, 1, 1, 2, 0, 0]
+ *           ↓
+ *      divide in half
+ *           ↓
+ * [5,1,1]       [2,0,0]
+ *    ↓              ↓
+ * sorted          sorted
+ *    ↓              ↓
+ * [1,1,5]       [0,0,2]
+ *        \        /
+ *         \      /
+ *          merge
+ *            ↓
+ * [0,0,1,1,2,5]
+ */
