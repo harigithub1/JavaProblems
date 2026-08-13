@@ -7,7 +7,7 @@ public class On2Ologn_DivideAndConquer_HoaresPartition_QuickSort {
     private static int partition(int[] nums, int l, int r) {
         int m = l + (r - l) / 2;
 
-        // Move middle element to l+1 position
+        // Move middle element to l+1 position.
         // This implementation keeps pivot candidate at l+1
         swap(nums,l + 1, m);
 
