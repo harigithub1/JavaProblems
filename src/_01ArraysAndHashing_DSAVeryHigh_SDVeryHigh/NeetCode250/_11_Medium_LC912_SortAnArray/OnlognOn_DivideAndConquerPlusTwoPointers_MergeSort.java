@@ -4,10 +4,9 @@ import java.util.*;
 
 //mergeSortedArray sort
 public class OnlognOn_DivideAndConquerPlusTwoPointers_MergeSort {
-    /**
-     * merge using two pointers technique
-     */
-    private static void merge(int[] nums, int l, int m, int r) {
+    // merge using two pointers technique
+    private static void mergeTwoAlreadySortedHalfs(int[] nums, int l, int m, int r) {
+        //temp holds the merged sorted result
         List<Integer> temp = new ArrayList<>();
         int i = l;
         int j = m + 1;
@@ -40,17 +39,17 @@ public class OnlognOn_DivideAndConquerPlusTwoPointers_MergeSort {
 //        }
     }
 
-    private static void mergeSort(int[] nums, int l, int r) {
+    private static void divideTheArray(int[] nums, int l, int r) {
         if (l >= r) return;
         int m = l + (r - l) / 2;
-        mergeSort(nums, l, m);
-        mergeSort(nums, m + 1, r);
-        merge(nums, l, m, r);
+        divideTheArray(nums, l, m);
+        divideTheArray(nums, m + 1, r);
+        mergeTwoAlreadySortedHalfs(nums, l, m, r);
     }
 
     public static int[] sortArray(int[] nums) {
         int l=0,r=nums.length-1;
-        mergeSort(nums, l, r);
+        divideTheArray(nums, l, r);
         return nums;
     }
 
