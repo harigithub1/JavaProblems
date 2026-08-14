@@ -98,6 +98,8 @@ public class On2Ologn_DivideAndConquer_HoaresPartition_QuickSort {
     }
 
     public static int[] sortArray(int[] nums) {
+        int l = 0;
+        int r = nums.length-1;
         quickSort(nums, 0, nums.length - 1);
         return nums;
     }
