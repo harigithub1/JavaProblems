@@ -1,7 +1,17 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_SortAnArray;
 
 public class On2Ologn_DivideAndConquer_QuickSort_LomutoPartition {
-
+        /*
+        m
+        ↓
+        pivot selected
+        ↓
+        move pivot to r
+        ↓
+        Lomuto partition
+        ↓
+        move pivot to i
+         */
     public static void swap(int[] nums, int l, int r) {
         int temp = nums[l];
         nums[l] = nums[r];
