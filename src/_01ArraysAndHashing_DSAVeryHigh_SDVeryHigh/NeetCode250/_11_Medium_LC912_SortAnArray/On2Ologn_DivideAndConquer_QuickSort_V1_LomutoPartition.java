@@ -22,7 +22,7 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
         int pivot = nums[r];
         int i = l;
         for (int j = l; j < r; j++) {
-            if (nums[j] <= pivot) {
+            if (nums[j] < pivot) {
                 swap(nums, i, j);
                 i++;
             }
@@ -48,7 +48,7 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, 1, 1, 2, 0, 0};
+        int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
         int[] res = sortArray(nums);
         for (int n : res) {
             System.out.println(n + ",");
