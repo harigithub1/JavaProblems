@@ -1,15 +1,21 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_SortAnArray;
 
 public class On2Ologn_DivideAndConquer_QuickSort_HoaresPartitionWithTwoPointersAndMedianOfThree {
-        /*
-        l + 1
-           ↓
-        pivot selected
-           ↓
-        Hoare partition
-           ↓
-        pivot moved to j
-         */
+/*
+m
+↓
+move candidate to l+1
+↓
+l+1
+↓
+Median-of-three
+↓
+pivot selected at l+1
+↓
+Hoare partition
+↓
+pivot moved from l+1 → j
+ */
     private static int partition(int[] nums, int l, int r) {
         int m = l + (r - l) / 2;
 
