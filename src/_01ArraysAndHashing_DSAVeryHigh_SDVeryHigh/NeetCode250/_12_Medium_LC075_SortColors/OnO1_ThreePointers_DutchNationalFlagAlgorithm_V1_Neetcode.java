@@ -1,9 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._12_Medium_LC075_SortColors;
 
-import java.util.Arrays;
-
 //Three Pointers - I
-public class OnO1_ThreePointers_DutchNationalFlagAlgorithm {
+public class OnO1_ThreePointers_DutchNationalFlagAlgorithm_V1_Neetcode {
 
     private static void swap(int[] nums, int x, int y) {
         int temp = nums[x];
@@ -13,23 +11,23 @@ public class OnO1_ThreePointers_DutchNationalFlagAlgorithm {
 
     public static void sortColors(int[] nums) {
         /*
-        i → where next 0 goes
-        j → where next 2 goes
+        l → where next 0 goes
+        r → where next 2 goes
         c → current element
          */
-        int i = 0;
-        int j = nums.length - 1;
+        int l = 0;
+        int r = nums.length - 1;
         int c = 0;
-        while (c <= j) {
+        while (c <= r) {
             if (nums[c] == 0) {
-                swap(nums, i, c);
-                i++;
+                swap(nums, l, c);
+                l++;
                 c++;
             } else if (nums[c] == 1) {
                 c++;
             } else {
-                swap(nums, c, j);
-                j--;
+                swap(nums, c, r);
+                r--;
             }
         }
     }

@@ -18,7 +18,7 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
         nums[r] = temp;
     }
 
-    public static int getPartitionIndex(int[] nums, int l, int r) {
+    public static int getPivotIndex(int[] nums, int l, int r) {
         int pivot = nums[r];
         int i = l;
         for (int j = l; j < r; j++) {
@@ -35,7 +35,7 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
         if (l >= r) {
             return;
         }
-        int pIdx = getPartitionIndex(nums, l, r);
+        int pIdx = getPivotIndex(nums, l, r);
         quickSort(nums, l, pIdx - 1);
         quickSort(nums, pIdx + 1, r);
     }
