@@ -1,11 +1,9 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._13_Medium_LC347_TopKFrequentElements;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class IfInputArrayDoesntHaveTwoOrMoreElementsWithSameFrequencies {
+public class OnOn_BucketSort_IfDistinctFrequencies {
 
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
