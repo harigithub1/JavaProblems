@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._13_Medium_LC347_
 import java.util.*;
 
 public class _Rank1_OnOn_BucketSort_TwoOrMoreElementsCouldHaveSameFrequencies {
-    public static int[] topKFrequent(int[] nums, int k) {
+    public static int[] kelementsWithTopFrequencies(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
@@ -12,8 +12,7 @@ public class _Rank1_OnOn_BucketSort_TwoOrMoreElementsCouldHaveSameFrequencies {
         We have used List<Integer>[] instead of int[] because multiple elements can have the same frequency,
         and each bucket must be able to store multiple numbers.
          */
-        List<Integer>[] arr = new List[nums.length + 1];
-        // initialize each bucket list, i will be the frequency, so we need to initialize all buckets from 0 to nums.length
+        List<Integer>[] arr = new List[nums.length + 1]; // initialize each bucket list, i will be the frequency, so we need to initialize all buckets from 0 to nums.length
         for (int i = 0; i <= nums.length; i++) {
             arr[i] = new ArrayList<>();
         }
@@ -40,8 +39,9 @@ public class _Rank1_OnOn_BucketSort_TwoOrMoreElementsCouldHaveSameFrequencies {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 1, 2, 1, 2, 3, 1, 3, 2};
+//        int[] nums = {5, 5, 5, 5, 5, 5}; edge case
         int k = 2;
-        int[] result = topKFrequent(nums, k);
+        int[] result = kelementsWithTopFrequencies(nums, k);
         for (int n : result) {
             System.out.print(result[n] + " ");
         }

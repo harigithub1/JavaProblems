@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Rank1_OnOn_BucketSort_IfDistinctFrequencies {
 
-    public static int[] topKFrequent(int[] nums, int k) {
+    public static int[] kelementsWithTopFrequencies(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
@@ -37,8 +37,9 @@ public class Rank1_OnOn_BucketSort_IfDistinctFrequencies {
 
     public static void main(String[] args) {
         int[] nums = {1, 1, 1, 2, 2, 3}; //not like {1, 2, 1, 2, 1, 2, 3, 1, 3, 2}; where 1 and 2 have same frequency
+//        int[] nums = {5, 5, 5, 5, 5, 5}; edge case
         int k = 2;
-        int[] result = topKFrequent(nums, k);
+        int[] result = kelementsWithTopFrequencies(nums, k);
         for (int n : result) {
             System.out.print(n+ ",");
         }
