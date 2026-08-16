@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class OnlognOn_ListSort_IfDistinctFrequencies {
+public class Rank2_OnlognOn_ListSort_IfDistinctFrequencies {
 
     public static int[] topKFrequent(int[] nums, int k) {
 

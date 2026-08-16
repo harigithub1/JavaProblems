@@ -3,46 +3,35 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._13_Medium_LC347_
 import java.util.HashMap;
 import java.util.Map;
 
-public class OnOn_BucketSort_IfDistinctFrequencies {
+public class Rank1_OnOn_BucketSort_IfDistinctFrequencies {
 
     public static int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
-        // Count frequency of each number
         for (int n : nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }
 
-        /*
-         * Since no two numbers have the same frequency,
-         * each frequency maps to exactly one number.
-         *
-         * Example:
-         * frequency 5 -> number 7
-         * frequency 3 -> number 2
-         * frequency 1 -> number 9
+        /**
+         * An Integer[] is an array of objects, so every position initially contains:
+         * null
+         * not 0.
+         * That's actually one of the advantages of using Integer[] instead of int[] if 0s are allowed like 0, 0, 0, 5, 5, 2
          */
-        Integer[] arr = new Integer[nums.length + 1];
-
-        // frequency -> number
+        Integer[] arr = new Integer[nums.length+1]; //here using nums.length+1 to handle edge case with inputs like 5, 5, 5, 5, 5, 5
         for (Map.Entry<Integer, Integer> e : map.entrySet()) {
             arr[e.getValue()] = e.getKey();
         }
-
         int[] res = new int[k];
-        int j = 0;
-
-        // Start from highest frequency
-        for (int i = nums.length; i >= 0; i--) {
-            if (arr[i] != null) {
-                res[j] = arr[i];
-                j++;
-
-                if (j == k) {
+        int i=0;
+        for(int j=nums.length-1; j>0; j--) {
+            if(arr[j]!=null) {
+                res[i]= arr[j];
+                if(i==k-1){
                     return res;
                 }
+                i++;
             }
         }
-
         return res;
     }
 
@@ -51,7 +40,7 @@ public class OnOn_BucketSort_IfDistinctFrequencies {
         int k = 2;
         int[] result = topKFrequent(nums, k);
         for (int n : result) {
-            System.out.print(result[n] + " ");
+            System.out.print(n+ ",");
         }
     }
 }
