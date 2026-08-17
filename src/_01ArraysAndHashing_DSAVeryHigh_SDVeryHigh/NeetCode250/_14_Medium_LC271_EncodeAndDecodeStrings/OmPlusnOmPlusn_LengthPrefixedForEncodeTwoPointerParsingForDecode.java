@@ -8,7 +8,6 @@ public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
         for (String s : strs) {
-            // Store the length of string + delimiter '#' + actual string
             sb.append(s.length()).append('#').append(s);
         }
         return sb.toString();
