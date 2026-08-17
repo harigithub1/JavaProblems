@@ -17,7 +17,7 @@ public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
         // input string 5#hello5#world
         List<String> result = new ArrayList<>();
         // using two pointers i, j
-        // i points to the start of the length
+        //i points to the start of the length
         int i = 0;
         while (i < s.length()) {
             // j moves forward until it finds '#'
