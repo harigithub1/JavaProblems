@@ -16,11 +16,9 @@ public class _Rank1_OnOn_BucketSort_TwoOrMoreElementsCouldHaveSameFrequencies {
         for (int i = 0; i <= nums.length; i++) {
             arr[i] = new ArrayList<>();
         }
-        // place each number into the bucket corresponding to its frequency
         for (Map.Entry<Integer, Integer> e : map.entrySet()) {
             arr[e.getValue()].add(e.getKey());
         }
-
         int[] res = new int[k];
         int j = 0;
         // collect results starting from highest frequency
