@@ -29,7 +29,7 @@ public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
             int length = Integer.parseInt(s.substring(i, j));
             result.add(s.substring(j + 1, j + 1 + length));
             // Move i to the beginning of the next encoded string
-            // Example:
+            // Example :
             // "5#hello5#world"
             //        ^
             //        next i
