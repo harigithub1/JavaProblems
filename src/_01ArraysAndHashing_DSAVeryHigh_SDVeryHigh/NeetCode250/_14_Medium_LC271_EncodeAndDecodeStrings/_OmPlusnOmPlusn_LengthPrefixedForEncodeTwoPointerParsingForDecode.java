@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
+public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
     public static String encode(List<String> strs) {
         StringBuilder sb = new StringBuilder();
         for (String s : strs) {
