@@ -13,6 +13,7 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
         return sb.toString();
     }
 
+    //using for loop
     public static List<String> decode2(String s) {
         List<String> result = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
@@ -27,6 +28,7 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
         return result;
     }
 
+    //using while loop
     public static List<String> decode(String s) {
         // input string 5#hello5#world
         List<String> result = new ArrayList<>();
