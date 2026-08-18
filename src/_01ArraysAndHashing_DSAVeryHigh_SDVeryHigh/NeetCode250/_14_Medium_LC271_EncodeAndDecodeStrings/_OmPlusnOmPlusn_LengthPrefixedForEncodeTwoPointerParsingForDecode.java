@@ -15,21 +15,15 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
 
     public static List<String> decode2(String s) {
         List<String> result = new ArrayList<>();
-
         for (int i = 0; i < s.length(); i++) {
             int j = i;
-
             while (s.charAt(j) != '#') {
                 j++;
             }
-
             int length = Integer.parseInt(s.substring(i, j));
-
             result.add(s.substring(j + 1, j + 1 + length));
-
             i = j + length;  // for-loop will then do i++
         }
-
         return result;
     }
 
