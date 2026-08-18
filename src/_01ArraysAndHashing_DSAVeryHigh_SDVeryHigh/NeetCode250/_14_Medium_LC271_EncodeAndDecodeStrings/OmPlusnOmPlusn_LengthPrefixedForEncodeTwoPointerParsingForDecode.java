@@ -13,6 +13,26 @@ public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
         return sb.toString();
     }
 
+    public static List<String> decode2(String s) {
+        List<String> result = new ArrayList<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            int j = i;
+
+            while (s.charAt(j) != '#') {
+                j++;
+            }
+
+            int length = Integer.parseInt(s.substring(i, j));
+
+            result.add(s.substring(j + 1, j + 1 + length));
+
+            i = j + length;  // for-loop will then do i++
+        }
+
+        return result;
+    }
+
     public static List<String> decode(String s) {
         // input string 5#hello5#world
         List<String> result = new ArrayList<>();
@@ -42,7 +62,7 @@ public class OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
         List<String> input = Arrays.asList("hello", "world");
         String encoded = encode(input);
         System.out.println("Encoded: " + encoded);
-        List<String> decoded = decode(encoded);
+        List<String> decoded = decode2(encoded);
         System.out.println("Decoded: " + decoded);
     }
 }
