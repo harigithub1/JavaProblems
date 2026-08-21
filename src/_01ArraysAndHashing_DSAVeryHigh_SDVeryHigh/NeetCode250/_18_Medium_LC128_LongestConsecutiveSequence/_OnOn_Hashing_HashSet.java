@@ -4,32 +4,30 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class _OnOn_Hashing_HashSet {
-    public static int longestConsecutive(int[] nums) {
+    public static int longestConsecutiveSequenceLength(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int n : nums) {
             set.add(n);
         }
-        int maxLength = 0;
+        int maxCount = 0;
         for (int n : set) {
             // Only start if it's the beginning of a sequence
             if (!set.contains(n - 1)) {
                 int startPointer = n;
-                int length = 1;
+                int count = 1;
                 // Expand sequence
                 while (set.contains(startPointer + 1)) {
-                    length++;
+                    count++;
                     startPointer++;
                 }
-                maxLength = Math.max(maxLength, length);
+                maxCount = Math.max(maxCount, count);
             }
         }
-        return maxLength;
+        return maxCount;
     }
     public static void main(String[] args) {
         int[] nums = {100, 4, 200, 1, 3, 2};
 //        int[] nums = {0, -1, 1, 2, -2, 3, 4};
-        System.out.println(longestConsecutive(nums));
+        System.out.println(longestConsecutiveSequenceLength(nums));
     }
 }
-
-
