@@ -10,8 +10,10 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
          count1, count2         -> vote counts for the candidates
          Initially there are no candidates.
         */
-        int candidate1 = -1, candidate2 = -1, count1 = 0, count2 = 0;
-
+        int candidate1 = -1;
+        int candidate2 = -1;
+        int count1 = 0;
+        int count2 = 0;
         // First Pass: Find potential majority candidates
         for (int n : nums) {
             if (n == candidate1) {
@@ -46,19 +48,17 @@ public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
                 freq2++;
             }
         }
-
-        List<Integer> res = new ArrayList<>();
-        if (freq1 > nums.length / 3) res.add(candidate1);
-        if (freq2 > nums.length / 3) res.add(candidate2);
-
-        return res;
+        List<Integer> list = new ArrayList<>();
+        if (freq1 > nums.length / 3) list.add(candidate1);
+        if (freq2 > nums.length / 3) list.add(candidate2);
+        return list;
     }
 
     public static void main(String[] args) {
         int[] nums = {1, 1, 1, 3, 3, 2, 2, 2}; // majority element exists, Output: [1, 2]
 //        int[] nums = {1,2,3,4}; //no majority element, second pass is necessary, Output: []
 //        int[] nums = {1,2,3,1,2,3}; //no majority element, second pass is necessary, Output: []
-        List<Integer> res = majorityElement2(nums); // [1, 2]
-        System.out.println(res);
+        List<Integer> list = majorityElement2(nums); // [1, 2]
+        System.out.println(list);
     }
 }
