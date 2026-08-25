@@ -1,7 +1,10 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_FirstMissingPositive;
 
-public class _Rank1_OnO1_InPlaceHashing {
+public class _Rank1_OnO1_InPlaceHashing_V1 {
     public static int firstMissingPositive(int[] nums) {
+        // Step 1: Replace all negative numbers with 0.
+        // We only care about positive numbers from 1 to nums.length.
+        // 0 will act as an "unmarked" value later.
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < 0) {
                 nums[i] = 0;
