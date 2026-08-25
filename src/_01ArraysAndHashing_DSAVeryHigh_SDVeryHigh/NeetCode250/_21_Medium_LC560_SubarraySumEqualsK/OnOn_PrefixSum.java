@@ -1,6 +1,7 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._21_Medium_LC560_SubarraySumEqualsK;
 
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
 
 //refer takeUForward video https://www.youtube.com/watch?v=xvNwoz-ufXA for understanding
 public class OnOn_PrefixSum {
@@ -33,3 +34,12 @@ public class OnOn_PrefixSum {
         System.out.println(noOfSubArraysWithSumK(nums, k));
     }
 }
+/**
+ * k=3
+ * nums
+ *     1, 2, 3, 1, 1, 1, 4, 2,1
+ * currentPrefixSum
+ * 0, 1, 3, 6, 7, 8,9,13,15,16
+ * currentPrefixSum-k
+ *    -2, 0, 3, 4,5,6,10,12,13
+ */
