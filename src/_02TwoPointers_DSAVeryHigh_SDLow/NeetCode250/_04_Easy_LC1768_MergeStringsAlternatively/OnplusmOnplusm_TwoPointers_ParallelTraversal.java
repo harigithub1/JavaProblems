@@ -5,19 +5,19 @@ public class OnplusmOnplusm_TwoPointers_ParallelTraversal {
         StringBuilder sb = new StringBuilder();
         int l1 = 0;
         int l2 = 0;
-        int n1 = word1.length();
-        int n2 = word2.length();
-        while (l1 < n1 && l2 < n2) {
+        int r1 = word1.length()-1;
+        int r2 = word2.length()-1;
+        while (l1 <= r1 && l2 <= r2) {
             sb.append(word1.charAt(l1));
             sb.append(word2.charAt(l2));
             l1++;
             l2++;
         }
-        while (l1 < n1) {
+        while (l1 <= r1) {
             sb.append(word1.charAt(l1));
             l1++;
         }
-        while (l2 < n2) {
+        while (l2 <= r2) {
             sb.append(word2.charAt(l2));
             l2++;
         }
