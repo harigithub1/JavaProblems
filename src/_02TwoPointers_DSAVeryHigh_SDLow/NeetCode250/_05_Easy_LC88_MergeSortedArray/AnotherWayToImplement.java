@@ -1,6 +1,7 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedArray;
 
 public class AnotherWayToImplement {
+
     public static void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
         m--;
         n--;
@@ -23,7 +24,6 @@ public class AnotherWayToImplement {
     public static void main(String[] args) {
         int[] nums1 = {4,5,6,0,0,0};
         int m = 3;
-
         int[] nums2 = {1,2,3};
         int n = 3;
         mergeSortedArray(nums1,m,nums2,n);
