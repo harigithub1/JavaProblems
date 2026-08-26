@@ -5,6 +5,7 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
         int l = 0;
         int r = s.length() - 1;
         while (l < r) {
+
             // in below loop using l < r, to handle inputs like "!!!", where l can become 3 and cause StringIndexOutOfBoundsException
             while (l < r && !Character.isLetterOrDigit(s.charAt(l))) {
                 l++;
