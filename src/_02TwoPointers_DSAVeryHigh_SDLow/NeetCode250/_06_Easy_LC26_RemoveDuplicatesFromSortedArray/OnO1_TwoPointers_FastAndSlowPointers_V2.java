@@ -1,22 +1,21 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._06_Easy_LC26_RemoveDuplicatesFromSortedArray;
 
-public class OnO1_TwoPointers_FastAndSlowPointers {
+public class OnO1_TwoPointers_FastAndSlowPointers_V2 {
     public static int removeDuplicatesAndGetUniqueCount(int[] nums) {
         if (nums.length == 0) {
             return 0;
         }
-        int res=1;
-        int l1 = 0, l2 = 1;
+        int l = 0;
         int r = nums.length-1;
-        while (l2 <= r) {
-            if (nums[l1] != nums[l2]) {
-                nums[l1+1] = nums[l2];
-                l1++;
-                res++;
+        int k = 1;
+        while (k <= r) {
+            if (nums[l] != nums[k]) {
+                nums[l +1] = nums[k];
+                l++;
             }
-            l2++;
+            k++;
         }
-        return res;
+        return l+1;
     }
 
     public static void main(String[] args) {
