@@ -1,9 +1,7 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedArray;
 
-import java.util.Arrays;
-
-public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer {
-    public static void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
+public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer_V1 {
+    public static void mergeSortedArrays(int[] nums1, int m, int[] nums2, int n) {
         int r1 = m - 1;
         int r2 = n - 1;
         int k = m + n - 1; //it can also be nums1.length-1
@@ -34,7 +32,7 @@ public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer {
         int m = 3;
         int[] nums2 = {1,2,3};
         int n = 3;
-        mergeSortedArray(nums1, m, nums2, n);
+        mergeSortedArrays(nums1, m, nums2, n);
         for (int i = 0; i < nums1.length; i++) {
             System.out.print(nums1[i] + " ");
         }
