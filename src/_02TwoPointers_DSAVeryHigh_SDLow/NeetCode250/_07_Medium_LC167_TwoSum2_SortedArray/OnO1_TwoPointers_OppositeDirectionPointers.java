@@ -26,9 +26,10 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
     public static void main(String[] args) {
         int[] nums = {1, 3, 5, 7, 10};
         int target = 12;
-        int[] result = twoSumSortedArrayIndices(nums, target);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + " ");
+        int[] res = twoSumSortedArrayIndices(nums, target);
+        for(int n : res) {
+            //printing n+1 as per leetcode requirement
+            System.out.print(n+1+" ");
         }
     }
 }
