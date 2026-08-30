@@ -12,11 +12,12 @@ public class OnO1_ThreeReversalAlgorithm_TwoPointers_OppositeDirectionPointers {
     }
 
     public static void rotate(int[] nums, int k) {
-        int length = nums.length;
-        k = k % length;
-        reverse(nums, 0, length - 1);
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, length - 1);
+        k=k%nums.length;
+        int l =0;
+        int r = nums.length-1;
+        reverse(nums,l,r);
+        reverse(nums,0,k-1);
+        reverse(nums,k,r);
     }
 
     public static void main(String[] args) {
