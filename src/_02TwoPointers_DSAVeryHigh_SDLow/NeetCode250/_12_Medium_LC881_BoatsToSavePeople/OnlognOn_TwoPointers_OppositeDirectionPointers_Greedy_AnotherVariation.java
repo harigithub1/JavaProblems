@@ -2,19 +2,25 @@ package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._12_Medium_LC881_BoatsToSav
 
 import java.util.Arrays;
 
-public class OnlognOn_TwoPointers_OppositeDirectionPointers_Greedy {
+public class OnlognOn_TwoPointers_OppositeDirectionPointers_Greedy_AnotherVariation {
     public static int getMinBoats(int[] nums, int limit) {
         Arrays.sort(nums);
-        // 1, 2, 2, 3
+        //1, 2, 2, 3
         int l = 0;
         int r = nums.length - 1;
         int count = 0;
-        while (l <= r) {
-            if (nums[l] + nums[r] <= limit) {
+        while (l < r + 1) {
+            if (nums[r] == limit) {
+                count++;
+                r--;
+            } else if (nums[r] + nums[l] <= limit) {
+                r--;
                 l++;
+                count++;
+            } else {
+                count++;
+                r--;
             }
-            count++;
-            r--;
         }
         return count;
     }
