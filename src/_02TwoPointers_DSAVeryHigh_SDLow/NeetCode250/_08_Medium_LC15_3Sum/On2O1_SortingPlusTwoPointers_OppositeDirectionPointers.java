@@ -4,7 +4,7 @@ import java.util.*;
 
 public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
     public static List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
+        List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
             // Early termination
@@ -23,7 +23,7 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
             while (l < r) {
                 int sum = nums[l] + nums[r];
                 if (sum == target) {
-                    result.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                    list.add(Arrays.asList(nums[i], nums[l], nums[r]));
                     //skip duplicates both sides
                     while (l < r && nums[l] == nums[l + 1]) {
                         l++;
@@ -40,7 +40,7 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
                 }
             }
         }
-        return result;
+        return list;
     }
 
     public static void main(String[] args) {
