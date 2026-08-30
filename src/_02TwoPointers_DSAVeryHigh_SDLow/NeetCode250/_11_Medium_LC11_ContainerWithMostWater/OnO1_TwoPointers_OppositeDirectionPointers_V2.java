@@ -4,11 +4,10 @@ public class OnO1_TwoPointers_OppositeDirectionPointers_V2 {
     public static int maxArea(int[] nums) {
         int l = 0;
         int r = nums.length - 1;
-        int h = 0;
-        int w = 0;
         int area = 0;
         while (l < r) {
-            w = r - l;
+            int h;
+            int w = r - l;
             if (nums[l] < nums[r]) {
                 h = nums[l];
             } else {
