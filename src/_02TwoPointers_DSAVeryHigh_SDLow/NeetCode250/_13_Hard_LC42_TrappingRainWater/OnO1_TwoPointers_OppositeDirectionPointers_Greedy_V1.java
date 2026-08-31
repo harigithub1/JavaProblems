@@ -1,30 +1,30 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._13_Hard_LC42_TrappingRainWater;
 
-public class OnO1_TwoPointers_OppositeDirectionPointers_Greedy_CurrentBoundary {
-    public static int noOfUnitsOfWaterTrapped(int[] height) {
+public class OnO1_TwoPointers_OppositeDirectionPointers_Greedy_V1 {
+    public static int noOfUnitsOfWaterTrapped(int[] nums) {
         int l = 0;
-        int r = height.length - 1;
+        int r = nums.length - 1;
         int leftMax = 0;
         int rightMax = 0;
-        int res = 0;
+        int units = 0;
         while (l < r) {
-            if (height[l] <= height[r]) {
-                if (leftMax > height[l]) {
-                    res += leftMax - height[l];
+            if (nums[l] <= nums[r]) {
+                if (leftMax > nums[l]) {
+                    units += leftMax - nums[l];
                 } else {
-                    leftMax = height[l];
+                    leftMax = nums[l];
                 }
                 l++;
             } else {
-                if (rightMax > height[r]) {
-                    res += rightMax - height[r];
+                if (rightMax > nums[r]) {
+                    units += rightMax - nums[r];
                 } else {
-                    rightMax = height[r];
+                    rightMax = nums[r];
                 }
                 r--;
             }
         }
-        return res;
+        return units;
     }
 
     public static void main(String[] args) {
