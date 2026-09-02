@@ -1,8 +1,8 @@
-package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250;
+package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._03_Medium_LC6_LongestSubstringWithoutRepeatingCharacters;
 
 import java.util.HashMap;
 
-public class Medium1_LC003_LongestSubstringWithoutRepeatingChar {
+public class Alternative {
     public static int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         int left = 0, maxLength = 0;
