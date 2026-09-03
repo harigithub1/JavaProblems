@@ -3,23 +3,25 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._03_Medium_LC6_LongestSub
 import java.util.HashSet;
 import java.util.Set;
 
-public class OnOm_SlidingWindow {
-    public static int lengthOfLongestSubstring(String s) {
+public class OnOm_SlidingWindow_V2 {
+    public static int lengthOfLongestSubstring(String s){
         Set<Character> set = new HashSet<>();
-        int l = 0;
-        int length = 0;
-        for (int r = 0; r <= s.length()-1; r++) {
-            while (set.contains(s.charAt(r))) {
+        int l =0;
+        int length =0;
+        int r=1;
+        set.add(s.charAt(l));
+        while(r<=s.length()-1){
+            while(set.contains(s.charAt(r))){
                 set.remove(s.charAt(l));
                 l++;
             }
             set.add(s.charAt(r));
-            length = Math.max(length, r - l + 1);
+            r++;
+            length = Math.max(length,r-l);
         }
         return length;
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         String s = "abcabcbb";
         System.out.println(lengthOfLongestSubstring(s));
     }
