@@ -8,8 +8,7 @@ public class OnOm_SlidingWindow_V2 {
         Set<Character> set = new HashSet<>();
         int l =0;
         int length =0;
-        int r=1;
-        set.add(s.charAt(l));
+        int r=0;
         while(r<=s.length()-1){
             while(set.contains(s.charAt(r))){
                 set.remove(s.charAt(l));
