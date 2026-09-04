@@ -14,17 +14,21 @@ public class OmxnOm_SlidingWindow {
         //for each unique character
         for (char c : set) {
             int count = 0, l = 0;
-            for (int r = 0; r < s.length(); r++) {
-                if (s.charAt(r) == c) {
+            for (int currentIndex = 0; currentIndex < s.length(); currentIndex++) {
+                if (s.charAt(currentIndex) == c) {
                     count++;
                 }
-                while ((r - l + 1) - count > k) {
+                // below while loop is to shrink the window
+                // "(currentIndex - l + 1) - count" means (window size) - number of A's
+                // "(currentIndex - l + 1) - count" means (window size) - number of A's in next for each iteration
+                //(currentIndex - l + 1) - count > k : The number of characters I need to replace to turn this entire window into c is greater than the number of replacements I'm allowed (k)
+                while ((currentIndex - l + 1) - count > k) {
                     if (s.charAt(l) == c) {
                         count--;
                     }
                     l++;
                 }
-                length = Math.max(length, r - l + 1);
+                length = Math.max(length, currentIndex - l + 1);
             }
         }
         return length;
