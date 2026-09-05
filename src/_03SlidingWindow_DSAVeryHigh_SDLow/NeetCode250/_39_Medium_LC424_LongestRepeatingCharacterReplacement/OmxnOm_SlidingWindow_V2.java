@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class OmxnOm_SlidingWindow_V2 {
-    public static int characterReplacement(String s, int k) {
+    public static int lengthAsPerLongestRepeatingCharacterKFreqReplacement(String s, int k) {
         int length = 0;
         Set<Character> set = new HashSet<>();
         //find unique characters
@@ -38,6 +38,6 @@ public class OmxnOm_SlidingWindow_V2 {
     public static void main(String[] args) {
         String s = "AABABBA";
         int k = 1;
-        System.out.println(characterReplacement(s, k));
+        System.out.println(lengthAsPerLongestRepeatingCharacterKFreqReplacement(s, k));
     }
 }
