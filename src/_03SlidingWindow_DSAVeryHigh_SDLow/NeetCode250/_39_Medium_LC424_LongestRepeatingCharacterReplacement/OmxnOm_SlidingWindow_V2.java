@@ -3,7 +3,7 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._39_Medium_LC424_LongestR
 import java.util.HashSet;
 import java.util.Set;
 
-public class OmxnOm_SlidingWindow {
+public class OmxnOm_SlidingWindow_V2 {
     public static int characterReplacement(String s, int k) {
         int length = 0;
         Set<Character> set = new HashSet<>();
@@ -18,17 +18,18 @@ public class OmxnOm_SlidingWindow {
                 if (s.charAt(currentIndex) == c) {
                     count++;
                 }
+                int windowSize = currentIndex - l + 1;
                 // below while loop is to shrink the window
-                // "(currentIndex - l + 1) - count" means (window size) - number of A's
-                // "(currentIndex - l + 1) - count" means (window size) - number of A's in next for each iteration
-                //(currentIndex - l + 1) - count > k : The number of characters I need to replace to turn this entire window into c is greater than the number of replacements I'm allowed (k)
-                while ((currentIndex - l + 1) - count > k) {
+                // windowSize - count means number of characters
+                // that need to be replaced to turn the entire window into c
+                while (windowSize - count > k) {
                     if (s.charAt(l) == c) {
                         count--;
                     }
                     l++;
+                    windowSize = currentIndex - l + 1;
                 }
-                length = Math.max(length, currentIndex - l + 1);
+                length = Math.max(length, windowSize);
             }
         }
         return length;
