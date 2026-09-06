@@ -14,11 +14,12 @@ public class OmxnOm_SlidingWindow_V2 {
         //for each unique character
         for (char c : set) {
             int count = 0, l = 0;
-            for (int currentIndex = 0; currentIndex < s.length(); currentIndex++) {
-                if (s.charAt(currentIndex) == c) {
+            // here variable right is current index
+            for (int right = 0; right < s.length(); right++) {
+                if (s.charAt(right) == c) {
                     count++;
                 }
-                int windowSize = currentIndex - l + 1;
+                int windowSize = right - l + 1;
                 // below while loop is to shrink the window
                 // windowSize - count means number of characters
                 // that need to be replaced to turn the entire window into c
@@ -27,7 +28,7 @@ public class OmxnOm_SlidingWindow_V2 {
                         count--;
                     }
                     l++;
-                    windowSize = currentIndex - l + 1;
+                    windowSize = right - l + 1;
                 }
                 length = Math.max(length, windowSize);
             }

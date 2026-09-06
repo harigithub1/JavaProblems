@@ -8,13 +8,13 @@ public class OnOm_SlidingWindow {
         Set<Character> set = new HashSet<>();
         int l = 0;
         int length = 0;
-        for (int currentIndex = 0; currentIndex <= s.length()-1; currentIndex++) {
-            while (set.contains(s.charAt(currentIndex))) {
+        for (int right = 0; right <= s.length()-1; right++) {
+            while (set.contains(s.charAt(right))) {
                 set.remove(s.charAt(l));
                 l++;
             }
-            set.add(s.charAt(currentIndex));
-            length = Math.max(length, currentIndex - l + 1);
+            set.add(s.charAt(right));
+            length = Math.max(length, right - l + 1);
         }
         return length;
     }
