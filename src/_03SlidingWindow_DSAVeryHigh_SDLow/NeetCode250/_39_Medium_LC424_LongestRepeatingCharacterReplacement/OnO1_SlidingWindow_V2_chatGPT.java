@@ -35,6 +35,7 @@ S=AABABBA k=1
 
 l = 0, maxFreq =0, maxLength = 0, all freq values 0
 r=0
+A
 index = s.charAt(r)-A = A-A = 65-65= 0
 freq[0]=1
 maxFreq = Math.max(maxFreq,freq[0])= Math.max(0,1) = 1
@@ -44,6 +45,7 @@ maxLength = 1
 
 l = 0, maxFreq =1, maxLength = 1, freq[0]=1
 r=1
+AA
 index = s.charAt(r)-A = A-A = 0
 freq[0]=2
 maxFreq = Math.max(maxFreq,freq[0])=Math.max(1,2) = 2
@@ -53,16 +55,18 @@ maxLength = 2
 
 l = 0, maxFreq =2, maxLength = 2, freq[0]=2
 r=2
+AAB
 index = s.charAt(r)-A = B-A = 66-65=1
 freq[0]=2
 freq[1]=1
-maxFreq = Math.max(maxFreq,freq[0]) =Math.max(2,1)=2
+maxFreq = Math.max(maxFreq,freq[1]) =Math.max(2,1)=2
 replacements = r-l+1-maxFreq =2-0+1-2 = 1
 replacements >k => 1> k => false
 maxLength = 3
 
 l = 0, maxFreq =2, maxLength = 3, freq[0]=2, freq[1]=1
 r=3
+AABA
 index = s.charAt(r)-A = A-A = 0
 freq[0]=3
 freq[1]=1
