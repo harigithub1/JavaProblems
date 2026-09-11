@@ -6,31 +6,24 @@ public class OnO1_SlidingWindow_ChatGPT {
             return false;
         }
         int[] count = new int[26];
-        // Frequency of characters in s1
         for (char c : s1.toCharArray()) {
             count[c - 'a']++;
         }
-        int left = 0;
-        int right = 0;
         int required = s1.length();
-        while (right < s2.length()) {
-            char c = s2.charAt(right);
-            // If this character is still needed
-            if (count[c - 'a'] > 0) {
+        for (int right = 0; right < s2.length(); right++) {
+            int index = s2.charAt(right) - 'a';
+            if (count[index] > 0) {
                 required--;
             }
-            count[c - 'a']--;
-            right++;
-            // Window size becomes larger than s1
-            if (right - left > s1.length()) {
-                char leftChar = s2.charAt(left);
-                count[leftChar - 'a']++;
-                if (count[leftChar - 'a'] > 0) {
+            count[index]--;
+            // Keep window size == s1.length()
+            if (right >= s1.length()) {
+                int leftIndex = s2.charAt(right - s1.length()) - 'a';
+                count[leftIndex]++;
+                if (count[leftIndex] > 0) {
                     required++;
                 }
-                left++;
             }
-            // All required characters are present
             if (required == 0) {
                 return true;
             }
