@@ -5,22 +5,22 @@ public class OnO1_SlidingWindow_ChatGPT {
         if (s1.length() > s2.length()) {
             return false;
         }
-        int[] count = new int[26];
+        int[] freq = new int[26];
         for (char c : s1.toCharArray()) {
-            count[c - 'a']++;
+            freq[c - 'a']++;
         }
         int required = s1.length();
         for (int right = 0; right < s2.length(); right++) {
             int index = s2.charAt(right) - 'a';
-            if (count[index] > 0) {
+            if (freq[index] > 0) {
                 required--;
             }
-            count[index]--;
+            freq[index]--;
             // Keep window size == s1.length()
             if (right >= s1.length()) {
                 int leftIndex = s2.charAt(right - s1.length()) - 'a';
-                count[leftIndex]++;
-                if (count[leftIndex] > 0) {
+                freq[leftIndex]++;
+                if (freq[leftIndex] > 0) {
                     required++;
                 }
             }
