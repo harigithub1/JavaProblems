@@ -3,16 +3,14 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._02_Easy_LC121_BestTimeto
 public class OnO1_TwoPointers_notSlidingwindow {
     public static int maxProfit(int[] prices) {
         int l = 0;
-        int r = 1;
         int maxProfit = 0;
         // here variable r is current index
-        while (r < prices.length) {
+        for (int r = 1; r < prices.length; r++) {
             if (prices[l] < prices[r]) {
                 maxProfit = Math.max(maxProfit, prices[r] - prices[l]);
             } else {
                 l = r;
             }
-            r++;
         }
         return maxProfit;
     }
