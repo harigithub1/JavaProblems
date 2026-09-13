@@ -7,16 +7,17 @@ public class OnOm_SlidingWindow {
     public static int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         int l = 0;
-        int length = 0;
-        for (int right = 0; right <= s.length()-1; right++) {
-            while (set.contains(s.charAt(right))) {
+        int maxLength = 0;
+        for (int r = 0; r <= s.length()-1; r++) {
+            while (set.contains(s.charAt(r))) {
+                //why does set.remove(s.charAt(l)) work? Because you're not removing based on the Set's index. You're using the string's index. The Set simply searches for the value 'a' and removes it.
                 set.remove(s.charAt(l));
                 l++;
             }
-            set.add(s.charAt(right));
-            length = Math.max(length, right - l + 1);
+            set.add(s.charAt(r));
+            maxLength = Math.max(maxLength, r - l + 1);
         }
-        return length;
+        return maxLength;
     }
 
     public static void main(String[] args) {
