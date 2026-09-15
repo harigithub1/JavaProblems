@@ -1,6 +1,15 @@
 package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._05_Medium_LC567_PermutationInString;
 
 public class OnO1_SlidingWindow_ChatGPT_V2_1 {
+    private static boolean isFreqSame(int[] a, int[] b) {
+        for (int i = 0; i < 26; i++) {
+            if (a[i] != b[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static boolean checkInclusion(String s1, String s2) {
         if (s1.length() > s2.length()) {
             return false;
@@ -33,15 +42,6 @@ public class OnO1_SlidingWindow_ChatGPT_V2_1 {
             }
         }
         return false;
-    }
-
-    private static boolean isFreqSame(int[] a, int[] b) {
-        for (int i = 0; i < 26; i++) {
-            if (a[i] != b[i]) {
-                return false;
-            }
-        }
-        return true;
     }
 
     public static void main(String[] args) {
