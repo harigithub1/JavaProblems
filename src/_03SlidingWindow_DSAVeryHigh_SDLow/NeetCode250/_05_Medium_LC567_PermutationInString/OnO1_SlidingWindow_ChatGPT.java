@@ -1,39 +1,38 @@
 package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._05_Medium_LC567_PermutationInString;
 
 public class OnO1_SlidingWindow_ChatGPT {
-    public static boolean checkInclusion(String s1, String s2) {
-        if (s1.length() > s2.length()) {
-            return false;
-        }
-        int[] freq = new int[26];
-        for (char c : s1.toCharArray()) {
-            freq[c - 'a']++;
-        }
-        int required = s1.length();
-        for (int right = 0; right < s2.length(); right++) {
-            int index = s2.charAt(right) - 'a';
-            if (freq[index] > 0) {
-                required--;
+    public static boolean isFreqSame(int[] s1Freq, int[] windowFreq){
+        for(int i=0;i<s1Freq.length;i++){
+            if(s1Freq[i]!=windowFreq[i]){
+                return false;
             }
-            freq[index]--;
-            // Keep window size == s1.length()
-            if (right >= s1.length()) {
-                int leftIndex = s2.charAt(right - s1.length()) - 'a';
-                freq[leftIndex]++;
-                if (freq[leftIndex] > 0) {
-                    required++;
+        }
+        return true;
+    }
+    public static boolean checkInclusion(String s1, String s2){
+        int s1Freq[] = new int[26];
+        int windowFreq[] = new int[26];
+        int l=0;
+        for(char c : s1.toCharArray()){
+            s1Freq[c-'a']++;
+        }
+        for(int r=0;r<s2.length();r++){
+            windowFreq[s2.charAt(r)-'a']++;
+            if(r-l+1>s1.length()){
+                windowFreq[s2.charAt(l)-'a']--;
+                l++;
+            }
+            if(r-l+1 == s1.length()){
+                if(isFreqSame(s1Freq, windowFreq)){
+                    return true;
                 }
-            }
-            if (required == 0) {
-                return true;
             }
         }
         return false;
     }
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         String s1 = "ab";
         String s2 = "eidbaooo";
-        System.out.println(checkInclusion(s1, s2));
+        System.out.println(checkInclusion(s1,s2));
     }
 }
