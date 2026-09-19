@@ -1,7 +1,7 @@
 package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._05_Medium_LC567_PermutationInString;
 
 public class OnO1_SlidingWindow_ChatGPT {
-    public static boolean isFreqSame(int[] s1Freq, int[] windowFreq){
+    public static boolean containsPermutation(int[] s1Freq, int[] windowFreq){
         for(int i=0;i<s1Freq.length;i++){
             if(s1Freq[i]!=windowFreq[i]){
                 return false;
@@ -11,19 +11,20 @@ public class OnO1_SlidingWindow_ChatGPT {
     }
     public static boolean checkInclusion(String s1, String s2){
         int s1Freq[] = new int[26];
-        int windowFreq[] = new int[26];
+        //window freq
+        int winFreq[] = new int[26];
         int l=0;
         for(char c : s1.toCharArray()){
             s1Freq[c-'a']++;
         }
         for(int r=0;r<s2.length();r++){
-            windowFreq[s2.charAt(r)-'a']++;
+            winFreq[s2.charAt(r)-'a']++;
             if(r-l+1>s1.length()){
-                windowFreq[s2.charAt(l)-'a']--;
+                winFreq[s2.charAt(l)-'a']--;
                 l++;
             }
             if(r-l+1 == s1.length()){
-                if(isFreqSame(s1Freq, windowFreq)){
+                if(containsPermutation(s1Freq, winFreq)){
                     return true;
                 }
             }
