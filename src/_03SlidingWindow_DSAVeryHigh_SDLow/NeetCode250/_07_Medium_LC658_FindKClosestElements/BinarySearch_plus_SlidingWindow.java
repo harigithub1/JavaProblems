@@ -1,0 +1,4 @@
+package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._07_Medium_LC658_FindKClosestElements;
+
+public class BinarySearch_plus_SlidingWindow {
+}
