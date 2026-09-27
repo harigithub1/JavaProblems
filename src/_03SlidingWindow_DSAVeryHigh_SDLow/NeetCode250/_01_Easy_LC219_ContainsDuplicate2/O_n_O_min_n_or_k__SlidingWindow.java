@@ -7,16 +7,16 @@ public class O_n_O_min_n_or_k__SlidingWindow {
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
         Set<Integer> set = new HashSet<>();
         int left = 0;
-        // here variable right is current index
-        for (int right = 0; right < nums.length; right++) {
-            if (right - left > k) {
+        // here variable currIndex is current index
+        for (int currIndex = 0; currIndex < nums.length; currIndex++) {
+            if (currIndex - left > k) {
                 set.remove(nums[left]);
                 left++;
             }
-            if (set.contains(nums[right])) {
+            if (set.contains(nums[currIndex])) {
                 return true;
             }
-            set.add(nums[right]);
+            set.add(nums[currIndex]);
         }
         return false;
     }
