@@ -3,7 +3,7 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._03_Medium_LC6_LongestSub
 import java.util.HashSet;
 import java.util.Set;
 
-public class OnOm_SlidingWindow {
+public class OnOm_SlidingWindow_NeetCode {
     public static int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         int left = 0;
