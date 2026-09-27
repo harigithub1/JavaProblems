@@ -1,15 +1,15 @@
 package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._02_Easy_LC121_BestTimetoBuyandSellStock;
 
-public class OnO1_TwoPointers_notSlidingwindow {
+public class OnO1_NotSlidingwindow_TwoPointers {
     public static int maxProfit(int[] prices) {
-        int l = 0;
+        int left = 0;
         int maxProfit = 0;
-        // here variable r is current index
-        for (int r = 1; r < prices.length; r++) {
-            if (prices[l] < prices[r]) {
-                maxProfit = Math.max(maxProfit, prices[r] - prices[l]);
+        for (int currIdx = 1; currIdx < prices.length; currIdx++) {
+            if (prices[left] < prices[currIdx]) {
+                maxProfit = Math.max(maxProfit, prices[currIdx] - prices[left]);
             } else {
-                l = r;
+                left = currIdx;
+                // or we can do left++ too instead of left = currIdx;
             }
         }
         return maxProfit;
