@@ -7,14 +7,12 @@ public class OnO1_SlidingWindow_V2_chatGPT {
         int maxFreq = 0;
         int maxLength = 0;
         for (int currIdx = 0; currIdx < s.length(); currIdx++) {
-            int index = s.charAt(currIdx) - 'A';
-            freq[index]++;
-            maxFreq = Math.max(maxFreq, freq[index]);
+            freq[s.charAt(currIdx) - 'A']++;
+            maxFreq = Math.max(maxFreq, freq[s.charAt(currIdx) - 'A']);
             // If window needs more than k replacements
             if (currIdx - left + 1 - maxFreq > k) {
-                int leftIndex = s.charAt(left) - 'A';
                 // Remove left character
-                freq[leftIndex]--;
+                freq[s.charAt(left) - 'A']--;
                 // Move left
                 left++;
                 // Recalculate maxFreq
