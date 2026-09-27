@@ -1,6 +1,6 @@
 package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._02_Easy_LC121_BestTimetoBuyandSellStock;
 
-public class OnO1_NotSlidingwindow_TwoPointers_V2 {
+public class OnO1_NotSlidingwindow_TwoPointers_AltVer {
     public static int maxProfit(int[] prices) {
         int left = 0;
         int maxProfit = 0;
