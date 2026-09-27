@@ -10,7 +10,6 @@ public class On_O1_Greedy_RunningMinimum {
             if (price < minPrice) {
                 minPrice = price;
             }
-            // Calculate profit
             else if (price - minPrice > maxProfit) {
                 maxProfit = price - minPrice;
             }
@@ -24,8 +23,3 @@ public class On_O1_Greedy_RunningMinimum {
         System.out.println("Maximum Profit: " + result);
     }
 }
-
-/**
- * Sliding Window (Optimized) / Two-Pointer Pattern
- * the sliding happens left → right (forward direction).
- */
