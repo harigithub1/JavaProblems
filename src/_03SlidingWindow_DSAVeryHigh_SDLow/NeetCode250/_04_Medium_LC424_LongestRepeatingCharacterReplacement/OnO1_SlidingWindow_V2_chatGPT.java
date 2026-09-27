@@ -2,28 +2,28 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._04_Medium_LC424_LongestR
 
 public class OnO1_SlidingWindow_V2_chatGPT {
     public static int characterReplacement(String s, int k) {
-        int l = 0;
+        int left = 0;
         int[] freq = new int[26];
         int maxFreq = 0;
         int maxLength = 0;
-        for (int r = 0; r < s.length(); r++) {
-            int index = s.charAt(r) - 'A';
+        for (int currIdx = 0; currIdx < s.length(); currIdx++) {
+            int index = s.charAt(currIdx) - 'A';
             freq[index]++;
             maxFreq = Math.max(maxFreq, freq[index]);
             // If window needs more than k replacements
-            if (r - l + 1 - maxFreq > k) {
-                int leftIndex = s.charAt(l) - 'A';
-                // Remove l character
+            if (currIdx - left + 1 - maxFreq > k) {
+                int leftIndex = s.charAt(left) - 'A';
+                // Remove left character
                 freq[leftIndex]--;
-                // Move l
-                l++;
+                // Move left
+                left++;
                 // Recalculate maxFreq
                 maxFreq = 0;
                 for (int i = 0; i < 26; i++) {
                     maxFreq = Math.max(maxFreq, freq[i]);
                 }
             }
-            maxLength = Math.max(maxLength, r - l + 1);
+            maxLength = Math.max(maxLength, currIdx - left + 1);
         }
         return maxLength;
     }
