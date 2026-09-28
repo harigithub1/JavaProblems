@@ -16,18 +16,18 @@ public class O_nplusm_O_k_SlidingWindow_NeetCode {
         int[] res = {-1, -1};
         int resLen = Integer.MAX_VALUE;
         int left = 0;
-        for (int right = 0; right < s.length(); right++) {
-            char c = s.charAt(right);
+        for (int currIdx = 0; currIdx < s.length(); currIdx++) {
+            char c = s.charAt(currIdx);
             window.put(c, window.getOrDefault(c, 0) + 1);
             if (countT.containsKey(c) && window.get(c).equals(countT.get(c))) {
                 have++;
             }
             while (have == need) {
                 //save the current valid window
-                if ((right - left + 1) < resLen) {
-                    resLen = right - left + 1;
+                if ((currIdx - left + 1) < resLen) {
+                    resLen = currIdx - left + 1;
                     res[0] = left;
-                    res[1] = right;
+                    res[1] = currIdx;
                 }
                 char leftChar = s.charAt(left);
                 window.put(leftChar, window.get(leftChar) - 1);

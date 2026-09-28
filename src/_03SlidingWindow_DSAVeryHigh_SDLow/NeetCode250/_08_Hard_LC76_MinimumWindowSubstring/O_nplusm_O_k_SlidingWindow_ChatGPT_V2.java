@@ -18,11 +18,16 @@ public class O_nplusm_O_k_SlidingWindow_ChatGPT_V2 {
                 required++;
             }
         }
-        int formed = 0;
-        int left = 0;
-        int minLeft = 0;
-        int minLength = Integer.MAX_VALUE;
+
+        //sliding window variables
+        int formed = 0; //Number of distinct characters whose required frequency has been satisfied.
+        int left = 0; //Left boundary of the sliding window.
+        int minLeft = 0; //Starting position of the best/minimum window found so far.
+        int minLength = Integer.MAX_VALUE; //Length of the best window found so far.
+
+        //expand the window
         for (int currIdx = 0; currIdx < s.length(); currIdx++) {
+            // here c is currChar
             char c = s.charAt(currIdx);
             winFreq[c]++;
             // This character has now satisfied its requirement
