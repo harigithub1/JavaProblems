@@ -1,4 +1,4 @@
-package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._08_Hard_LC76_MinimumWindowSubstring;
+package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._08_Hard_LC76_MinimumWindowSubstring.overkill;
 
 public class O_nplusm_O_k_SlidingWindow_ChatGPT_V2 {
     public static String minWindow(String s, String t) {
@@ -27,11 +27,11 @@ public class O_nplusm_O_k_SlidingWindow_ChatGPT_V2 {
 
         //expand the window
         for (int currIdx = 0; currIdx < s.length(); currIdx++) {
-            // here c is currChar
-            char c = s.charAt(currIdx);
-            winFreq[c]++;
+            // here currChar is currChar
+            char currChar = s.charAt(currIdx);
+            winFreq[currChar]++;
             // This character has now satisfied its requirement
-            if (tFreq[c] > 0 && winFreq[c] == tFreq[c]) {
+            if (tFreq[currChar] > 0 && winFreq[currChar] == tFreq[currChar]) {
                 formed++;
             }
             // Current winFreq contains all required characters
