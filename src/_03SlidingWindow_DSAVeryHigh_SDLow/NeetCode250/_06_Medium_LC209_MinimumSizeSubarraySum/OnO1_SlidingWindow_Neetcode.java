@@ -5,10 +5,10 @@ public class OnO1_SlidingWindow_Neetcode {
         int left = 0;
         int sum = 0;
         int minLength = Integer.MAX_VALUE;
-        for (int right = 0; right < nums.length; right++) {
-            sum += nums[right];
+        for (int currIdx = 0; currIdx < nums.length; currIdx++) {
+            sum += nums[currIdx];
             while (sum >= target) {
-                minLength = Math.min(right - left + 1, minLength);
+                minLength = Math.min(currIdx - left + 1, minLength);
                 sum -= nums[left];
                 left++;
             }

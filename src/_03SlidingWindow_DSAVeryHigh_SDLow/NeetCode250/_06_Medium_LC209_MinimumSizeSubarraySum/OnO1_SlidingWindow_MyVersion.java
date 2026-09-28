@@ -2,18 +2,21 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._06_Medium_LC209_MinimumS
 
 public class OnO1_SlidingWindow_MyVersion {
     public static int minSubArrayLen(int target, int[] nums) {
-        int left = 0;
-        int sum=nums[left];
-        int minLength = Integer.MAX_VALUE;
-        for (int right = 1; right < nums.length; right++) {
-            sum += nums[right];
-            while (sum >= target) {
-                minLength = Math.min(right - left + 1, minLength);
-                sum -= nums[left];
+        int left =0;
+        int sum=0;
+        int count=0;
+        int minCount=Integer.MAX_VALUE;
+        for(int currIdx=0;currIdx<nums.length;currIdx++){
+            sum+=nums[currIdx];
+            count++;
+            while(sum>=target){
+                minCount=Math.min(minCount,count);
+                sum-=nums[left];
                 left++;
+                count--;
             }
         }
-        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+        return minCount;
     }
     public static void main(String[] args){
         int target = 7;
