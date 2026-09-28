@@ -3,7 +3,7 @@ package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._08_Hard_LC76_MinimumWind
 import java.util.HashMap;
 import java.util.Map;
 
-public class O_nplusm_O_k_SlidingWindow_NeetCode_MoreIntutive {
+public class O_nplusm_O_k_SlidingWindow_NeetCode {
     public static String minWindowSubString(String s, String t) {
         if (t.isEmpty()) return "";
         Map<Character, Integer> tFreq = new HashMap<>();
