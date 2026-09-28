@@ -4,15 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class O_nplusm_O_k_SlidingWindow_NeetCode_MoreIntutive {
-    public static String minWindow(String s, String t) {
+    public static String minWindowSubString(String s, String t) {
         if (t.isEmpty()) return "";
         Map<Character, Integer> tFreq = new HashMap<>();
         Map<Character, Integer> winFreq = new HashMap<>();
         for (char c : t.toCharArray()) {
             tFreq.put(c, tFreq.getOrDefault(c, 0) + 1);
         }
-        int have = 0; //How many distinct required characters have I currently satisfied?
         int need = tFreq.size(); //How many distinct characters do I need to satisfy?
+        int have = 0; //How many distinct required characters have I currently satisfied?
 
         /*
         res stores:
@@ -26,6 +26,8 @@ public class O_nplusm_O_k_SlidingWindow_NeetCode_MoreIntutive {
         for (int currIdx = 0; currIdx < s.length(); currIdx++) {
             char currChar = s.charAt(currIdx);
             winFreq.put(currChar, winFreq.getOrDefault(currChar, 0) + 1);
+
+            // here winFreq.get(currChar).equals(tFreq.get(currChar)) is used to handle edge case of duplicate characters in t
             if (tFreq.containsKey(currChar) && winFreq.get(currChar).equals(tFreq.get(currChar))) {
                 have++;
             }
@@ -44,12 +46,12 @@ public class O_nplusm_O_k_SlidingWindow_NeetCode_MoreIntutive {
 
                 //Remove the leftmost character
                 //shrinking
-                char leftChar = s.charAt(left);
-                winFreq.put(leftChar, winFreq.get(leftChar) - 1);
+                char winLeftChar = s.charAt(left);
+                winFreq.put(winLeftChar, winFreq.get(winLeftChar) - 1);
                 left++;
 
                 //Check if shrinking made the window invalid. if its invalid, have decrements and then have and need will become different and while loop will exit
-                if (tFreq.containsKey(leftChar) && winFreq.get(leftChar) < tFreq.get(leftChar)) {
+                if (tFreq.containsKey(winLeftChar) && winFreq.get(winLeftChar) < tFreq.get(winLeftChar)) {
                     have--;
                 }
             }
@@ -60,6 +62,6 @@ public class O_nplusm_O_k_SlidingWindow_NeetCode_MoreIntutive {
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
         String t = "ABC";
-        System.out.println(minWindow(s, t));
+        System.out.println(minWindowSubString(s, t));
     }
 }
