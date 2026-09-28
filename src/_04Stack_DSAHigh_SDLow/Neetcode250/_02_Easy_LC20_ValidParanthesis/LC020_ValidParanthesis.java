@@ -1,4 +1,4 @@
-package _04Stack_DSAHigh_SDLow;
+package _04Stack_DSAHigh_SDLow.Neetcode250._02_Easy_LC20_ValidParanthesis;
 import java.util.Stack;
 
 public class LC020_ValidParanthesis {
