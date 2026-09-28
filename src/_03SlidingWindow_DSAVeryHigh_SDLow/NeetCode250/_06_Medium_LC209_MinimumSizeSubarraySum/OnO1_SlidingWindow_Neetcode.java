@@ -4,16 +4,16 @@ public class OnO1_SlidingWindow_Neetcode {
     public static int minSubArrayLen(int target, int[] nums) {
         int left = 0;
         int sum = 0;
-        int minLength = Integer.MAX_VALUE;
+        int minCount = Integer.MAX_VALUE;
         for (int currIdx = 0; currIdx < nums.length; currIdx++) {
             sum += nums[currIdx];
             while (sum >= target) {
-                minLength = Math.min(currIdx - left + 1, minLength);
+                minCount = Math.min(currIdx - left + 1, minCount);
                 sum -= nums[left];
                 left++;
             }
         }
-        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+        return minCount == Integer.MAX_VALUE ? 0 : minCount;
     }
     public static void main(String[] args){
         int target = 7;

@@ -1,49 +1,46 @@
 package _03SlidingWindow_DSAVeryHigh_SDLow.NeetCode250._08_Hard_LC76_MinimumWindowSubstring;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class O_nplusm_O_k_SlidingWindow_ChatGPT {
+public class O_nplusm_O_k_SlidingWindow_ChatGPT_V2 {
     public static String minWindow(String s, String t) {
         if (s.length() < t.length()) {
             return "";
         }
-        int[] need = new int[128];
-        int[] window = new int[128];
+        int[] tFreq = new int[128];
+        int[] winFreq = new int[128];
         // Frequency of characters required
         for (char c : t.toCharArray()) {
-            need[c]++;
+            tFreq[c]++;
         }
         int required = 0;
         // Number of distinct characters required
-        for (int count : need) {
+        for (int count : tFreq) {
             if (count > 0) {
                 required++;
             }
         }
         int formed = 0;
         int left = 0;
-        int minLength = Integer.MAX_VALUE;
         int minLeft = 0;
-        for (int right = 0; right < s.length(); right++) {
-            char c = s.charAt(right);
-            window[c]++;
+        int minLength = Integer.MAX_VALUE;
+        for (int currIdx = 0; currIdx < s.length(); currIdx++) {
+            char c = s.charAt(currIdx);
+            winFreq[c]++;
             // This character has now satisfied its requirement
-            if (need[c] > 0 && window[c] == need[c]) {
+            if (tFreq[c] > 0 && winFreq[c] == tFreq[c]) {
                 formed++;
             }
-            // Current window contains all required characters
+            // Current winFreq contains all required characters
             while (formed == required) {
-                // Update minimum window
-                if (right - left + 1 < minLength) {
-                    minLength = right - left + 1;
+                // Update minimum winFreq
+                if (currIdx - left + 1 < minLength) {
+                    minLength = currIdx - left + 1;
                     minLeft = left;
                 }
                 char leftChar = s.charAt(left);
-                window[leftChar]--;
+                winFreq[leftChar]--;
                 // Window is no longer satisfying this character
-                if (need[leftChar] > 0 &&
-                        window[leftChar] < need[leftChar]) {
+                if (tFreq[leftChar] > 0 &&
+                        winFreq[leftChar] < tFreq[leftChar]) {
                     formed--;
                 }
                 left++;
