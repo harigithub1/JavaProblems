@@ -48,7 +48,8 @@ public class OnlognOn_DivideAndConquer_MergeSort_TwoPointers {
     }
 
     public static int[] sortArray(int[] nums) {
-        int l=0,r=nums.length-1;
+        int l=0;
+        int r=nums.length-1;
         divide(nums, l, r);
         return nums;
     }

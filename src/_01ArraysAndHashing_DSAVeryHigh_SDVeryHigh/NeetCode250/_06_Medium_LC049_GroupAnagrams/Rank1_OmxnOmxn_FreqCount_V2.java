@@ -6,13 +6,13 @@ public class Rank1_OmxnOmxn_FreqCount_V2 {
     public static List<List<String>> getGroupedAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
-            int[] count = new int[26];
+            int[] keyArr = new int[26];
             for(int i =0;i<s.length();i++){
-                count[s.charAt(i)-'a']++;
+                keyArr[s.charAt(i)-'a']++;
             }
             StringBuilder key = new StringBuilder();
             for (int i = 0; i < 26; i++) {
-                key.append('#').append(count[i]);
+                key.append('#').append(keyArr[i]);
             }
             String keyString = key.toString();
             map.putIfAbsent(keyString, new ArrayList<>());

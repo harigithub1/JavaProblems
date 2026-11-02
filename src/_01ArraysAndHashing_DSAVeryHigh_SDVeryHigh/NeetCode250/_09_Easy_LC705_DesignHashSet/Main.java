@@ -2,16 +2,16 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._09_Easy_LC705_De
 
 public class Main {
     public static void main(String[] args) {
-        MyHashSet set = new MyHashSet();
+        MyHashSet myHashSet = new MyHashSet();
 
-        set.add(1);
-        set.add(2);
+        myHashSet.add(1);
+        myHashSet.add(2);
 
-        System.out.println(set.contains(1)); // true
-        System.out.println(set.contains(3)); // false
+        System.out.println(myHashSet.contains(1)); // true
+        System.out.println(myHashSet.contains(3)); // false
 
-        set.remove(2);
+        myHashSet.remove(2);
 
-        System.out.println(set.contains(2)); // false
+        System.out.println(myHashSet.contains(2)); // false
     }
 }

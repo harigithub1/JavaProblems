@@ -10,11 +10,11 @@ public class Rank1_OmxnOmxn_FreqCount_V1 {
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
-            int[] count = new int[26];
+            int[] keyArr = new int[26];
             for (char c : s.toCharArray()) {
-                count[c - 'a']++;
+                keyArr[c - 'a']++;
             }
-            String key = Arrays.toString(count);
+            String key = Arrays.toString(keyArr);
             map.putIfAbsent(key, new ArrayList<>());
             map.get(key).add(s);
         }
