@@ -8,6 +8,9 @@ public class OnlognOn_DivideAndConquer_MergeSort_TwoPointers {
     private static void sortAndMerge(int[] nums, int l, int m, int r) {
         //creating temp to hold the merged sorted result
         List<Integer> temp = new ArrayList<>();
+
+        // sorting using two pointers i and j by starting second pointer j from mid
+        // ** below works only for sorting two already sorted halfs eg here: [3,8][4,7]
         int i = l;
         int j = m + 1;
         while (i <= m && j <= r) {
@@ -27,11 +30,13 @@ public class OnlognOn_DivideAndConquer_MergeSort_TwoPointers {
             temp.add(nums[j]);
             j++;
         }
+
         //copy back
         for (int k = l; k <= r; k++) {
             nums[k] = temp.get(k - l);
         }
-//        //copy back version 2
+
+//        // copy back version 2
 //        int a=l;
 //        for(int k=0;k<tempList.size();k++){
 //            nums[a]=tempList.get(k);
