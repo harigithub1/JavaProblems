@@ -5,7 +5,7 @@ import java.util.*;
 //mergeSortedArrays sort
 public class OnlognOn_DivideAndConquer_MergeSort_TwoPointers {
     // sort and merge using two pointers technique
-    private static void sortAndMerge(int[] nums, int l, int m, int r) {
+    private static void mergeInSortedOrder(int[] nums, int l, int m, int r) {
         //creating temp to hold the merged sorted result
         List<Integer> tempList = new ArrayList<>();
 
@@ -46,7 +46,7 @@ public class OnlognOn_DivideAndConquer_MergeSort_TwoPointers {
         int m = l + (r - l) / 2; //or (l+r)/2
         divide(nums, l, m);
         divide(nums, m + 1, r);
-        sortAndMerge(nums, l, m, r);
+        mergeInSortedOrder(nums, l, m, r);
     }
 
     public static int[] sortArray(int[] nums) {
