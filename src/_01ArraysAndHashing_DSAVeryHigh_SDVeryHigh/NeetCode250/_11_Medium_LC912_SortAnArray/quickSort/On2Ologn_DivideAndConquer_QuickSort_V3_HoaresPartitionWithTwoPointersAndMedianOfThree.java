@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_SortAnArray;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_SortAnArray.quickSort;
 
 public class On2Ologn_DivideAndConquer_QuickSort_V3_HoaresPartitionWithTwoPointersAndMedianOfThree {
 /*
