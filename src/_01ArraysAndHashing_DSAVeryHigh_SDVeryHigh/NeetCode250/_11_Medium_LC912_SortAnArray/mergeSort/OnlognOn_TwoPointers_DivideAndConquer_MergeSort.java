@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_
 import java.util.*;
 
 //mergeSortedArrays sort
-public class OnlognOn_DivideAndConquer_MergeSort_TwoPointers {
+public class OnlognOn_TwoPointers_DivideAndConquer_MergeSort {
     // sort and merge using two pointers technique
     private static void mergeInSortedOrder(int[] nums, int l, int m, int r) {
         //creating temp to hold the merged sorted result

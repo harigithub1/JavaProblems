@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._11_Medium_LC912_SortAnArray.quickSort;
 
-public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
+public class On2Ologn_TwoPointers_DivideAndConquer_QuickSort_V1_LomutoPartition {
     /*
     r
     ↓
@@ -19,6 +19,15 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
     }
 
     public static int getPivotIndex(int[] nums, int l, int r) {
+//        Two pointers
+//        i	Tracks the position where the next smaller element should be placed.
+//        j	Scans the array to find elements smaller than the pivot.
+//        Pointer movement:	Slow and Fast Pointers
+//        Specific pointer roles:	Boundary Pointer (i) and Scanning Pointer (j)
+
+//          This is not the traditional opposite-direction two-pointer approach (left and right pointers
+//        moving towards each other). It is a same-direction two-pointer approach, where one pointer
+//        tracks the boundary and the other scans the array.
         int pivot = nums[r];
         int i = l;
         for (int j = l; j < r; j++) {
