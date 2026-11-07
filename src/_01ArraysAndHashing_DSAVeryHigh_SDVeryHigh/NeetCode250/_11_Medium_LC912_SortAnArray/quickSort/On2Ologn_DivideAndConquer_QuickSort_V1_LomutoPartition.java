@@ -31,19 +31,19 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
         return i;
     }
 
-    public static void placeSmallerAndLargerAroundPivot(int[] nums, int l, int r) {
+    public static void placeSmallerAndLargerNumsAroundPivot(int[] nums, int l, int r) {
         if (l >= r) {
             return;
         }
         int pIdx = getPivotIndex(nums, l, r);
-        placeSmallerAndLargerAroundPivot(nums, l, pIdx - 1);
-        placeSmallerAndLargerAroundPivot(nums, pIdx + 1, r);
+        placeSmallerAndLargerNumsAroundPivot(nums, l, pIdx - 1);
+        placeSmallerAndLargerNumsAroundPivot(nums, pIdx + 1, r);
     }
 
     public static int[] quickSort(int[] nums) {
         int l = 0;
         int r = nums.length - 1;
-        placeSmallerAndLargerAroundPivot(nums, l, r);
+        placeSmallerAndLargerNumsAroundPivot(nums, l, r);
         return nums;
     }
 
