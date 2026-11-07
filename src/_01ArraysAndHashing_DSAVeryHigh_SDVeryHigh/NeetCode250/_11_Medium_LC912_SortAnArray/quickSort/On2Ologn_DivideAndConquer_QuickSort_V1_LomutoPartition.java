@@ -31,25 +31,25 @@ public class On2Ologn_DivideAndConquer_QuickSort_V1_LomutoPartition {
         return i;
     }
 
-    public static void quickSort(int[] nums, int l, int r) {
+    public static void placeSmallerAndLargerAroundPivot(int[] nums, int l, int r) {
         if (l >= r) {
             return;
         }
         int pIdx = getPivotIndex(nums, l, r);
-        quickSort(nums, l, pIdx - 1);
-        quickSort(nums, pIdx + 1, r);
+        placeSmallerAndLargerAroundPivot(nums, l, pIdx - 1);
+        placeSmallerAndLargerAroundPivot(nums, pIdx + 1, r);
     }
 
-    public static int[] sortArray(int[] nums) {
+    public static int[] quickSort(int[] nums) {
         int l = 0;
         int r = nums.length - 1;
-        quickSort(nums, l, r);
+        placeSmallerAndLargerAroundPivot(nums, l, r);
         return nums;
     }
 
     public static void main(String[] args) {
         int[] nums = {8, 3, 7, 4, 9, 2, 6, 5};
-        int[] res = sortArray(nums);
+        int[] res = quickSort(nums);
         for (int n : res) {
             System.out.println(n + ",");
         }
