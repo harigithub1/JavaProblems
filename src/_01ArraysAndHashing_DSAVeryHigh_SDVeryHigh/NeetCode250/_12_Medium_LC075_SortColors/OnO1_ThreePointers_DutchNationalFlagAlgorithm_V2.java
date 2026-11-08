@@ -19,8 +19,8 @@ public class OnO1_ThreePointers_DutchNationalFlagAlgorithm_V2 {
                 l++;
             } else if(nums[c]==2){
                 swap(nums,r,c);
-                c--;
                 r--;
+                c--;
             }
             c++;
         }
