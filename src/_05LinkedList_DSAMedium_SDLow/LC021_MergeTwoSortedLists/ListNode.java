@@ -1,4 +1,4 @@
-package _06LinkedList_DSAMedium_SDLow.LC021_MergeTwoSortedLists;
+package _05LinkedList_DSAMedium_SDLow.LC021_MergeTwoSortedLists;
 
 class ListNode {
     int val;

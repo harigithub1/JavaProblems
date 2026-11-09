@@ -55,7 +55,7 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
     }
 
     public static void main(String[] args) {
-        List<String> input = Arrays.asList("hello", "world");
+        List<String> input = Arrays.asList("hello", "world", "helloworldhello");
         String encoded = encode(input);
         System.out.println("Encoded: " + encoded);
         List<String> decoded = decode2(encoded);

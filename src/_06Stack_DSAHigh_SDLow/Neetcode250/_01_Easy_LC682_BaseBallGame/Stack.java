@@ -1,4 +1,4 @@
-package _04Stack_DSAHigh_SDLow.Neetcode250._01_Easy_LC682_BaseBallGame;
+package _06Stack_DSAHigh_SDLow.Neetcode250._01_Easy_LC682_BaseBallGame;
 
 import java.util.HashSet;
 import java.util.Set;

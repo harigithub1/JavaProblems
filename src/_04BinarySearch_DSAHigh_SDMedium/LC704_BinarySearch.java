@@ -1,4 +1,4 @@
-package _05BinarySearch_DSAHigh_SDMedium;
+package _04BinarySearch_DSAHigh_SDMedium;
 
 public class LC704_BinarySearch {
 

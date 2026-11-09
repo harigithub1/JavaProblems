@@ -1,4 +1,4 @@
-package _06LinkedList_DSAMedium_SDLow.LC141_LinkedListCycle;
+package _05LinkedList_DSAMedium_SDLow.LC141_LinkedListCycle;
 
 public class Main {
         public static boolean hasCycle(ListNode head) {

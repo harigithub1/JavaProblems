@@ -1,9 +1,9 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._14_Medium_LC271_EncodeAndDecodeStrings;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._14_Medium_LC271_EncodeAndDecodeStrings.notes;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Notes_OnOn_IfAllStringsAreSingleDigitLength {
+public class IfAllStringsAreSingleDigitLength {
     public static String encode(List<String> list) {
         StringBuilder sb = new StringBuilder();
         for(String s : list) {

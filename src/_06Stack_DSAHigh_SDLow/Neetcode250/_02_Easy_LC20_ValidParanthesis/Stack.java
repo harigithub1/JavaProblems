@@ -1,4 +1,4 @@
-package _04Stack_DSAHigh_SDLow.Neetcode250._02_Easy_LC20_ValidParanthesis;
+package _06Stack_DSAHigh_SDLow.Neetcode250._02_Easy_LC20_ValidParanthesis;
 
 import java.util.HashSet;
 import java.util.Set;
