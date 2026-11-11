@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
-    public static String encode(List<String> strs) {
+    public static String encode(List<String> list) {
         StringBuilder sb = new StringBuilder();
-        for (String s : strs) {
+        for (String s : list) {
             sb.append(s.length()).append('#').append(s);
         }
         return sb.toString();
@@ -15,23 +15,23 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
 
     //using for loop
     public static List<String> decode2(String s) {
-        List<String> result = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
             int j = i;
             while (s.charAt(j) != '#') {
                 j++;
             }
             int length = Integer.parseInt(s.substring(i, j));
-            result.add(s.substring(j + 1, j + 1 + length));
+            list.add(s.substring(j + 1, j + 1 + length));
             i = j + length;  // for-loop will then do i++
         }
-        return result;
+        return list;
     }
 
     //using while loop
     public static List<String> decode(String s) {
         // input string 5#hello5#world
-        List<String> result = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         // using two pointers i, j
         //i points to the start of the length
         int i = 0;
@@ -43,7 +43,7 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
                 j++;
             }
             int length = Integer.parseInt(s.substring(i, j));
-            result.add(s.substring(j + 1, j + 1 + length));
+            list.add(s.substring(j + 1, j + 1 + length));
             // Move i to the beginning of the next encoded string
             // Example :
             // "5#hello5#world"
@@ -51,15 +51,15 @@ public class _OmPlusnOmPlusn_LengthPrefixedForEncodeTwoPointerParsingForDecode {
             //        next i
             i = j + 1 + length;
         }
-        return result;
+        return list;
     }
 
     public static void main(String[] args) {
         List<String> input = Arrays.asList("hello", "world", "helloworldhello");
-        String encoded = encode(input);
-        System.out.println("Encoded: " + encoded);
-        List<String> decoded = decode2(encoded);
-        System.out.println("Decoded: " + decoded);
+        String string = encode(input);
+        System.out.println("Encoded: " + string);
+        List<String> list = decode2(string);
+        System.out.println("Decoded: " + list);
     }
 }
 /*
