@@ -6,11 +6,9 @@ public class NumMatrix {
     public NumMatrix(int[][] matrix) {
         int rows = matrix.length;
         int cols = matrix[0].length;
-        //now all 0s will be added as default values in below prefixSum matrix after initialization
-        prefixSum = new int[rows + 1][cols + 1];
+        prefixSum = new int[rows + 1][cols + 1]; //now all 0s will be added as default values in below prefixSum matrix after initialization
         for(int i = 0;i<rows;i++){
             for(int j =0;j<cols;j++){
-//                prefixSum[i][j]=prefixSum[i][j-1]+prefixSum[i-1][j]+matrix[i-1][j-1]-prefixSum[i-1][j-1];
                 prefixSum[i+1][j+1]=prefixSum[i+1][j]+prefixSum[i][j+1]+matrix[i][j]-prefixSum[i][j];
             }
         }
