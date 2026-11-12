@@ -5,3 +5,12 @@ public class Notes {
      * OmnO1_2DPrefixSum
      */
 }
+
+//        another method of generating prefixSumMatrix
+//        for (int i = 0; i < rows; i++) {
+//            int prefix = 0;
+//            for (int j = 0; j < cols; j++) {
+//                prefix = prefix + matrix[i][j];
+//                prefixSum[i + 1][j + 1] = prefix + prefixSum[i][j + 1];
+//            }
+//        }
