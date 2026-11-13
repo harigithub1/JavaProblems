@@ -28,6 +28,9 @@ public class O81O1_Hashing_HashSet_OnePass {
                 }
             }
         }
+        System.out.println(rows);
+        System.out.println(cols);
+        System.out.println(squares);
         return true;
     }
 

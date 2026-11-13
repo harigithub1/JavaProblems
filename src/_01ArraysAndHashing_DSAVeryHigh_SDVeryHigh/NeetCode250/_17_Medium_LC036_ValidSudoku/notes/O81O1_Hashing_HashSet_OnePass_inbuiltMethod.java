@@ -1,4 +1,4 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._17_Medium_LC036_ValidSudoku;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._17_Medium_LC036_ValidSudoku.notes;
 
 import java.util.HashMap;
 import java.util.HashSet;
