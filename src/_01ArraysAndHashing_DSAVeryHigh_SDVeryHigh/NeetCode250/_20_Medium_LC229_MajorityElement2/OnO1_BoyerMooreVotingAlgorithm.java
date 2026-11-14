@@ -3,7 +3,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 import java.util.*;
 
 public class OnO1_BoyerMooreVotingAlgorithm {
-    public static List<Integer> majorityElement2(int[] nums) {
+    public static List<Integer> majorityElements(int[] nums) {
         /*
          An element occurring more than n/3 times can be at most 2 elements.
          candidate1, candidate2 -> current majority candidates
@@ -35,6 +35,7 @@ public class OnO1_BoyerMooreVotingAlgorithm {
             }
         }
 
+        List<Integer> list = new ArrayList<>();
         /*
          Second Pass:
          Verify whether the candidates actually occur
@@ -49,9 +50,12 @@ public class OnO1_BoyerMooreVotingAlgorithm {
                 freq2++;
             }
         }
-        List<Integer> list = new ArrayList<>();
-        if (freq1 > nums.length / 3) list.add(candidate1);
-        if (freq2 > nums.length / 3) list.add(candidate2);
+        if (freq1 > nums.length / 3) {
+            list.add(candidate1);
+        }
+        if (freq2 > nums.length / 3) {
+            list.add(candidate2);
+        }
         return list;
     }
 
@@ -59,7 +63,7 @@ public class OnO1_BoyerMooreVotingAlgorithm {
         int[] nums = {1, 1, 1, 3, 3, 2, 2, 2}; // majority element exists, Output: [1, 2]
 //        int[] nums = {1,2,3,4}; //no majority element, second pass is necessary, Output: []
 //        int[] nums = {1,2,3,1,2,3}; //no majority element, second pass is necessary, Output: []
-        List<Integer> list = majorityElement2(nums); // [1, 2]
+        List<Integer> list = majorityElements(nums); // [1, 2]
         System.out.println(list);
     }
 }
