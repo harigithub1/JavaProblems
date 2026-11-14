@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_Fi
 
 public class OnO1_InPlaceHashing_V2 {
     public static int firstMissingPositive(int[] nums) {
-        // Replace negative values and 0s with n + 1
+        // Replace negative values and 0s with length + 1
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] <= 0) {
                 nums[i] = nums.length + 1;
@@ -12,7 +12,7 @@ public class OnO1_InPlaceHashing_V2 {
         // Mark numbers 1..n as negative at index val-1
         for (int i = 0; i < nums.length; i++) {
             int val = Math.abs(nums[i]);
-            if (val >= 1 && val <= nums.length) {
+            if (val <= nums.length) {
                 //here using Math.abs again because nums[val - 1] might already be negative.
                 nums[val - 1] = -Math.abs(nums[val - 1]);
             }
