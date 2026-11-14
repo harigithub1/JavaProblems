@@ -1,6 +1,6 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_FirstMissingPositive;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_FirstMissingPositive.notes;
 
-public class _Rank2_OnOn {
+public class OnOn {
     public static int firstMissingPositive(int[] nums) {
         int[] arr = new int[nums.length];
         for(int i=0;i<nums.length;i++){

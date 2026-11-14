@@ -1,6 +1,6 @@
 package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._22_Hard_LC041_FirstMissingPositive;
 
-public class _Rank1_OnO1_InPlaceHashing_V2 {
+public class OnO1_InPlaceHashing_V2 {
     public static int firstMissingPositive(int[] nums) {
         // Replace negative values and 0s with n + 1
         for (int i = 0; i < nums.length; i++) {
