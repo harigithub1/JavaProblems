@@ -14,6 +14,7 @@ public class OnO1_BoyerMooreVotingAlgorithm {
         int candidate2 = -1;
         int count1 = 0;
         int count2 = 0;
+
         // First Pass: Find potential majority candidates
         for (int n : nums) {
             if (n == candidate1) {
@@ -41,10 +42,10 @@ public class OnO1_BoyerMooreVotingAlgorithm {
          */
         int freq1 = 0;
         int freq2 = 0;
-        for (int num : nums) {
-            if (num == candidate1) {
+        for (int n : nums) {
+            if (n == candidate1) {
                 freq1++;
-            } else if (num == candidate2) {
+            } else if (n == candidate2) {
                 freq2++;
             }
         }
