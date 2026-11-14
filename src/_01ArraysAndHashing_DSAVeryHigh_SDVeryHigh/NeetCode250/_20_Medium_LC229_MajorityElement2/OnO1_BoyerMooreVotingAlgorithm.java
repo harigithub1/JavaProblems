@@ -2,7 +2,7 @@ package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_
 
 import java.util.*;
 
-public class _Rank1_OnO1_BoyerMooreVotingAlgorithm {
+public class OnO1_BoyerMooreVotingAlgorithm {
     public static List<Integer> majorityElement2(int[] nums) {
         /*
          An element occurring more than n/3 times can be at most 2 elements.

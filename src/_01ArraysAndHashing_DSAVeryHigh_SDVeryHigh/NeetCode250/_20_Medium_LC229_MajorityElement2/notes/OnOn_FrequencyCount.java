@@ -1,6 +1,6 @@
-package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_MajorityElement2;
+package _01ArraysAndHashing_DSAVeryHigh_SDVeryHigh.NeetCode250._20_Medium_LC229_MajorityElement2.notes;
 import java.util.*;
-public class _Rank2_OnOn_FrequencyCount {
+public class OnOn_FrequencyCount {
     public static List<Integer> majorityElement2(int[] nums) {
 
         //Space complexity O(n)
