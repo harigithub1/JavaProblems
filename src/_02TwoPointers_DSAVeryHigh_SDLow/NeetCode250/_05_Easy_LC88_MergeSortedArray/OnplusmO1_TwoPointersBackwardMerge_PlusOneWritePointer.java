@@ -1,10 +1,11 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedArray;
 
-public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer {
+public class OnplusmO1_TwoPointersBackwardMerge_PlusOneWritePointer {
     public static void mergeSortedArrays(int[] nums1, int m, int[] nums2, int n) {
         int r1 = m - 1;
         int r2 = n - 1;
         int k = m + n - 1; //it can also be nums1.length-1
+        //k is write pointer for nums1
         while (r1 >= 0 && r2 >= 0) {
             if (nums1[r1] > nums2[r2]) {
                 nums1[k] = nums1[r1];
