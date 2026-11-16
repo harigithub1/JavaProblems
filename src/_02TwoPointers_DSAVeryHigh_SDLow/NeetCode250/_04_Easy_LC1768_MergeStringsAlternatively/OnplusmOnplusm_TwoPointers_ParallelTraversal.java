@@ -25,7 +25,8 @@ public class OnplusmOnplusm_TwoPointers_ParallelTraversal {
     }
 
     public static void main(String[] args) {
-        String word1 = "ab", word2 = "pqrs";
+        String word1 = "ab";
+        String word2 = "pqrs";
         System.out.println(mergeAlternately(word1, word2));
     }
 }

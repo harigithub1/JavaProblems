@@ -1,6 +1,6 @@
 package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedArray;
 
-public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer_V1 {
+public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer {
     public static void mergeSortedArrays(int[] nums1, int m, int[] nums2, int n) {
         int r1 = m - 1;
         int r2 = n - 1;

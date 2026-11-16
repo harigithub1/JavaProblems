@@ -1,6 +1,6 @@
-package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedArray;
+package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._05_Easy_LC88_MergeSortedArray.notes;
 
-public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer_V2 {
+public class OnplusmO1_TwoPointersBackwardMerge_PlusWritePointer_Alternate {
     public static void mergeSortedArrays(int[] nums1, int m, int[] nums2, int n) {
         m--;
         n--;
