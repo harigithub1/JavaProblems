@@ -9,13 +9,12 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
         int l = 0;
         int r = nums.length - 1;
         while (l < r) {
-            int sum = nums[l] + nums[r];
-            if(sum==target){
-                return new int[]{l, r};
-            } else if (sum < target) {
+            if(nums[l]+nums[r]<target){
                 l++;
-            } else {
+            } else if (nums[l]+nums[r]>target){
                 r--;
+            } else {
+                return new int[]{l,r};
             }
         }
         throw new IllegalArgumentException("No two sum solution for given input array");
@@ -27,7 +26,7 @@ public class OnO1_TwoPointers_OppositeDirectionPointers {
         int[] res = twoSumSortedArrayIndices(nums, target);
         for(int n : res) {
             //printing n+1 as per leetcode requirement
-            System.out.print(n+1+" ");
+            System.out.print(n+" ");
         }
     }
 }
