@@ -1,6 +1,6 @@
-package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._06_Easy_LC26_RemoveDuplicatesFromSortedArray;
+package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._06_Easy_LC26_RemoveDuplicatesFromSortedArray.notes;
 
-public class OnO1_TwoPointers_FastAndSlowPointers_V1 {
+public class OnO1_TwoPointers_FastAndSlowPointers {
     public static int removeDuplicatesAndGetUniqueCount(int[] nums) {
         if (nums.length == 0) {
             return 0;
