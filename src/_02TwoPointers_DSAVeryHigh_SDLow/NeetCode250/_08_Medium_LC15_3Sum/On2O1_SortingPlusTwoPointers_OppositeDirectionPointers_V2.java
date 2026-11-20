@@ -8,7 +8,7 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers_V2 {
     public static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         //-4, -1, -1, 0, 1, 2
-        List<List<Integer>> listList = new ArrayList<>();
+        List<List<Integer>> listOfList = new ArrayList<>();
         for(int i =0; i< nums.length; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
@@ -33,13 +33,13 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers_V2 {
                     list.add(nums[i]);
                     list.add(nums[l]);
                     list.add(nums[r]);
-                    listList.add(list);
+                    listOfList.add(list);
                     l++;
                     r--;
                 }
             }
         }
-        return listList;
+        return listOfList;
     }
     public static void main(String[] args) {
         int[] nums = {-1, 0, 1, 2, -1, -4};
