@@ -1,10 +1,10 @@
-package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._08_Medium_LC15_3Sum;
+package _02TwoPointers_DSAVeryHigh_SDLow.NeetCode250._08_Medium_LC15_3Sum.notes;
 
 import java.util.*;
 
 public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
     public static List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
+        List<List<Integer>> listList = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
             // Early termination
@@ -23,7 +23,7 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
             while (l < r) {
                 int sum = nums[l] + nums[r];
                 if (sum == target) {
-                    list.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                    listList.add(Arrays.asList(nums[i], nums[l], nums[r]));
                     //skip duplicates both sides
                     while (l < r && nums[l] == nums[l + 1]) {
                         l++;
@@ -40,7 +40,7 @@ public class On2O1_SortingPlusTwoPointers_OppositeDirectionPointers {
                 }
             }
         }
-        return list;
+        return listList;
     }
 
     public static void main(String[] args) {
